@@ -1,0 +1,76 @@
+.body {
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    height: 50%;
+    width: 30%;
+    background-color: #E0F7F6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.emailImage {
+    height: 30%;
+    width: 25%;
+}
+
+.emailImage img {
+    height: 100%;
+    width: 100%;
+}
+
+.headText {
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+}
+
+.textArea {
+    height: 55%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loginBtn {
+    height: 26px;
+    width: 70px;
+    background-color: #1EBFC1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: white;
+    border-radius: 3px;
+    font-weight: light;
+    border: none !important;
+}
+
+.clickBtn {
+    height: auto;
+    width: 100%;
+    display: flex;
+    margin-top: 9%;
+    justify-content: flex-end;
+    padding-right: 20px;
+    font-size: 13px;
+    gap: 23px;
+}
+
+.clickBtn p {
+    margin-top: 4px;
+    color: black;
+
+}

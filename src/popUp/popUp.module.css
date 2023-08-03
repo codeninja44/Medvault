@@ -1,0 +1,48 @@
+.popUp {
+    height: 100vh;
+    width: 100%;
+    background: rgba(31, 31, 31, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.card {
+    height: 50%;
+    width: 30%;
+    background-color: #1EBFC1;
+}
+
+.popUpImg {
+    height: 45%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popUpImg img {
+    height: 80%;
+    width: 30%;
+}
+
+.popUpText {
+    height: 55%;
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.innerContent {
+    height: auto;
+    width: 50%;
+}
+
+.text {
+    text-align: center;
+}
