@@ -1,4 +1,4 @@
-import style from './VerifiedEmail.module.css'
+import style from './verifiedEmail.module.css'
 import image from '../images/email.png'
 import { useNavigate } from 'react-router-dom'
 
