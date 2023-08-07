@@ -74,3 +74,10 @@
     color: black;
 
 }
+
+@media screen and (max-width:390px) {
+    .card {
+        height: 45%;
+        width: 75%;
+    }
+}

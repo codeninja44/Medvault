@@ -14,7 +14,7 @@ function Dashboard() {
                     <div className={style.navSec}>
                         <div className={style.firstNav}>
                             <div className={style.dashboardIcon1}>
-                                <img src="./src/images/homePage.png" alt="" />
+                                <img src="/homePage.png" alt="" />
                             </div>
                             <div className={style.text}>Home</div>
                         </div>
@@ -23,7 +23,7 @@ function Dashboard() {
                                 <img src="./src/images/patientIcon.png" alt="" />
                             </div>
                             <div>Staffs</div>
-                        </div>
+                        </div>''
                         <div className={style.navs}>
                             <div className={style.dashboardIcon}>
                                 <img src="./src/images/profileIcon.png" alt="" />

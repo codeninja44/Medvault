@@ -7,6 +7,8 @@ import VerifiedEmail from './emailVerified/VerifiedEmail'
 import EmailPopUp from './popUp/EmailPopUp'
 import Dashboard from './dashboard/Dashboard'
 import StaffSpace from './staffDashboard/StaffSpace'
+import StaffsInfo from './staffs/StaffsInfo'
+import Patient from './patient/Patient'
 
 
 const App = () => {
@@ -21,6 +23,8 @@ const App = () => {
         <Route path='/emailVerificaion' element={<EmailPopUp />} />
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/staffDashboard' element={<StaffSpace />} />
+        <Route path='/staffInfo' element={<StaffsInfo />} />
+        <Route path='/patient' element={<Patient />} />
       </Routes>
     </HashRouter >
 

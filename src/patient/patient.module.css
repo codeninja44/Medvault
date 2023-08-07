@@ -1,0 +1,119 @@
+.staffsInfo {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.search {
+    height: 7%;
+    width: 20%;
+    background-color: rgb(210, 208, 208);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    gap: 5px;
+}
+
+.innerBody {
+    height: 90%;
+    width: 60%;
+}
+
+.info {
+    height: 75%;
+    width: 100%;
+    padding-top: 15px;
+}
+
+.infoDisplay {
+    height: 15%;
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(69, 68, 68);
+    color: black;
+}
+
+.profileInfo {
+    height: 100%;
+    width: 50%;
+    border-radius: 15px 0px 0px 15px;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.image {
+    height: 90%;
+    width: 60px;
+    background-color: black;
+    border-radius: 60px;
+}
+
+.delete {
+    height: 70%;
+    width: 90px;
+    border: none;
+    margin-right: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: red;
+}
+
+.searchIcon {
+    height: 70%;
+    width: 20%;
+    background-color: white;
+    margin-left: 10px;
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: gray;
+}
+
+.create {
+    height: 10%;
+    width: 130px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 30px;
+    margin-top: 20px;
+    background-color: #1EBFC1;
+}
+
+@media screen and (max-width: 390px) {
+    .innerBody {
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+
+    }
+
+    .search {
+        height: 8%;
+        width: 40%;
+    }
+
+    .searchIcon {
+        height: 70%;
+        width: 20%;
+        margin-left: 10px;
+    }
+
+    .image {
+        height: 80%;
+        width: 50px;
+        border-radius: 50px;
+    }
+}
