@@ -32,8 +32,8 @@ function Registration() {
         setLoadState(true)
         axios.post(url, userData)
             .then(res => {
-                console.log(res); setVerify(true); setLoadState(false);
-                setTimeout(() => { setVerify(false) }, 5000)
+                console.log(res); setVerify(true); setLoadState(false)
+                nav('/emailVerificaion')
             })
             .catch((err) => console.log("The error ", err))
     }
