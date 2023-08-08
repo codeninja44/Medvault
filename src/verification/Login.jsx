@@ -23,14 +23,14 @@ function Login() {
 
     return (
         <div className="registration">
-        //     <div className="illustration">
+            {/* //     <div className="illustration">
         //         <div className="topIllustration">
         //             <img src="./src/images/undraw_secure_login_pdn4 1.png" alt="" />
         //         </div>
         //         <div className="bottomIllustration">
         //             <img src="./src/images/Arrow 1.png" alt="" />
         //         </div>
-            </div>
+            </div> */}
             <div className="registrationList">
                 <div className="regSection">
                     <h4>LOGIN</h4>

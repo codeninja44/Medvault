@@ -1,0 +1,611 @@
+@media screen and (max-width: 426px) {
+    .Header{
+        width: 100%;
+        height: 10vh;
+        background-color: black;
+    }
+
+    .MainHero{
+        width: 100%;
+        height: 70vh;
+        padding: 10px;
+        display: flex;
+        gap: 10px;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .Heroleft{
+        width: 100%;
+        height: 60%;
+    }
+
+    .Herolefttext{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .health{
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .with{
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .trusted{
+        font-size: 15px;
+    }
+
+    .btn{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .btn button{
+        width: 30%;
+        height: 50%;
+        font-size: 10px;
+
+    }
+
+    .Heroright{
+        width: 100%;
+        height: 60%;
+        background-color: #E0F7F6;
+    }
+
+    .Herorightbox{
+        width: 100%;
+        height: 100%;
+    }
+
+    .Ourservicediv{
+        width: 100%;
+        height:100vh;
+    }
+
+    .Ourservicecontainer{
+        width: 100%;
+        height: 100%;
+    }
+
+    .Ourservice{
+        width: 100%;
+        height: 10%;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Emrimgholder{
+        width: 100%;
+        height: 90%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Emrbox1{
+        width: 90%;
+        height: 30%;
+    }
+
+    .createicon{
+        font-size: 40px;
+    }
+
+    .createtext{
+        font-size: 20px;
+    }
+
+    .descemr1{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .Emrbox2{
+        width: 90%;
+        height: 30%;
+    }
+
+    .safeicon{
+        font-size: 40px;
+    }
+
+    .safetext{
+        font-size: 20px; 
+    }
+
+    .descemr2{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .Emrbox3{
+        width: 90%;
+        height: 30%;
+    }
+
+    .protecticon{
+        font-size: 40px;
+    }
+
+    .protecttext{
+        font-size: 20px;
+    }
+
+    .descemr3{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .Uniquefeaturesdiv{
+        width: 100%;
+        height: max-content; 
+    }
+
+    .Uniquefeaturetextbox{
+        width: 100%;
+        height: 10vh;
+    }
+
+    .Uniquefeaturestext{
+        width: 100;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Uniquep{
+        font-size: 30px;
+    }
+
+    .Uniquefeaturesfirstbox{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .Uniqueleftbox{
+        width: 100%;
+        height: 50%;
+
+    }
+
+    .Uniquelefttextholder{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .Uniquelefttext{
+        width: 85%;
+        font-size: 15px;
+        margin-top: 60px;
+    }
+    
+    .Uniquerightbox{
+        width: 100%;
+        height: 50%;
+    }
+
+    .Uniquerightimgholder{
+        width: 100%;
+        height: 100%;
+    }
+
+    .Uniquerightimgholder img{
+        width: 100%;
+        height: 100%;
+    }
+
+.Uniquefeaturessecondbox{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .secondboxleft{
+        width: 100%;
+        height: 50%; 
+    }
+
+    .secondboxleftimgholder{
+        width: 100%;
+        height: 100%;
+    }
+
+    .secondboxright{
+        width: 100%;
+        height: 50%;
+    }
+
+    .secondtextholder{
+        width: 85%;
+        height: 100%;
+    }
+
+    .secondtext{
+        font-size: 15px;
+        margin-top: 30px;
+    }
+
+    .Uniquefeaturethirdbox{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .thirdleftbox{
+        width: 100%;
+        height: 50%;
+    }
+
+    .thirdlefttextholder{
+        width: 85%;
+        height: 50%;
+    }
+
+    .thirdlefttext{
+        font-size: 15px;
+        margin-top: 60px;
+    }
+
+    .thirdrightbox{
+        width: 100%;
+        height: 50%; 
+    }
+
+    .thirdightimgholder{
+        width: 100%;
+        height: 100%;
+    }
+
+    .Uniquefeaturesfourthbox{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .fourthboxleft{
+        width: 100%;
+        height: 50%;
+    }
+
+    .fourthboxleftimgholder{
+        width: 100%;
+        height: 100%;
+    }
+
+    .fourthboxleftimgholder img{
+        width: 50%;
+        height: 100%;
+    }
+
+    .fourthboxright{
+        width: 100%;
+        height: 50%;
+    }
+
+    .fourthtextholder{
+        width: 100%;
+        height: 100%;
+    }
+
+    .fourthtext{
+        font-size: 15px;
+        margin-top: 30px;
+    }
+
+    .Pricingdiv{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+    }
+
+    .Pricingcontainer{
+        width: 100%;
+        height: 100%;
+    }
+
+    .Pricingtextholder{
+        width: 100%;
+        height: 10vh;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Pricingboxholder{
+        width: 95%;
+        height: 90%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricingbox1{
+        width: 90%;
+        height: 28%;
+        /* background-color: gray; */
+    }
+
+    .pricingbox2{
+        width: 90%;
+        height: 28%;
+    }
+
+    .pricingbox3{
+        width: 90%;
+        height: 28%; 
+    }
+
+    .quote{
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+    }
+
+    .quoteholder{
+        width: 95%;
+        height: 100%;
+        margin-right: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Emily{
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .testimonialsmaindiv{
+        width: 100%;
+        height: 100vh;
+    }
+
+    .testimonialscontainer{
+        width: 100%;
+    }
+
+    .testimonialstextholder{
+        width: 100%;
+        height: 10%;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .testimonialsboxholder{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonialsbox1{
+        width: 85%;
+        height: 21%;
+    }
+
+    .testimonialsbox2{
+        width: 85%;
+        height: 21%;
+    }
+
+    .testimonialsbox3{
+        width: 85%;
+        height: 21%;
+    }
+
+    .downsignupmaindiv{
+        width: 100%;
+        height: 15vh;
+        background-color: white;
+    }
+
+    .signupwrapper{
+        width: 95%;
+        height: 100%;
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        background-color: #1EBFC1;
+        border-radius: 10px;
+        margin-top: 60px;
+    }
+
+    .join{
+        font-size: 15px;
+    }
+
+    .signupbtn{
+        width:30% ;
+        height: 30%;
+    }
+
+    .footer{
+        width: 100%;
+        height: 40vh;
+    }
+
+    .footerwrapper{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .leftfooter{
+        width: 38%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .medlogo{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .medlogo img{
+        width: 40%;
+        height: 50%;
+    }
+
+    .footeraddress{
+        width: 100%;
+        height: 10%;
+        font-size: 12px;
+        color: #636763;
+    }
+
+    .footerphoneno{
+        width: 100%;
+        height: 10%;
+        font-size: 12px;
+        color: #636763;
+    }
+
+    .footeremail{
+        width: 100%;
+        height: 10%;
+        font-size: 12px; 
+        color: #636763;
+    }
+
+    .footercopyrights{
+        width: 100%;
+        height: 40%;
+        font-size: 12px;  
+        color: #636763;
+    }
+
+    .footer2{
+        width: 15%;
+        height: 100%;
+    }
+
+    .quicklinkstext{
+        width: 100%;
+        height: 20%;
+        background-color: #E0F7F6;
+        display: flex;
+        align-items: flex-end;
+        color: #636763; 
+    }
+
+    .quicklinkshome{
+        width: 100%;
+        height: 10%;
+        font-size: 12px; 
+        color: #636763;
+    }
+
+    .quicklinksabout{
+        width: 100%;
+        height: 10%;
+        font-size: 12px; 
+        color: #636763;
+    }
+
+    .quicklinksservices{
+        width: 100%;
+        height: 10%;
+        font-size: 12px; 
+        color: #636763;
+    }
+
+    .quicklinkempty{
+        width: 100%;
+        height: 40%;
+        font-size: 12px; 
+        color: #636763;
+    }
+
+    .legallinkstext{
+        width: 100%;
+        height: 20%;
+        background-color: #E0F7F6;
+        display: flex;
+        align-items: flex-end;
+        color: #636763; 
+    }
+
+    .legallinksterms{
+        width: 100%;
+        height: 10%;
+        font-size: 12px; 
+        color: #636763;
+    }
+
+    .socialmediatext{
+        width: 100%;
+        height: 20%;
+        background-color: #E0F7F6;
+        display: flex;
+        align-items: flex-end;
+        color: #636763;
+    }
+
+    .socialmediafb{
+        width: 100%;
+        height: 10%;
+        font-size: 12px; 
+        color: #636763; 
+        display: flex;
+    }
+}
+    
+
+@media only screen and (min-width:  580px) and (max-width: 1024px) {
+
+}

@@ -1,0 +1,1022 @@
+.Main{
+    width: 100%;
+    height: max-content;
+    background-color:white;
+}
+
+/* .Header{
+    width: 100%;
+    height: 15vh;
+    background-color: blue;
+} */
+
+.contact{
+    width: 10%;
+    height: 30%;
+}
+
+
+
+.MainHero{
+    width: 100%;
+    height: 85vh;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+
+.Heroleft{
+    width:  50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Herolefttext{
+    width: 90%;
+    height: 70%;
+    border-radius: 10px; 
+    /* text-align: center; */
+}
+
+.health{
+    font-size: 80px;
+    font-weight: 700;
+    color: #0B120B;
+}
+
+.with{
+    font-size: 80px;
+    color: #0B120B;
+    font-weight: 700;
+}
+
+.safety{
+    color: #1EBFC1;
+}
+
+.trusted{
+    font-size: 30px;
+    color: gray;
+}
+
+.btn{
+    width: 80%;
+    height: 30%;
+    display: flex;
+    align-items: end;
+   
+}
+
+.btn button{
+    width: 40%;
+    height: 60%;
+    border-radius: 10px;
+    border: none;
+    background-color: #1EBFC1;
+    font-size: 20px;
+    color: white;
+}
+
+.Heroright{
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Herorightbox{
+    width: 90%;
+    height: 100%;
+    background-color: #E0F7F6;
+    border-radius: 10px;
+}
+
+.Herorightbox img{
+    width: 100%;
+    height: 100%;
+}
+
+.Ourservicediv{
+    width: 100%;
+    height: 80vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.Ourservicecontainer{
+    width: 95%;
+    height: 100%;
+}
+
+.Ourservice{
+    width: 100%;
+    height: 15%;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.Ourservice span{
+    color: #1EBFC1;
+}
+
+.Emrimgholder{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Emrbox1{
+    width: 30%;
+    height: 100%;
+    background-color: #1EBFC1;
+    border-radius: 10px;
+    color: #F5F5F5;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.createicon{
+    font-size: 100px;
+}
+
+.createtext{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.descemr1{
+    width: 70%;
+    font-size: 20px;
+}
+
+.Emrbox2{
+    width: 30%;
+    height: 100%;
+    background-color: #1EBFC1;
+    border-radius: 10px;
+    color: #F5F5F5;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.safeicon{
+    font-size: 100px;
+}
+
+.safetext{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.descemr2{
+    width: 70%;
+    font-size: 20px;
+}
+
+.Emrbox3{
+    width: 30%;
+    height: 100%;
+    background-color: #1EBFC1;
+    border-radius: 10px;
+    color: #F5F5F5;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.protecticon{
+    font-size: 100px;
+}
+
+.protecttext{
+    font-size: 40px;
+    font-weight: bold; 
+}
+
+.descemr3{
+    width: 70%;
+    font-size: 20px;
+}
+
+
+.Uniquefeaturesdiv{
+    width: 100%;
+    height: max-content;
+}
+
+.Uniquefeaturetextbox{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.Uniquefeaturestext{
+    width: 93%;
+    height: 100%;
+}
+
+.Uniquep{
+    font-size: 50px;
+    font-weight: 700;
+    color: #1EBFC1;
+}
+
+.Features{
+    color: black;
+}
+
+.Uniquefeaturesfirstbox{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Uniqueleftbox{
+    width: 47%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.Uniquelefttextholder{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.Uniquelefttext{
+    font-size: 20px;
+}
+
+.Uniquerightbox{
+    width: 47%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Uniquerightimgholder{
+    width: 85%;
+    height: 100%;
+}
+
+.Uniquerightimgholder img{
+    width: 50%;
+    height: 100%;
+}
+
+.Uniquefeaturessecondbox{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.secondboxleft{
+    width: 47%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.secondboxleftimgholder{
+    width: 85%;
+    height: 100%;
+}
+
+.secondboxleftimgholder img{
+    width: 50%;
+    height: 100%;
+}
+
+.secondboxright{
+    width: 47%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.secondtextholder{
+    width: 85%;
+    height: 100%;
+}
+
+.secondtext{
+    font-size: 20px;
+}
+
+.Uniquefeaturethirdbox{
+    width: 100%;
+    height: 25vh;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.thirdleftbox{
+    width: 47%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.thirdlefttextholder{
+    width: 85%;
+    height: 100%;
+    align-items: center;
+}
+
+.thirdlefttext{
+    font-size: 20px;
+}
+
+.thirdrightbox{
+    width: 47%;
+    height: 100%;
+    display: flex;
+    justify-content: center; 
+}
+
+.thirdightimgholder{
+    width: 85%;
+    height: 100%;
+}
+
+.thirdightimgholder img{
+    width: 50%;
+    height: 100%;
+}
+
+.Uniquefeaturesfourthbox{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.fourthboxleft{
+    width: 47%;
+    height: 100%;
+    display: flex;
+    justify-content: center; 
+}
+
+.fourthboxright{
+    width: 47%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.fourthboxleftimgholder{
+    width: 85%;
+    height: 100%;
+}
+
+.fourthboxleftimgholder img{
+    width: 50%;
+    height: 100%;
+}
+
+.fourthtextholder{
+    width: 85%;
+    height: 100%;
+}
+.fourthtext{
+    font-size: 20px;
+}
+
+.Pricingdiv{
+    width: 100%;
+    height: 60vh;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 20px 20px;
+}
+
+.Pricingcontainer{
+    width: 95%;
+    height: 100%;
+}
+
+.Pricingtextholder{
+    width: 100%;
+    height: 15%;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.cing{
+    color: #1EBFC1;
+}
+
+.Pricingboxholder{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pricingbox1{
+    width: 30%;
+    height: 80%;
+    background-color: white;
+    border-radius: 10px;
+    border: 3px solid #1EBFC1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.pricingnaira{
+    width: 100%;
+    height: 50%;
+    /* background-color: aqua; */
+    font-size: 50px;
+    font-weight: 700;
+    color: #0B120B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.regular{
+    width: 100%;
+    height: 20%;
+    /* background-color: red; */
+    font-size: 30px;
+    color: #636763;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.regulardesc{
+    width: 100%;
+    height: 30%;
+    /* background-color: blue; */
+    font-size: 20px;
+    color: #A4A6A4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.regularcircle{
+    width: 10%;
+    height: 40%;
+    border-radius: 50%;
+    background-color:#1EBFC1 ;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricingbox2{
+    width: 30%;
+    height: 80%;
+    background-color: white;
+    border-radius: 10px;
+    border: 3px solid #118ab2;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.pricenaira2{
+    width: 100%;
+    height: 50%;
+    /* background-color: aqua; */
+    font-size: 50px;
+    font-weight: 700;
+    color: #0B120B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1EBFC1;
+}
+
+
+.Medium{
+    width: 100%;
+    height: 20%;
+    /* background-color: red; */
+    font-size: 30px;
+    color: #636763;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mediumdesc{
+    width: 100%;
+    height: 30%;
+    font-size: 20px;
+    color: #A4A6A4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.mediumcircle{
+    width: 10%;
+    height: 40%;
+    border-radius: 50%;
+    background-color:#1EBFC1 ;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricingbox3{
+    width: 30%;
+    height: 80%;
+    background-color: white;
+    border-radius: 10px;
+    border: 3px solid #FFC147;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.pricenaira3{
+    width: 100%;
+    height: 50%;
+    /* background-color: aqua; */
+    font-size: 50px;
+    font-weight: 700;
+    color: #0B120B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFC147;
+}
+
+.Premium{
+    width: 100%;
+    height: 20%;
+    /* background-color: red; */
+    font-size: 30px;
+    color: #636763;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.premiumdesc{
+    width: 100%;
+    height: 30%;
+    font-size: 20px;
+    color: #A4A6A4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.premiumcircle{
+    width: 10%;
+    height: 40%;
+    border-radius: 50%;
+    background-color:#1EBFC1 ;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote{
+    width: 100%;
+    height: 20vh;
+    font-size: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #E0F7F6;
+}
+
+.quoteholder{
+    width: 93%;
+    height: 95%;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.Emily{
+    font-size: 30px;
+    color: #636763;
+}
+
+.testimonialsmaindiv{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.testimonialscontainer{
+    width: 95%;
+    height: 100%;
+}
+
+.testimonialstextholder{
+    width: 100%;
+    height: 15%;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+
+.testimonials{
+    color: #1EBFC1;
+}
+
+.onials{
+    color: black;
+}
+
+.testimonialsboxholder{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.testimonialsbox1{
+    width: 22%;
+    height: 80%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.testimonialsbox1top{
+    width: 100%;
+    height: 75%;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.testimonialscircle{
+    width: 20%;
+    height: 30%;
+    background-color: #0B120B;
+    border-radius: 50%;
+}
+
+.testimonialsname{
+    color: #0B120B;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.testimonialstitle{
+    color: #636763;
+    font-size: 20px;
+}
+
+.testimonialsdesc{
+    width: 80%;
+    height: 30%;
+    color: #A4A6A4; 
+}
+
+.testimonialsbox1bottom{
+    width: 98%;
+    height: 20%;
+    font-size: 40px;
+    color: #1EBFC1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.testimonialsbox2{
+    width: 22%;
+    height: 80%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.testimonialsbox3{
+    width: 22%;
+    height: 80%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+.downsignupmaindiv{
+    width: 100%;
+    height: 20vh;
+    background-color:#1EBFC1;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signupwrapper{
+    width: 95%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.join{
+    font-size: 25px;
+    font-weight: 600;
+    color: #F5F5F5;
+}
+
+
+.signupbtn{
+    width: 10%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.signupbtn button{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color:#0B120B;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+}
+
+.footer{
+    width: 100%;
+    height: 60vh;
+    background-color: #E0F7F6;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.footerwrapper{
+    width: 95%;
+    height: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.leftfooter{
+    width: 40%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+.medlogo{
+    width: 100%;
+    height: 20%;
+}
+
+.medlogo img{
+    width: 20%;
+    height: 100%;
+}
+
+.footeraddress{
+    width: 50%;
+    height: 10%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #636763
+}
+
+.footerphoneno{
+    width: 50%;
+    height: 10%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #636763
+}
+
+.footeremail{
+    width: 50%;
+    height: 10%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #636763 
+}
+
+.footercopyrights{
+    width: 100%;
+    height: 40%;
+    font-size: 12px;
+    display: flex;
+    align-items: flex-end;
+    color: #636763 
+}
+
+.footer2{
+    width: 15%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.quicklinkstext{
+    width: 100%;
+    height: 20%;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: #636763;
+}
+
+.quicklinkshome{
+    width: 100%;
+    height: 10%;
+    font-size: 12px;
+    color: #636763;
+}
+
+.quicklinksabout{
+    width: 100%;
+    height: 10%;
+    font-size: 12px;
+    color: #636763;
+}
+
+.quicklinksservices{
+    width: 100%;
+    height: 10%;
+    font-size: 12px;
+    color: #636763;
+}
+
+.quicklinkempty{
+    width: 100%;
+    height: 40%;
+}
+
+.legallinkstext{
+    width: 100%;
+    height: 20%;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: #636763;
+}
+
+.legallinksterms{
+    width: 100%;
+    height: 10%;
+    font-size: 12px;
+    color: #636763;
+}
+
+.legallinkscondition{
+    width: 100%;
+    height: 10%;
+    font-size: 12px;
+    color: #636763;
+}
+
+.legallinksprivacy{
+    width: 100%;
+    height: 10%;
+    font-size: 12px;
+    color: #636763;
+}
+
+.legallinksempty{
+    width: 100%;
+    height: 40%;
+    font-size: 12px;
+    color: #636763;
+}
+
+.socialmediatext{
+    width: 100%;
+    height: 20%;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: #636763;
+    
+}
+
+.socialmediafb{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #636763;
+    font-size: 12px;  
+}
+
+.socialmediatwi{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #636763;
+    font-size: 12px;  
+}
+
+
+.socialmedialnkd{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #636763;
+    font-size: 12px; 
+}
+
+.socialmediaempty{
+    width: 100%;
+    height: 40%;
+}
+
+
+
+
+
+
+

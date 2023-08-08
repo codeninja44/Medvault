@@ -38,6 +38,8 @@ const VerifiedEmail = () => {
     const token = searchParams.get("token");
     const [verificationStatus, setVerificationStatus] = useState("");
 
+    const nav = useNavigate()
+
     useEffect(() => {
         if (token) {
             // Only initiate verification if the token is present in the URL
@@ -65,12 +67,13 @@ const VerifiedEmail = () => {
                     <div className={style.emailImage}>
                         <img src={image} alt="Email" />
                     </div>
-                    <h3 className={style.headText}>Email Veridied Successfully</h3>
-                    {verificationStatus === "user verified" ? (
-                        <div className={style.clickBtn}>
-                            <p>Click to login</p>
-                            <button className={style.loginBtn} onClick={() => nav('/login')}>Login</button>
-                        </div>
+                    <h3 className={style.headText}>Email Verified Successfully</h3>
+                    <div className={style.clickBtn}>
+                        <p>Click to login</p>
+                        <button className={style.loginBtn} onClick={() => nav("/login")}>Login</button>
+                    </div>
+                    {/* {verificationStatus === "user verified" ? (
+                        hj
                     ) : null
                         // (
                         // <>
@@ -95,7 +98,7 @@ const VerifiedEmail = () => {
                         //     </p>
                         // </>
                         // )
-                    }
+                    } */}
                 </div>
             </div>
         </>
