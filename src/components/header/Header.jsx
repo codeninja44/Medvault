@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
     const nav = useNavigate()
+    const [dropDown, setDropDown] = useState(false)
 
 
     return (
@@ -26,8 +27,22 @@ const Header = () => {
                 <div className='buttons'>
                     <button className='signUpBtn' onClick={() => nav('/registration')}>Register</button>
                     <button className='loginbtn' onClick={() => nav('/login')}>Login</button>
+                    <div className='handBurger' onClick={() => setDropDown(!dropDown)}>
+                        <img src="./src/images/handBurger.png" alt="" />
+                    </div>
                 </div>
             </div>
+            {
+                dropDown ? (<div className="dropDown">
+                    <div className="menu1">
+                        <span onClick={() => setDropDown(false)}>X</span>
+                    </div>
+                    <div className="menu"> <p>Home</p></div>
+                    <div className="menu"> <p>About us</p></div>
+                    <div className="menu"> <p>Contact us</p></div>
+                </div>) : null
+            }
+
             {/* <LandingPage /> */}
         </div>
     )

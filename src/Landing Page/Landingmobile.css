@@ -1,8 +1,7 @@
-@media screen and (max-width: 426px) {
+@media only screen and (min-width: 320px) and  (max-width: 580px) {
     .Header{
         width: 100%;
         height: 10vh;
-        background-color: black;
     }
 
     .MainHero{
@@ -13,6 +12,7 @@
         gap: 10px;
         flex-direction: column-reverse;
         text-align: center;
+        justify-content: space-between;
     }
 
     .Heroleft{
@@ -71,6 +71,11 @@
     .Ourservicediv{
         width: 100%;
         height:100vh;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
     }
 
     .Ourservicecontainer{
@@ -106,12 +111,12 @@
     }
 
     .createtext{
-        font-size: 20px;
+        font-size: 10px;
     }
 
     .descemr1{
         width: 100%;
-        font-size: 15px;
+        font-size: 8px;
     }
 
     .Emrbox2{
@@ -275,7 +280,7 @@
 
     .thirdlefttext{
         font-size: 15px;
-        margin-top: 60px;
+        margin-top: 30px;
     }
 
     .thirdrightbox{
@@ -296,6 +301,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 10px;
     }
 
     .fourthboxleft{
@@ -365,14 +371,56 @@
         /* background-color: gray; */
     }
 
+    .pricingnaira{
+        font-size: 25px;
+    }
+
+    .regular{
+        font-size: 18px;
+    }
+
+    .regulardesc{
+        font-size: 18px;
+    }
+
+    .pricingbox1{
+        width: 90%;
+        height: 28%;
+        /* background-color: gray; */
+    }
+
     .pricingbox2{
         width: 90%;
         height: 28%;
     }
 
+    .pricenaira2{
+        font-size: 25px;
+    }
+
+    .Medium{
+        font-size: 18px;
+    }
+
+    .mediumdesc{
+        font-size: 18px;
+    }
+
     .pricingbox3{
         width: 90%;
         height: 28%; 
+    }
+
+    .pricenaira3{
+        font-size: 25px;
+    }
+
+    .Premium{
+        font-size: 18px; 
+    }
+
+    .premiumdesc{
+        font-size: 18px;
     }
 
     .quote{
@@ -391,6 +439,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .quote{
+        font-size: 10px;
+    }
+
+    .Emily{
+        font-size: 15px;
     }
 
     .Emily{
@@ -426,18 +482,40 @@
     }
 
     .testimonialsbox1{
-        width: 85%;
+        width: 80%;
         height: 21%;
     }
 
     .testimonialsbox2{
-        width: 85%;
+        width: 80%;
         height: 21%;
     }
 
     .testimonialsbox3{
-        width: 85%;
+        width: 80%;
         height: 21%;
+    }
+
+    .testimonialscircle{
+        width: 15%;
+        height: 25%;
+    }
+
+    .testimonialsname{
+        font-size: 20px;
+    }
+
+    .testimonialstitle{
+        font-size: 15px;
+    }
+
+    .testimonialsdesc{
+        font-size: 12px;
+    }
+
+    .testimonialsbox1bottom{
+        font-size: 20px;
+        padding: 10px;
     }
 
     .downsignupmaindiv{
@@ -469,143 +547,18 @@
         height: 30%;
     }
 
-    .footer{
-        width: 100%;
-        height: 40vh;
-    }
-
-    .footerwrapper{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .leftfooter{
-        width: 38%;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-    }
-
-    .medlogo{
-        width: 100%;
-        height: 20%;
-        display: flex;
-        align-items: flex-end;
-    }
-
-    .medlogo img{
-        width: 40%;
-        height: 50%;
-    }
-
-    .footeraddress{
-        width: 100%;
-        height: 10%;
-        font-size: 12px;
-        color: #636763;
-    }
-
-    .footerphoneno{
-        width: 100%;
-        height: 10%;
-        font-size: 12px;
-        color: #636763;
-    }
-
-    .footeremail{
-        width: 100%;
-        height: 10%;
-        font-size: 12px; 
-        color: #636763;
-    }
-
-    .footercopyrights{
-        width: 100%;
-        height: 40%;
-        font-size: 12px;  
-        color: #636763;
-    }
-
-    .footer2{
-        width: 15%;
-        height: 100%;
-    }
-
-    .quicklinkstext{
-        width: 100%;
-        height: 20%;
-        background-color: #E0F7F6;
-        display: flex;
-        align-items: flex-end;
-        color: #636763; 
-    }
-
-    .quicklinkshome{
-        width: 100%;
-        height: 10%;
-        font-size: 12px; 
-        color: #636763;
-    }
-
-    .quicklinksabout{
-        width: 100%;
-        height: 10%;
-        font-size: 12px; 
-        color: #636763;
-    }
-
-    .quicklinksservices{
-        width: 100%;
-        height: 10%;
-        font-size: 12px; 
-        color: #636763;
-    }
-
-    .quicklinkempty{
-        width: 100%;
-        height: 40%;
-        font-size: 12px; 
-        color: #636763;
-    }
-
-    .legallinkstext{
-        width: 100%;
-        height: 20%;
-        background-color: #E0F7F6;
-        display: flex;
-        align-items: flex-end;
-        color: #636763; 
-    }
-
-    .legallinksterms{
-        width: 100%;
-        height: 10%;
-        font-size: 12px; 
-        color: #636763;
-    }
-
-    .socialmediatext{
-        width: 100%;
-        height: 20%;
-        background-color: #E0F7F6;
-        display: flex;
-        align-items: flex-end;
-        color: #636763;
-    }
-
-    .socialmediafb{
-        width: 100%;
-        height: 10%;
-        font-size: 12px; 
-        color: #636763; 
-        display: flex;
-    }
+    
 }
     
 
 @media only screen and (min-width:  580px) and (max-width: 1024px) {
 
+    .MainHero{
+        width: 100%;
+        height: 85vh;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        background-color: red;
+    }
 }

@@ -1,0 +1,207 @@
+.footer {
+    width: 100%;
+    height: 60vh;
+    background-color: #E0F7F6;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footerwrapper {
+    width: 95%;
+    height: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.leftfooter {
+    width: 40%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+.medlogo {
+    width: 100%;
+    height: 20%;
+}
+
+.medlogo img {
+    width: 20%;
+    height: 100%;
+}
+
+.footeraddress {
+    width: 50%;
+    height: 10%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #636763
+}
+
+.footerphoneno {
+    width: 50%;
+    height: 10%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #636763
+}
+
+.footeremail {
+    width: 50%;
+    height: 10%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #636763
+}
+
+.footercopyrights {
+    width: 100%;
+    height: 40%;
+    font-size: 12px;
+    display: flex;
+    align-items: flex-end;
+    color: #636763
+}
+
+.footer2 {
+    width: 15%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.quicklinkstext {
+    width: 100%;
+    height: 20%;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: #636763;
+}
+
+.quicklinkshome {
+    width: 100%;
+    height: 10%;
+    font-size: 12px;
+    color: #636763;
+}
+
+.quicklinksabout {
+    width: 100%;
+    height: 10%;
+    font-size: 12px;
+    color: #636763;
+}
+
+.quicklinksservices {
+    width: 100%;
+    height: 10%;
+    font-size: 12px;
+    color: #636763;
+}
+
+.quicklinkempty {
+    width: 100%;
+    height: 40%;
+}
+
+.legallinkstext {
+    width: 100%;
+    height: 20%;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: #636763;
+}
+
+.legallinksterms {
+    width: 100%;
+    height: 10%;
+    font-size: 12px;
+    color: #636763;
+}
+
+.legallinkscondition {
+    width: 100%;
+    height: 10%;
+    font-size: 12px;
+    color: #636763;
+}
+
+.legallinksprivacy {
+    width: 100%;
+    height: 10%;
+    font-size: 12px;
+    color: #636763;
+}
+
+.legallinksempty {
+    width: 100%;
+    height: 40%;
+    font-size: 12px;
+    color: #636763;
+}
+
+.socialmediatext {
+    width: 100%;
+    height: 20%;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: #636763;
+
+}
+
+.socialmediafb {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #636763;
+    font-size: 12px;
+}
+
+.socialmediatwi {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #636763;
+    font-size: 12px;
+}
+
+
+.socialmedialnkd {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #636763;
+    font-size: 12px;
+}
+
+.socialmediaempty {
+    width: 100%;
+    height: 40%;
+}

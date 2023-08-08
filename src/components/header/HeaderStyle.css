@@ -245,3 +245,83 @@
     color: black;
     cursor: pointer;
 }
+
+.handBurger {
+    height: 30px;
+    width: 30px;
+    display: none;
+    cursor: pointer;
+}
+
+.handBurger img {
+    height: 100%;
+    width: 100%;
+}
+
+
+@media only screen and (min-width:320px) and (max-width:758px) {
+    .handBurger {
+        display: block;
+    }
+
+    .firstList {
+        display: none;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: 25px;
+    }
+
+    .signUpBtn {
+        display: none;
+    }
+
+    .loginbtn {
+        display: none;
+    }
+
+    .dropDown {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        background-color: #0b120b;
+        left: 0;
+        top: 0;
+        display: block;
+    }
+
+    .menu {
+        height: 8%;
+        width: 100%;
+        font-size: 18px;
+        padding-left: 10px;
+    }
+
+    .menu1 {
+        display: flex;
+        justify-content: flex-end;
+        height: 5%;
+        width: 100%;
+    }
+
+    .menu1 span {
+        color: red;
+        font-size: 25px;
+        cursor: pointer;
+        transform: scale(1.0);
+        transition: all 350ms ease-in;
+        font-weight: 600;
+    }
+
+    .menu1 span:hover {
+        transition: all 350ms ease-in;
+        transform: scale(1.2);
+    }
+
+    .menu p {
+        cursor: pointer;
+    }
+
+}

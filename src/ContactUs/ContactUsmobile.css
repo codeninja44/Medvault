@@ -1,0 +1,170 @@
+@media only screen and (min-width:320px) and (max-width:580px) {
+
+    .ContactMain{
+        width: 100%;
+        height: 100vh;
+      }
+
+      .contacttextwrapper{
+        width: 100%;
+        height: 20vh;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align:  center;
+        flex-direction: column;
+    }
+
+    .contactustext{
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .contacticonwrapper{
+       width: 100%;
+       height: 40vh;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       flex-direction: column;
+    }
+
+    .contactadressdiv{
+       width: 100%;
+       height: 30%;
+    }
+
+    .contactaddressicon{
+        font-size: 40px;
+    }
+
+    .contactaddresstext{
+        font-size: 15px;
+    }
+
+    .contactphonenodiv{
+        width: 100%;
+        height: 30%;
+    }
+
+    .contactphonenoicon{
+        font-size: 40px; 
+    }
+
+    .contactphonenotext{
+        font-size: 15px;
+    }
+
+    .contactemaildiv{
+        width: 100%;
+        height: 30%;
+    }
+
+    .contactemailicon{
+        font-size: 40px;
+    }
+
+    .contactemailtext{
+        font-size: 15px 
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .ContactMain{
+        width: 100%;
+        height: 110vh;
+    }
+
+    .contacttextwrapper{
+        width: 100%;
+        height: 20vh;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align:  center;
+        flex-direction: column;
+    }
+
+    .contactustext{
+        font-size: 50px;
+        color: #0B120B;
+        font-weight: 700;
+    }
+    
+    .contacticonwrapper{
+        width: 100%;
+        height: 25vh;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .contactadressdiv{
+        width: 32%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contactaddressicon{
+        font-size: 80px;
+    }
+    
+    .contactaddresstext{
+        font-size: 18px
+    }
+    
+    .contactphonenodiv{
+        width: 32%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contactphonenoicon{
+        font-size: 80px;
+    }
+    
+    .contactphonenotext{
+        font-size: 18px
+    }
+    
+    .contactemaildiv{
+        width: 32%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contactemailicon{
+        font-size: 80px;
+    }
+    
+    .contactemailtext{
+        font-size: 18px 
+    }
+
+    .medlogo{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: flex-end;
+    }
+    
+    .medlogo img{
+        width: 40%;
+        height: 50%;
+    }
+}

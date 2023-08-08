@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import './LandingPage.css'
 import './Landingmobile.css'
 import { FaUserPlus, FaQuoteRight, FaFacebookF, FaTwitter, FaLinkedin } from "react-icons/fa"
@@ -6,16 +6,18 @@ import { MdHealthAndSafety, MdEmail, MdLocationOn } from "react-icons/md"
 import { BiSolidLock, BiLogoInstagramAlt } from "react-icons/bi"
 import { BsCheckLg, BsFillTelephoneFill } from "react-icons/bs"
 import Header from "../components/header/Header"
-
+import Footer from "../Footer/Footer"
 // import {FaQuoteRight,} from "react-icons/fa"
 
 
 
 const LandingPage = () => {
 
+
+
     return (
         <>
-            <Header/>
+            <Header />
             <div className="Main">
                 {/* <div className="Header">
                 <button className="Contus">contact Us</button>
@@ -146,8 +148,8 @@ const LandingPage = () => {
                                 effortlessly find the information
                                 they need.Say goodbye to information
                                 overload and embrace a streamlined
-                                experience that empowers healthcare
-                                providers to focus on what truly matters.
+                                experience that empowers you
+                                to focus on what truly matters.
                             </p>
                         </div>
                     </div>
@@ -202,7 +204,9 @@ const LandingPage = () => {
                         <div className="testimonialsboxholder">
                             <div className="testimonialsbox1">
                                 <div className="testimonialsbox1top">
-                                    <div className="testimonialscircle"></div>
+                                    <div className="testimonialscircle">
+                                        <img src="./src/assets/testifirstcircle.jpg" alt="testi1" />
+                                    </div>
                                     <p className="testimonialsname">Doctor Kelvin Ibe</p>
                                     <p className="testimonialstitle">General Health Practioner</p>
                                     <p className="testimonialsdesc">
@@ -215,7 +219,9 @@ const LandingPage = () => {
                             </div>
                             <div className="testimonialsbox2">
                                 <div className="testimonialsbox1top">
-                                    <div className="testimonialscircle"></div>
+                                    <div className="testimonialscircle">
+                                        <img src="./src/assets/testisecondcircle.jpg" alt="testi2" />
+                                    </div>
                                     <p className="testimonialsname">Nurse Mariam Sanni</p>
                                     <p className="testimonialstitle">Admin, Hope Clinic</p>
                                     <p className="testimonialsdesc">"MedVault's patient storage
@@ -227,7 +233,9 @@ const LandingPage = () => {
                             </div>
                             <div className="testimonialsbox3">
                                 <div className="testimonialsbox1top">
-                                    <div className="testimonialscircle"></div>
+                                    <div className="testimonialscircle">
+                                        <img src="./src/assets/testifourthcircle.jpg" alt="testi3" />
+                                    </div>
                                     <p className="testimonialsname">Nurse Victoria Trust</p>
                                     <p className="testimonialstitle">Hospital Admin</p>
                                     <p className="testimonialsdesc">"MedVault
@@ -239,7 +247,9 @@ const LandingPage = () => {
                             </div>
                             <div className="testimonialsbox3">
                                 <div className="testimonialsbox1top">
-                                    <div className="testimonialscircle"></div>
+                                    <div className="testimonialscircle">
+                                        <img src="./src/assets/testithirdcircle.jpg" alt="testi4" />
+                                    </div>
                                     <p className="testimonialsname">Nurse Mary Francis</p>
                                     <p className="testimonialstitle">Hospital Receptionist</p>
                                     <p className="testimonialsdesc">"MedVault
@@ -260,82 +270,8 @@ const LandingPage = () => {
                         </div>
                     </div>
                 </div>
-                <div className="footer">
-                    <div className="footerwrapper">
-                        <div className="leftfooter">
-                            <div className="medlogo">
-                                <img src="./src/assets/nonono-removebg-preview.png" alt="logo" />
-                            </div>
-                            <div className="footeraddress">
-                                <MdLocationOn />
-                                <p>161/163 Muyibi Street,
-                                    Olodi Apapa,
-                                    Lagos.
-                                </p>
-                            </div>
-                            <div className="footerphoneno">
-                                <BsFillTelephoneFill />
-                                <p>08131245060</p>
-                            </div>
-                            <div className="footeremail">
-                                <MdEmail />
-                                <p>thecurvemedvault@gmail.com</p>
-                            </div>
-                            <div className="footercopyrights">
-                                <p>© Copyright 2023 by  The Curve Africa. All right reserved.</p>
-                            </div>
-                        </div>
-                        <div className="footer2">
-                            <div className="quicklinkstext">
-                                <p>Quick Links</p>
-                            </div>
-                            <div className="quicklinkshome">
-                                <p>Home</p>
-                            </div>
-                            <div className="quicklinksabout">
-                                <p>About</p>
-                            </div>
-                            <div className="quicklinksservices">
-                                <p>Services</p>
-                            </div>
-                            <div className="quicklinkempty"></div>
-                        </div>
-                        <div className="footer2">
-                            <div className="legallinkstext">
-                                <p>Legal Links</p>
-                            </div>
-                            <div className="legallinksterms">
-                                <p>Terms</p>
-                            </div>
-                            <div className="legallinkscondition">
-                                <p>Conditions</p>
-                            </div>
-                            <div className="legallinksprivacy">
-                                <p>Privacy</p>
-                            </div>
-                            <div className="legallinksempty"></div>
-                        </div>
-                        <div className="footer2">
-                            <div className="socialmediatext">
-                                <p>Social Media</p>
-                            </div>
-                            <div className="socialmediafb">
-                                <FaFacebookF />
-                                <p>Facebook</p>
-                            </div>
-                            <div className="socialmediatwi">
-                                <FaTwitter />
-                                <p>Twitter</p>
-                            </div>
+                <Footer />
 
-                            <div className="socialmedialnkd">
-                                <FaLinkedin />
-                                <p>Linkedin</p>
-                            </div>
-                            <div className="socialmediaempty"></div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
 

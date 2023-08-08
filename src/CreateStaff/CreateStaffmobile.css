@@ -1,0 +1,246 @@
+/* Mobile Screen */
+@media only screen and (min-width:325px) and (max-width:580px) {
+
+    .createstaffmain{
+        width: 100%;
+        height: 97vh;
+        background-color: white;
+        
+    }
+
+    .createstaffwrapper{
+        width: 70%;
+        height: 90%;
+        background-color: #E0F7F6;
+    }
+
+    .createstafficondiv{
+        width: 100%;
+        height: 10%;
+    }
+
+    .createstafficonholder{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .createstaffcircle{
+        width: 60%;
+        height: 60%;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: gray;
+        font-size: 15px;
+    }
+
+    .createstafftextdiv{
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .createstafftext{
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .createstaffimagediv{
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .createstaffimageholder{
+        width: 15%;
+        height: 70%;
+        border-radius: 50%;
+        background-color: gray;
+    }
+
+    .createstaffinputdiv{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .createinput1{
+        width: 50%;
+        height: 20%;
+        border: none;
+        padding: 10px;
+        font-size: 10px;
+    }
+    
+    .createinput2{
+        width: 50%;
+        height: 20%;
+        border: none;
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    .createstaffbtndiv{
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+    
+    }
+    
+    .createstaffbtnholder{
+        width: 50%;
+        height: 60%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    
+    .createstaffbtn{
+        width: 50%;
+        height: 60%;
+        background-color: #1EBFC1;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        font-size: 10px;
+    }
+
+}
+
+
+/* Tablet Screen */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .createstaffmain{
+        width: 100%;
+        height:97vh;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .createstaffwrapper{
+        width: 50%;
+        height: 90%;
+        background-color: #E0F7F6;
+    }
+    
+    .createstafficondiv{
+        width: 100%;
+        height: 10%;
+    }
+    
+    .createstafficonholder{
+        width: 15%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .createstaffcircle{
+        width: 50%;
+        height: 60%;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: gray;
+        font-size: 15px;
+    }
+
+    .createstafftextdiv{
+        width: 100%;
+        height: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .createstafftext{
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .createstaffimagediv{
+        width: 100%;
+        height: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .createstaffimageholder{
+        width: 15%;
+        height: 70%;
+        border-radius: 50%;
+        background-color: gray;
+    }
+
+    .createstaffinputdiv{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .createinput1{
+        width: 50%;
+        height: 20%;
+        border: none;
+        padding: 10px;
+        font-size: 12px;
+    }
+    
+    .createinput2{
+        width: 50%;
+        height: 20%;
+        border: none;
+        padding: 10px;
+        font-size: 12px;
+
+    }
+    
+    .createstaffbtndiv{
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .createstaffbtnholder{
+        width: 50%;
+        height: 60%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    
+    .createstaffbtn{
+        width: 50%;
+        height: 70%;
+        background-color: #1EBFC1;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+}

@@ -1,30 +1,33 @@
 import style from './dashboard.module.css'
-import image from '../images/logo.png'
+import image from '../images/whiteLogo.png'
+import { useNavigate } from 'react-router-dom'
 // import image from '../images/home.png'
 
 function Dashboard() {
+
+    const nav = useNavigate()
 
     return (
         <div className={style.dashboardBody}>
             <div className={style.rightNav}>
                 <div className={style.top}>
-                    <div className={style.logo}>
+                    <div className={style.logo} onClick={() => nav('/')}>
                         <img src={image} alt="image" />
                     </div>
                     <div className={style.navSec}>
-                        <div className={style.firstNav}>
+                        <div className={style.firstNav} onClick={() => nav('/')}>
                             <div className={style.dashboardIcon1}>
                                 <img src="/homePage.png" alt="" />
                             </div>
                             <div className={style.text}>Home</div>
                         </div>
-                        <div className={style.secondNav}>
+                        <div className={style.secondNav} onClick={() => nav('/staffInfo')}>
                             <div className={style.dashboardIcon2}>
                                 <img src="./src/images/patientIcon.png" alt="" />
                             </div>
                             <div>Staffs</div>
-                        </div>''
-                        <div className={style.navs}>
+                        </div>
+                        <div className={style.navs} onClick={() => nav('/patient')}>
                             <div className={style.dashboardIcon}>
                                 <img src="./src/images/profileIcon.png" alt="" />
                             </div>
