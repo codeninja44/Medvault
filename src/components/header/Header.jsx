@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import "./HeaderStyle.css"
 // import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+// import LandingPage from '../../Landing Page/LandingPage'
 
 
 
@@ -27,6 +28,7 @@ const Header = () => {
                     <button className='loginbtn' onClick={() => nav('/login')}>Login</button>
                 </div>
             </div>
+            {/* <LandingPage /> */}
         </div>
     )
 }

@@ -9,13 +9,14 @@ import Dashboard from './dashboard/Dashboard'
 import StaffSpace from './staffDashboard/StaffSpace'
 import StaffsInfo from './staffs/StaffsInfo'
 import Patient from './patient/Patient'
+import LandingPage from './Landing Page/LandingPage'
 
 
 const App = () => {
   return (
 
     <HashRouter>
-      {/* <Header /> */}
+
       <Routes>
         <Route path='/registration' element={<Registration />} />
         <Route path='/login' element={<Login />} />
@@ -25,6 +26,7 @@ const App = () => {
         <Route path='/staffDashboard' element={<StaffSpace />} />
         <Route path='/staffInfo' element={<StaffsInfo />} />
         <Route path='/patient' element={<Patient />} />
+        <Route path='/' element={<LandingPage />} />
       </Routes>
     </HashRouter >
 
