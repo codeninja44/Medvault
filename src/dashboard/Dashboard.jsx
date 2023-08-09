@@ -1,10 +1,12 @@
 import style from './dashboard.module.css'
 import image from '../assets/whiteLogo.png'
 import { useNavigate } from 'react-router-dom'
-import homepage from '../assets/homePage.png'
+import homepage from '../assets/homepage.png'
 import patientIcon from '../assets/patientIcon.png'
-import profileIcon from '../assets/profileIcon.png'
-import dashboard from '../assets/dashboard.png'
+import profile from '../assets/profile.png'
+import staff from '../assets/staff.png'
+// import profileIcon from '../assets/profileIcon.png'
+// import dashboard from '../assets/dashboard.png'
 
 
 // import image from '../images/home.png'
@@ -29,13 +31,13 @@ function Dashboard() {
                         </div>
                         <div className={style.secondNav} onClick={() => nav('/staffInfo')}>
                             <div className={style.dashboardIcon2}>
-                                <img src={patientIcon} alt="patientIcon" />
+                                <img src={staff} alt="staff" />
                             </div>
                             <div>Staffs</div>
                         </div>
                         <div className={style.navs} onClick={() => nav('/patient')}>
                             <div className={style.dashboardIcon}>
-                                <img src={profileIcon} alt="profileIcon" />
+                                <img src={patientIcon} alt="patientIcon" />
                             </div>
                             <div>Patients</div>
                         </div>
@@ -46,7 +48,7 @@ function Dashboard() {
             <div className={style.leftSection}>
                 <div className={style.profile}>
                     <div className={style.profilePic}>
-                        <img src={dashboard} alt="dashboard" />
+                        <img src={profile} alt="profile" />
                         <p>View profile</p>
                     </div>
                     <div className={style.adminDetials}>

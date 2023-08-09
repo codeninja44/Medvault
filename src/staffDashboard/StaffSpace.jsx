@@ -1,7 +1,7 @@
 import style from './staffDashboard.module.css'
 import image from '../assets/logo.png'
 import profileIcon from '../assets/profileIcon.png'
-import dashboard from '../assets/dashboard.png'
+// import dashboard from '../assets/dashboard.png'
 // import image from '../images/home.png'
 
 function StaffSpace() {

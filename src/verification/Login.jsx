@@ -16,10 +16,12 @@ function Login() {
     const url = 'https://medvault.onrender.com/api/login'
 
     function login(e) {
+
         e.preventDefault()
         axios.post(url, loginInfo)
             .then(res => console.log(res))
-            .catch((err) => console.log('this is an error', err))
+            .catch((err) => console.log('this is an error', err));
+        nav('/dashboard')
     }
 
     return (

@@ -36,7 +36,6 @@ const VerifiedEmail = () => {
     const { token } = useParams();
     const [isVerified, setIsVerified] = useState(1)
     console.log(token)
-
     const nav = useNavigate()
 
     useEffect(() => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from './components/header/Header'
+// import Header from './components/header/Header'
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import Login from './verification/Login'
 import Registration from './registration/Registration'
@@ -12,7 +12,7 @@ import Patient from './patient/Patient'
 import LandingPage from './Landing Page/LandingPage'
 import ContactUs from './ContactUs/ContactUs'
 import CreateStaff from './CreateStaff/CreateStaff'
-import AboutUs from './AboutUs/AboutUs'
+// import ABOUTUS from './ABOUTFOLD/ABOUTUS'
 
 const App = () => {
   return (
@@ -31,7 +31,7 @@ const App = () => {
         <Route path='/' element={<LandingPage />} />
         <Route path='/contactPage' element={<ContactUs />} />
         <Route path='/createStaff' element={<CreateStaff />} />
-        <Route path='/aboutPage' element={<AboutUs />} />
+        {/* <Route path='/aboutPage' element={<ABOUTUS />} /> */}
       </Routes>
     </HashRouter >
 
