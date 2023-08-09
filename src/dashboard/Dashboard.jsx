@@ -1,10 +1,10 @@
 import style from './dashboard.module.css'
 import image from '../assets/whiteLogo.png'
 import { useNavigate } from 'react-router-dom'
-import homepage from '../assets/homepage.png'
 import patientIcon from '../assets/patientIcon.png'
 import profile from '../assets/profile.png'
 import staff from '../assets/staff.png'
+import home from '../assets/home.png'
 // import profileIcon from '../assets/profileIcon.png'
 // import dashboard from '../assets/dashboard.png'
 
@@ -25,7 +25,9 @@ function Dashboard() {
                     <div className={style.navSec}>
                         <div className={style.firstNav} onClick={() => nav('/')}>
                             <div className={style.dashboardIcon1}>
-                                <img src={homepage} alt="homepage" />
+                                <div>
+                                    <img src={home} alt="" />
+                                </div>
                             </div>
                             <div className={style.text}>Home</div>
                         </div>
