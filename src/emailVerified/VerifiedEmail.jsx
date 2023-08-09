@@ -29,36 +29,33 @@ import { useEffect, useState } from "react";
 // import "./Verify.css";
 import { BsFillNutFill, BsInfoCircle } from "react-icons/bs";
 import axios from "axios";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const VerifiedEmail = () => {
-    const location = useLocation();
-    const searchParams = new URLSearchParams(location.search);
-    const token = searchParams.get("token");
-    const [verificationStatus, setVerificationStatus] = useState("");
+    const { token } = useParams();
+    const [isVerified, setIsVerified] = useState(1)
+    console.log(token)
 
     const nav = useNavigate()
 
     useEffect(() => {
-        if (token) {
-            // Only initiate verification if the token is present in the URL
-            verifyUser(token);
-        }
-    }, [token]);
+        const verifyUser = () => {
+            axios
+                .post(`https://medvault.onrender.com/api/verifyemail/${token}`)
+                .then((res) => {
+                    console.log(res);
+                    setIsVerified(2)
+                })
+                .catch((err) => {
+                    console.log("Error response:", err);
+                    setIsVerified(3)
+                });
+        };
+        verifyUser()
+    }, []);
 
-    const verifyUser = (token) => {
-        axios
-            .put(`https://medvault.onrender.com/api/verifyemail/${token}`)
-            .then((res) => {
-                console.log(res);
-                setVerificationStatus("user verified");
-            })
-            .catch((err) => {
-                console.log("Error response:", err);
-                setVerificationStatus("error verifying user, try again");
-            });
-    };
+
 
     return (
         <>
@@ -67,38 +64,11 @@ const VerifiedEmail = () => {
                     <div className={style.emailImage}>
                         <img src={image} alt="Email" />
                     </div>
-                    <h3 className={style.headText}>Email Verified Successfully</h3>
+                    <h3 className={style.headText}>{isVerified === 1 ? "Verifying Email..." : isVerified === 2 ? "Email Verified Successfully" : "Verification Failed"}</h3>
                     <div className={style.clickBtn}>
                         <p>Click to login</p>
                         <button className={style.loginBtn} onClick={() => nav("/login")}>Login</button>
                     </div>
-                    {/* {verificationStatus === "user verified" ? (
-                        hj
-                    ) : null
-                        // (
-                        // <>
-                        //     <p>
-                        //         A link was sent to you at the email address provided
-                        //     </p>
-                        //     <p>
-                        //         Please verify your email address to complete the
-                        //         registration process
-                        //     </p>
-                        //     <p>
-                        //         Didnt get the email? Click{" "}
-                        //         <span
-                        //             style={{
-                        //                 color: "purple",
-                        //                 cursor: "pointer",
-                        //             }}
-                        //         >
-                        //             here
-                        //         </span>{" "}
-                        //         to resend email
-                        //     </p>
-                        // </>
-                        // )
-                    } */}
                 </div>
             </div>
         </>
