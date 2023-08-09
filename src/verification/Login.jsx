@@ -19,9 +19,12 @@ function Login() {
 
         e.preventDefault()
         axios.post(url, loginInfo)
-            .then(res => console.log(res))
+            .then(res => {
+                nav('/dashboard')
+                console.log(res)
+            })
             .catch((err) => console.log('this is an error', err));
-        nav('/dashboard')
+
     }
 
     return (
