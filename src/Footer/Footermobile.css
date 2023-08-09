@@ -1,157 +1,157 @@
-@media only screen and (min-width: 320px) and (max-width: 580px) {
+@media only screen and (min-width: 320px) and  (max-width: 580px) {
 
-    .footer {
-        width: 100%;
-        height: 40vh;
-    }
+.footer{
+    width: 100%;
+    height: 40vh;
+}
 
-    .footerwrapper {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
+.footerwrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
 
-    .leftfooter {
-        width: 38%;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-    }
+.leftfooter{
+    width: 38%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
 
-    .medlogo {
-        width: 100%;
-        height: 20%;
-        display: flex;
-        align-items: flex-end;
-    }
+.medlogo{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: flex-end;
+}
 
-    .medlogo img {
-        width: 40%;
-        height: 50%;
-    }
+.medlogo img{
+    width: 40%;
+    height: 50%;
+}
 
-    .footeraddress {
-        width: 100%;
-        height: 10%;
-        font-size: 8px;
-        color: #636763;
-    }
+.footeraddress{
+    width: 100%;
+    height: 10%;
+    font-size: 8px;
+    color: #636763;
+}
 
-    .footerphoneno {
-        width: 100%;
-        height: 10%;
-        font-size: 8px;
-        color: #636763;
-    }
+.footerphoneno{
+    width: 100%;
+    height: 10%;
+    font-size: 8px;
+    color: #636763;
+}
 
-    .footeremail {
-        width: 100%;
-        height: 10%;
-        font-size: 8px;
-        color: #636763;
-    }
+.footeremail{
+    width: 100%;
+    height: 10%;
+    font-size: 8px; 
+    color: #636763;
+}
 
-    .footercopyrights {
-        width: 100%;
-        height: 40%;
-        font-size: 8px;
-        color: #636763;
-    }
+.footercopyrights{
+    width: 100%;
+    height: 40%;
+    font-size: 8px;  
+    color: #636763;
+}
 
-    .footer2 {
-        width: 15%;
-        height: 100%;
-    }
+.footer2{
+    width: 15%;
+    height: 100%;
+}
 
-    .quicklinkstext {
-        width: 100%;
-        height: 20%;
-        background-color: #E0F7F6;
-        display: flex;
-        align-items: flex-end;
-        color: #636763;
-        font-size: 10px;
-    }
+.quicklinkstext{
+    width: 100%;
+    height: 20%;
+    background-color: #E0F7F6;
+    display: flex;
+    align-items: flex-end;
+    color: #636763; 
+    font-size: 10px;
+}
 
-    .quicklinkshome {
-        width: 100%;
-        height: 10%;
-        font-size: 8px;
-        color: #636763;
-    }
+.quicklinkshome{
+    width: 100%;
+    height: 10%;
+    font-size: 8px; 
+    color: #636763;
+}
 
-    .quicklinksabout {
-        width: 100%;
-        height: 10%;
-        font-size: 8px;
-        color: #636763;
-    }
+.quicklinksabout{
+    width: 100%;
+    height: 10%;
+    font-size: 8px; 
+    color: #636763;
+}
 
-    .quicklinksservices {
-        width: 100%;
-        height: 10%;
-        font-size: 8px;
-        color: #636763;
-    }
+.quicklinksservices{
+    width: 100%;
+    height: 10%;
+    font-size: 8px; 
+    color: #636763;
+}
 
-    .quicklinkempty {
-        width: 100%;
-        height: 40%;
-        font-size: 12px;
-        color: #636763;
-    }
+.quicklinkempty{
+    width: 100%;
+    height: 40%;
+    font-size: 12px; 
+    color: #636763;
+}
 
-    .legallinkstext {
-        width: 100%;
-        height: 20%;
-        background-color: #E0F7F6;
-        display: flex;
-        align-items: flex-end;
-        color: #636763;
-        font-size: 10px;
-    }
+.legallinkstext{
+    width: 100%;
+    height: 20%;
+    background-color: #E0F7F6;
+    display: flex;
+    align-items: flex-end;
+    color: #636763;
+    font-size: 10px;
+}
 
-    .legallinksterms {
-        width: 100%;
-        height: 10%;
-        font-size: 8px;
-        color: #636763;
-    }
+.legallinksterms{
+    width: 100%;
+    height: 10%;
+    font-size: 8px; 
+    color: #636763;
+}
 
-    .legallinkscondition {
-        font-size: 8px;
-    }
+.legallinkscondition{
+    font-size: 8px;
+}
 
-    .legallinksprivacy {
-        font-size: 8px;
-    }
+.legallinksprivacy{
+    font-size: 8px;
+}
 
-    .socialmediatext {
-        width: 100%;
-        height: 20%;
-        background-color: #E0F7F6;
-        display: flex;
-        align-items: flex-end;
-        color: #636763;
-        font-size: 10px;
-    }
+.socialmediatext{
+    width: 100%;
+    height: 20%;
+    background-color: #E0F7F6;
+    display: flex;
+    align-items: flex-end;
+    color: #636763;
+    font-size: 10px;
+}
 
-    .socialmediafb {
-        width: 100%;
-        height: 10%;
-        font-size: 8px;
-        color: #636763;
-        display: flex;
-    }
+.socialmediafb{
+    width: 100%;
+    height: 10%;
+    font-size: 8px; 
+    color: #636763; 
+    display: flex;
+}
 
-    .socialmediatwi {
-        font-size: 8px;
-    }
+.socialmediatwi{
+    font-size: 8px; 
+}
 
-    .socialmedialnkd {
-        font-size: 8px;
-    }
+.socialmedialnkd{
+    font-size: 8px;
+}
 
 }

@@ -19,9 +19,9 @@ const Header = () => {
                 </div>
                 <div className='firstList'>
                     <ul>
-                        <li>Home</li>
-                        <li>About us</li>
-                        <li>Contact</li>
+                        <li onClick={() => nav('/')}>Home</li>
+                        <li onClick={() => nav('/aboutPage')}>About us</li>
+                        <li onClick={() => nav('/contactPage')} > Contact</li>
                     </ul>
                 </div>
                 <div className='buttons'>
@@ -37,14 +37,14 @@ const Header = () => {
                     <div className="menu1">
                         <span onClick={() => setDropDown(false)}>X</span>
                     </div>
-                    <div className="menu"> <p>Home</p></div>
+                    <div className="menu" onClick={() => nav('/')}> <p>Home</p></div>
                     <div className="menu"> <p>About us</p></div>
-                    <div className="menu"> <p>Contact us</p></div>
+                    <div className="menu" onClick={() => nav('/contactPage')}> <p>Contact us</p></div>
                 </div>) : null
             }
 
             {/* <LandingPage /> */}
-        </div>
+        </div >
     )
 }
 

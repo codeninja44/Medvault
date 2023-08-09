@@ -187,6 +187,10 @@
     color: black;
 }
 
+.inputError {
+    color: red;
+}
+
 .regBtn {
     height: 30px;
     width: 60%;

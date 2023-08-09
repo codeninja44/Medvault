@@ -7,8 +7,8 @@ import VerifiedEmail from "../emailVerified/VerifiedEmail"
 // import { useEffect, useRef, useState } from "react"
 
 function Login() {
-    const [email, setEmail] = useState()
-    const [password, setPassword] = useState()
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
     const nav = useNavigate()
     const loginInfo = { email, password }
 

@@ -1,6 +1,8 @@
 import style from './staffsInfo.module.css'
+import { useNavigate } from 'react-router-dom'
 
 function StaffsInfo() {
+    const nav = useNavigate()
 
     return (
         <div className={style.staffsInfo}>
@@ -19,7 +21,7 @@ function StaffsInfo() {
                     </div>
                 </div>
                 <div className={style.line}></div>
-                <button className={style.create}>Create</button>
+                <button className={style.create} onClick={() => nav('/createStaff')} style={{ cursor: 'pointer' }}>Create</button>
             </div>
         </div>
     )

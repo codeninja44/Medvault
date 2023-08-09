@@ -2,6 +2,7 @@
     width: 100%;
     height: max-content;
     background-color: white;
+    color: black;
 }
 
 /* .Header{
@@ -281,7 +282,7 @@
 }
 
 .Features {
-    color: black;
+    color: #0B120B;
 }
 
 .Uniquefeaturesfirstbox {
@@ -308,6 +309,7 @@
 
 .Uniquelefttext {
     font-size: 20px;
+    color: #0B120B;
 }
 
 .Uniquerightbox {
@@ -366,6 +368,7 @@
 
 .secondtext {
     font-size: 20px;
+    color: #0B120B;
 }
 
 .Uniquefeaturethirdbox {
@@ -391,6 +394,7 @@
 
 .thirdlefttext {
     font-size: 20px;
+    color: #0B120B;
 }
 
 .thirdrightbox {
@@ -449,6 +453,7 @@
 
 .fourthtext {
     font-size: 20px;
+    color: #0B120B;
 }
 
 .Pricingdiv {
@@ -471,6 +476,10 @@
     height: 15%;
     font-size: 50px;
     font-weight: 700;
+}
+
+.pri {
+    color: #0B120B;
 }
 
 .cing {
@@ -689,6 +698,7 @@
     background-color: whitesmoke;
     border-radius: 20px;
     margin-left: 20px;
+    color: #0B120B;
 }
 
 .Emily {
@@ -722,7 +732,7 @@
 }
 
 .onials {
-    color: black;
+    color: #0B120B;
 }
 
 .testimonialsboxholder {
@@ -892,4 +902,3 @@
     background-color: #0d5253;
     color: white;
 }
-

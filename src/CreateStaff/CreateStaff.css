@@ -1,24 +1,24 @@
-.createstaffmain{
+.createstaffmain {
     width: 100%;
-    height:97vh;
+    height: 97vh;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.createstaffwrapper{
+.createstaffwrapper {
     width: 50%;
     height: 90%;
     background-color: #E0F7F6;
 }
 
-.createstafficondiv{
+.createstafficondiv {
     width: 100%;
     height: 10%;
 }
 
-.createstafficonholder{
+.createstafficonholder {
     width: 10%;
     height: 100%;
     display: flex;
@@ -26,7 +26,7 @@
     align-items: center;
 }
 
-.createstaffcircle{
+.createstaffcircle {
     width: 60%;
     height: 70%;
     border-radius: 50%;
@@ -34,12 +34,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: gray;
-    font-size: 15px;
+    color: black;
+    font-size: 23px;
     cursor: pointer;
+    padding-top: 4px;
+    padding-right: 3px;
 }
 
-.createstafftextdiv{
+.createstafftextdiv {
     width: 100%;
     height: 15%;
     display: flex;
@@ -47,12 +49,12 @@
     align-items: center;
 }
 
-.createstafftext{
+.createstafftext {
     font-size: 50px;
     font-weight: 700;
 }
 
-.createstaffimagediv{
+.createstaffimagediv {
     width: 100%;
     height: 20%;
     display: flex;
@@ -60,7 +62,7 @@
     align-items: center;
 }
 
-.createstaffimageholder{
+.createstaffimageholder {
     width: 15%;
     height: 70%;
     border-radius: 50%;
@@ -68,14 +70,14 @@
     object-fit: cover;
 }
 
-.createstaffimageholder img{
+.createstaffimageholder img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
     cursor: pointer;
 }
 
-.createstaffinputdiv{
+.createstaffinputdiv {
     width: 100%;
     height: 40%;
     display: flex;
@@ -84,21 +86,21 @@
     flex-direction: column;
 }
 
-.createinput1{
+.createinput1 {
     width: 50%;
     height: 20%;
     border: none;
     padding: 10px;
 }
 
-.createinput2{
+.createinput2 {
     width: 50%;
     height: 20%;
     border: none;
     padding: 10px;
 }
 
-.createstaffbtndiv{
+.createstaffbtndiv {
     width: 100%;
     height: 10%;
     display: flex;
@@ -106,7 +108,7 @@
 
 }
 
-.createstaffbtnholder{
+.createstaffbtnholder {
     width: 50%;
     height: 100%;
     display: flex;
@@ -114,7 +116,7 @@
     align-items: center;
 }
 
-.createstaffbtn{
+.createstaffbtn {
     width: 50%;
     height: 80%;
     background-color: #1EBFC1;

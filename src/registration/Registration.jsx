@@ -55,6 +55,7 @@ function Registration() {
                         <h4>REGISTRATION</h4>
                         <div className="inputSec">
                             <input type="text" placeholder="Facility Name" className="inputType" value={facilityname} onChange={(e) => setFacilityName(e.target.value)} />
+                            <p className="inputError">invalid user name</p>
                             <input type="text" placeholder="Facility Address" className="inputType" value={facilityaddress} onChange={(e) => setFacilityAddress(e.target.value)} />
                             <input type="text" placeholder="Facility Phone no" className="inputType" value={facilityphone} onChange={(e) => setFacilityPhoneNo(e.target.value)} />
                             <input type="text" placeholder="Email" className="inputType" value={email} onChange={(e) => setEmail(e.target.value)} />

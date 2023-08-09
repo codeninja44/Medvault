@@ -10,7 +10,9 @@ import StaffSpace from './staffDashboard/StaffSpace'
 import StaffsInfo from './staffs/StaffsInfo'
 import Patient from './patient/Patient'
 import LandingPage from './Landing Page/LandingPage'
-
+import ContactUs from './ContactUs/ContactUs'
+import CreateStaff from './CreateStaff/CreateStaff'
+import AboutUs from './AboutUs/AboutUs'
 
 const App = () => {
   return (
@@ -27,6 +29,9 @@ const App = () => {
         <Route path='/staffInfo' element={<StaffsInfo />} />
         <Route path='/patient' element={<Patient />} />
         <Route path='/' element={<LandingPage />} />
+        <Route path='/contactPage' element={<ContactUs />} />
+        <Route path='/createStaff' element={<CreateStaff />} />
+        <Route path='/aboutPage' element={<AboutUs />} />
       </Routes>
     </HashRouter >
 

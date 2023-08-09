@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import './LandingPage.css'
 import './Landingmobile.css'
 import { FaUserPlus, FaQuoteRight, FaFacebookF, FaTwitter, FaLinkedin } from "react-icons/fa"
@@ -7,13 +7,22 @@ import { BiSolidLock, BiLogoInstagramAlt } from "react-icons/bi"
 import { BsCheckLg, BsFillTelephoneFill } from "react-icons/bs"
 import Header from "../components/header/Header"
 import Footer from "../Footer/Footer"
-// import {FaQuoteRight,} from "react-icons/fa"
-
+// import heronurse from "../../assets/heronurse.png"
+import heronurse from '../assets/heronurse.png'
+import featuresimg1 from '../assets/featuresimg1.png'
+import featuresimg2 from '../assets/featuresimg2.png'
+import featuresimg3 from '../assets/featuresimg3.png'
+import featuresimg4 from '../assets/featuresimg4.png'
+import testifirstcircle from '../assets/testifirstcircle.jpg'
+import testisecondcircle from '../assets/testisecondcircle.jpg'
+import testifourthcircle from '../assets/testifourthcircle.jpg'
+import testithirdcircle from '../assets/testithirdcircle.jpg'
+// import { FaQuoteRight, } from "react-icons/fa"
+import { useNavigate } from "react-router-dom"
 
 
 const LandingPage = () => {
-
-
+    const nav = useNavigate()
 
     return (
         <>
@@ -28,13 +37,13 @@ const LandingPage = () => {
                             <p className="health">Health in <span className="safety">Safety</span></p>
                             <span className="with">with Medvault.</span>
                             <p className="trusted">Your trusted partner for secure,seamless and smart patient care.</p>
-                            <div className="btn"><button>Create Account</button></div>
+                            <div className="btn"><button onClick={() => nav('/registration')}>Create Account</button></div>
                         </div>
 
                     </div>
                     <div className="Heroright">
                         <div className="Herorightbox">
-                            <img src="./src/assets/nurse_nn-removebg-preview.png" alt="nurselogo" />
+                            <img src={heronurse} alt="nurselogo" />
                         </div>
                     </div>
                 </div>
@@ -85,7 +94,7 @@ const LandingPage = () => {
                         </div>
                         <div className="Uniquerightbox">
                             <div className="Uniquerightimgholder">
-                                <img src="./src/assets/undraw_medical_research_qg4d.png" alt="" />
+                                <img src={featuresimg1} alt="f1" />
                             </div>
                         </div>
                     </div>
@@ -93,7 +102,7 @@ const LandingPage = () => {
                 <div className="Uniquefeaturessecondbox">
                     <div className="secondboxleft">
                         <div className="secondboxleftimgholder">
-                            <img src="../src/assets/mobileapp.png" alt="" />
+                            <img src={featuresimg2} alt="f2" />
                         </div>
                     </div>
                     <div className="secondboxright">
@@ -130,14 +139,14 @@ const LandingPage = () => {
                     </div>
                     <div className="thirdrightbox">
                         <div className="thirdightimgholder">
-                            <img src="./src/assets/undraw_social_influencer_re_beim 1.png" alt="" />
+                            <img src={featuresimg3} alt="f3" />
                         </div>
                     </div>
                 </div>
                 <div className="Uniquefeaturesfourthbox">
                     <div className="fourthboxleft">
                         <div className="fourthboxleftimgholder">
-                            <img src="./src/assets/undraw_documents.png" alt="" />
+                            <img src={featuresimg4} alt="f4" />
                         </div>
                     </div>
                     <div className="fourthboxright">
@@ -157,7 +166,7 @@ const LandingPage = () => {
                 <div className="Pricingdiv">
                     <div className="Pricingcontainer">
                         <div className="Pricingtextholder">
-                            <p>Pri<span className="cing">cing</span></p>
+                            <p className="pri">Pri<span className="cing">cing</span></p>
                         </div>
                         <div className="Pricingboxholder">
                             <div className="pricingbox1">
@@ -205,7 +214,7 @@ const LandingPage = () => {
                             <div className="testimonialsbox1">
                                 <div className="testimonialsbox1top">
                                     <div className="testimonialscircle">
-                                        <img src="./src/assets/testifirstcircle.jpg" alt="testi1" />
+                                        <img src={testifirstcircle} alt="testi1" />
                                     </div>
                                     <p className="testimonialsname">Doctor Kelvin Ibe</p>
                                     <p className="testimonialstitle">General Health Practioner</p>
@@ -220,7 +229,7 @@ const LandingPage = () => {
                             <div className="testimonialsbox2">
                                 <div className="testimonialsbox1top">
                                     <div className="testimonialscircle">
-                                        <img src="./src/assets/testisecondcircle.jpg" alt="testi2" />
+                                        <img src={testisecondcircle} alt="testi2" />
                                     </div>
                                     <p className="testimonialsname">Nurse Mariam Sanni</p>
                                     <p className="testimonialstitle">Admin, Hope Clinic</p>
@@ -234,7 +243,7 @@ const LandingPage = () => {
                             <div className="testimonialsbox3">
                                 <div className="testimonialsbox1top">
                                     <div className="testimonialscircle">
-                                        <img src="./src/assets/testifourthcircle.jpg" alt="testi3" />
+                                        <img src={testifourthcircle} alt="testi3" />
                                     </div>
                                     <p className="testimonialsname">Nurse Victoria Trust</p>
                                     <p className="testimonialstitle">Hospital Admin</p>
@@ -248,7 +257,7 @@ const LandingPage = () => {
                             <div className="testimonialsbox3">
                                 <div className="testimonialsbox1top">
                                     <div className="testimonialscircle">
-                                        <img src="./src/assets/testithirdcircle.jpg" alt="testi4" />
+                                        <img src={testithirdcircle} alt="testi4" />
                                     </div>
                                     <p className="testimonialsname">Nurse Mary Francis</p>
                                     <p className="testimonialstitle">Hospital Receptionist</p>
@@ -266,7 +275,7 @@ const LandingPage = () => {
                     <div className="signupwrapper">
                         <p className="join">Join the Community and unlock a World of Healthcare Excellence.</p>
                         <div className="signupbtn">
-                            <button>Register</button>
+                            <button onClick={() => nav('/registration')}>Register</button>
                         </div>
                     </div>
                 </div>
