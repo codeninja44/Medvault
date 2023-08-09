@@ -2,6 +2,7 @@ import axios from "axios"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import VerifiedEmail from "../emailVerified/VerifiedEmail"
+import { HiOutlineArrowLeft } from 'react-icons/hi'
 // import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons"
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 // import { useEffect, useRef, useState } from "react"
@@ -31,6 +32,7 @@ function Login() {
         //             <img src="./src/images/Arrow 1.png" alt="" />
         //         </div>
             </div> */}
+            <div className='arrow' onClick={() => nav('/')}><HiOutlineArrowLeft /></div>
             <div className="registrationList">
                 <div className="regSection">
                     <h4>LOGIN</h4>

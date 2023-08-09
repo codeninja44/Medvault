@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import "./HeaderStyle.css"
 // import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import handBurger from '../../assets/handBurger.png'
+// import featuresimg1 from '../assets/featuresimg1.png'
+import logo from '../../assets/logo.png'
 // import LandingPage from '../../Landing Page/LandingPage'
 
 
@@ -15,7 +18,7 @@ const Header = () => {
         <div className='HeaderBody'>
             <div className='headerContent'>
                 <div className='headerLogo'>
-                    <img src="./src/images/nonono-removebg-preview 2.png" alt="" />
+                    <img src={logo} alt="logo" />
                 </div>
                 <div className='firstList'>
                     <ul>
@@ -28,7 +31,7 @@ const Header = () => {
                     <button className='signUpBtn' onClick={() => nav('/registration')}>Register</button>
                     <button className='loginbtn' onClick={() => nav('/login')}>Login</button>
                     <div className='handBurger' onClick={() => setDropDown(!dropDown)}>
-                        <img src="./src/images/handBurger.png" alt="" />
+                        <img src={handBurger} alt="handburgerMenu" />
                     </div>
                 </div>
             </div>

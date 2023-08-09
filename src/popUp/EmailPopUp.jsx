@@ -1,6 +1,6 @@
 import styles from './popUp.module.css'
 // import style from './mobile.module.css'
-import image from '../images/verifyMail.png'
+import image from '../assets/verifyMail.png'
 
 function EmailPopUp() {
 

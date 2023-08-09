@@ -3,6 +3,8 @@ import axios from 'axios'
 import { useEffect, useState, useRef } from 'react'
 import './registrationMobile.css'
 import EmailPopUp from '../popUp/EmailPopUp'
+import { HiOutlineArrowLeft } from 'react-icons/hi'
+
 
 
 function Registration() {
@@ -51,6 +53,7 @@ function Registration() {
                     </div>
                 </div> */}
                 <div className="registrationList">
+                    <div className='arrow' onClick={() => nav('/')}><HiOutlineArrowLeft /></div>
                     <div className="regSection">
                         <h4>REGISTRATION</h4>
                         <div className="inputSec">

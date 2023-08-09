@@ -1,5 +1,7 @@
 import style from './staffDashboard.module.css'
-import image from '../images/logo.png'
+import image from '../assets/logo.png'
+import profileIcon from '../assets/profileIcon.png'
+import dashboard from '../assets/dashboard.png'
 // import image from '../images/home.png'
 
 function StaffSpace() {
@@ -14,7 +16,7 @@ function StaffSpace() {
                     <div className={style.navSec}>
                         <div className={style.navs}>
                             <div className={style.dashboardIcon}>
-                                <img src="./src/images/profileIcon.png" alt="" />
+                                <img src={profileIcon} alt="profile" />
                             </div>
                             <div>Patients</div>
                         </div>
@@ -25,7 +27,7 @@ function StaffSpace() {
             <div className={style.leftSection}>
                 <div className={style.profile}>
                     <div className={style.profilePic}>
-                        <img src="./src/images/Ellipse 1870 (1).png" alt="" />
+                        <img src={dashboard} alt="dashboard" />
                         <p>View profile</p>
                     </div>
                     <div className={style.adminDetials}>

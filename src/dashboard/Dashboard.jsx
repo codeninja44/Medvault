@@ -1,6 +1,12 @@
 import style from './dashboard.module.css'
-import image from '../images/whiteLogo.png'
+import image from '../assets/whiteLogo.png'
 import { useNavigate } from 'react-router-dom'
+import homepage from '../assets/homePage.png'
+import patientIcon from '../assets/patientIcon.png'
+import profileIcon from '../assets/profileIcon.png'
+import dashboard from '../assets/dashboard.png'
+
+
 // import image from '../images/home.png'
 
 function Dashboard() {
@@ -17,19 +23,19 @@ function Dashboard() {
                     <div className={style.navSec}>
                         <div className={style.firstNav} onClick={() => nav('/')}>
                             <div className={style.dashboardIcon1}>
-                                <img src="/homePage.png" alt="" />
+                                <img src={homepage} alt="homepage" />
                             </div>
                             <div className={style.text}>Home</div>
                         </div>
                         <div className={style.secondNav} onClick={() => nav('/staffInfo')}>
                             <div className={style.dashboardIcon2}>
-                                <img src="./src/images/patientIcon.png" alt="" />
+                                <img src={patientIcon} alt="patientIcon" />
                             </div>
                             <div>Staffs</div>
                         </div>
                         <div className={style.navs} onClick={() => nav('/patient')}>
                             <div className={style.dashboardIcon}>
-                                <img src="./src/images/profileIcon.png" alt="" />
+                                <img src={profileIcon} alt="profileIcon" />
                             </div>
                             <div>Patients</div>
                         </div>
@@ -40,7 +46,7 @@ function Dashboard() {
             <div className={style.leftSection}>
                 <div className={style.profile}>
                     <div className={style.profilePic}>
-                        <img src="./src/images/Ellipse 1870 (1).png" alt="" />
+                        <img src={dashboard} alt="dashboard" />
                         <p>View profile</p>
                     </div>
                     <div className={style.adminDetials}>

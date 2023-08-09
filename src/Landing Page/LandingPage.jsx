@@ -7,7 +7,6 @@ import { BiSolidLock, BiLogoInstagramAlt } from "react-icons/bi"
 import { BsCheckLg, BsFillTelephoneFill } from "react-icons/bs"
 import Header from "../components/header/Header"
 import Footer from "../Footer/Footer"
-// import heronurse from "../../assets/heronurse.png"
 import heronurse from '../assets/heronurse.png'
 import featuresimg1 from '../assets/featuresimg1.png'
 import featuresimg2 from '../assets/featuresimg2.png'

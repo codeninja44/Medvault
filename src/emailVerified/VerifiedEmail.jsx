@@ -1,5 +1,5 @@
 import style from './verifiedEmail.module.css'
-import image from '../images/email.png'
+import image from '../assets/email.png'
 import { useNavigate } from 'react-router-dom'
 
 // function VerifiedEmail() {
