@@ -4,6 +4,8 @@ import image from '../assets/verifyMail.png'
 
 function EmailPopUp() {
 
+    const url = "https://medvault.onrender.com/api/resendverificationemail"
+
     return (
         <div className={styles.popUp} >
             <div className={styles.card}>
@@ -15,6 +17,9 @@ function EmailPopUp() {
                         <p className={styles.text}>A link has Been sent to your email</p>
                         <p className={styles.text}>Check email to verify...</p>
                     </div>
+                </div>
+                <div className={styles.btn}>
+                    <button className={styles.resendEmail}>Resend email</button>
                 </div>
             </div>
         </div>

@@ -63,12 +63,13 @@ const VerifiedEmail = () => {
                     <div className={style.emailImage}>
                         <img src={image} alt="Email" />
                     </div>
-                    <h3 className={style.headText}>{isVerified === 1 ? "Verifying Email..." : isVerified === 2 ? "Email Verified Successfully" : "Verification Failed"}</h3>
-                    <div className={style.clickBtn}>
+                    <h3 className={style.headText} style={{ paddingTop: "20px" }}>{isVerified === 1 ? "Verifying Email..." : isVerified === 2 ? <div className={style.clickBtn}>
+                        <p>Email Verified Successfully</p>
                         <p>Click to login</p>
                         <button className={style.loginBtn} onClick={() => nav("/login")}>Login</button>
-                    </div>
+                    </div> : "Verification Failed"}</h3>
                 </div>
+
             </div>
         </>
     );

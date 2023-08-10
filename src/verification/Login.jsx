@@ -45,7 +45,7 @@ function Login() {
                         <input type="text" placeholder="Email" className="inputType" value={email} onChange={(e) => setEmail(e.target.value)} />
                         <input type="Password" placeholder="Password" className="inputType" value={password} onChange={(e) => setPassword(e.target.value)} />
                     </div>
-                    <div className="forgetPassword">
+                    <div className="forgetPassword" onClick={() => nav('/forgetPassword')}>
                         <p>Forget password</p>
                     </div>
                     <button className="regBtn" onClick={login}>Login</button>

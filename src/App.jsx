@@ -12,6 +12,7 @@ import Patient from './patient/Patient'
 import LandingPage from './Landing Page/LandingPage'
 import ContactUs from './ContactUs/ContactUs'
 import CreateStaff from './CreateStaff/CreateStaff'
+import ForgetPassword from './forgetPassword/forgetPassword'
 // import ABOUTUS from './ABOUTFOLD/ABOUTUS'
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
         <Route path='/' element={<LandingPage />} />
         <Route path='/contactPage' element={<ContactUs />} />
         <Route path='/createStaff' element={<CreateStaff />} />
+        < Route path='/forgetPassword' element={<ForgetPassword />} />
         {/* <Route path='/aboutPage' element={<ABOUTUS />} /> */}
       </Routes>
     </HashRouter >

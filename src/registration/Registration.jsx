@@ -17,6 +17,7 @@ function Registration() {
     const [state, setState] = useState("")
     const [city, setCity] = useState("")
     const [LGA, setLga] = useState("")
+    const [errorMessage, setErrorMessage] = useState("")
     const userData = { facilityname, facilityaddress, facilityphone, email, password, state, city, LGA }
     // console.log(userData);
 
@@ -35,9 +36,13 @@ function Registration() {
         axios.post(url, userData)
             .then(res => {
                 console.log(res); setVerify(true); setLoadState(false)
+                setErrorMessage(res.data.message)
                 nav('/emailVerificaion')
             })
-            .catch((err) => console.log("The error ", err))
+            .catch((err) => {
+                console.log("The error ", err)
+                setErrorMessage(err.response.data.message)
+            })
     }
 
 
@@ -72,6 +77,7 @@ function Registration() {
                         <div className="sighSec">
                             <div className="signUp">Already have an account?<span className="signBtn" onClick={() => nav("/login")}>Sign up</span ></div>
                         </div>
+                        <p>{errorMessage}</p>
                     </div>
                 </div>
 
