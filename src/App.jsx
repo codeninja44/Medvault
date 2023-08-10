@@ -12,7 +12,7 @@ import Patient from './patient/Patient'
 import LandingPage from './Landing Page/LandingPage'
 import ContactUs from './ContactUs/ContactUs'
 import CreateStaff from './CreateStaff/CreateStaff'
-import ForgetPassword from './forgetPassword/forgetPassword'
+import ForgetPassword from './forgetPassword/ForgetPassword'
 // import ABOUTUS from './ABOUTFOLD/ABOUTUS'
 
 const App = () => {
