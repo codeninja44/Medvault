@@ -33,6 +33,7 @@ function Registration() {
     function register(e) {
         e.preventDefault()
         setLoadState(true)
+        localStorage.setItem("email", JSON.stringify(userData.email))
         axios.post(url, userData)
             .then(res => {
                 console.log(res); setVerify(true); setLoadState(false)
@@ -61,19 +62,19 @@ function Registration() {
                     <div className='arrow' onClick={() => nav('/')}><HiOutlineArrowLeft /></div>
                     <div className="regSection">
                         <h4>REGISTRATION</h4>
-                        <div className="inputSec">
-                            <input type="text" placeholder="Facility Name" className="inputType" value={facilityname} onChange={(e) => setFacilityName(e.target.value)} />
+                        <form className="inputSec" onSubmit={register}>
+                            <input type="text" placeholder="Facility Name" className="inputType" value={facilityname} onChange={(e) => setFacilityName(e.target.value)} required />
                             {/* <p className="inputError">invalid user name</p> */}
-                            <input type="text" placeholder="Facility Address" className="inputType" value={facilityaddress} onChange={(e) => setFacilityAddress(e.target.value)} />
-                            <input type="text" placeholder="Facility Phone no" className="inputType" value={facilityphone} onChange={(e) => setFacilityPhoneNo(e.target.value)} />
-                            <input type="text" placeholder="Email" className="inputType" value={email} onChange={(e) => setEmail(e.target.value)} />
-                            <input type="Password" placeholder="Password" className="inputType" value={password} onChange={(e) => setPassword(e.target.value)} />
+                            <input type="text" placeholder="Facility Address" className="inputType" value={facilityaddress} onChange={(e) => setFacilityAddress(e.target.value)} required />
+                            <input type="text" placeholder="Facility Phone no" className="inputType" value={facilityphone} onChange={(e) => setFacilityPhoneNo(e.target.value)} required />
+                            <input type="text" placeholder="Email" className="inputType" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                            <input type="Password" placeholder="Password" className="inputType" value={password} onChange={(e) => setPassword(e.target.value)} required />
                             {/* <input type="Password" placeholder="Confirm password" className="inputType" value={password} onChange={(e) => setPassword(e.target.value)} /> */}
-                            <input type="text" placeholder="State" className="inputType" value={state} onChange={(e) => setState(e.target.value)} />
-                            <input type="text" placeholder="City" className="inputType" value={city} onChange={(e) => setCity(e.target.value)} />
-                            <input type="text" placeholder="LGA" className="inputType" value={LGA} onChange={(e) => setLga(e.target.value)} />
-                        </div>
-                        <button className="regBtn" onClick={register}>{loadState ? 'Loading...' : "Register"}</button>
+                            <input type="text" placeholder="State" className="inputType" value={state} onChange={(e) => setState(e.target.value)} required />
+                            <input type="text" placeholder="City" className="inputType" value={city} onChange={(e) => setCity(e.target.value)} required />
+                            <input type="text" placeholder="LGA" className="inputType" value={LGA} onChange={(e) => setLga(e.target.value)} required />
+                            <button className="regBtn" type='submit'>{loadState ? 'Loading...' : "Register"}</button>
+                        </form>
                         <div className="sighSec">
                             <div className="signUp">Already have an account?<span className="signBtn" onClick={() => nav("/login")}>Sign up</span ></div>
                         </div>
