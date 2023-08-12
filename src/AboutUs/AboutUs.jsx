@@ -40,7 +40,7 @@ function ABOUTUS() {
               <div className='box1'><div className='im1'><MdHealthAndSafety /></div><div className='text1'><h2>Security</h2></div><div className='textt1'><h3>Our robust security protocols guarantee the utmost protection for your valuable information, allowing you to focus on what matters most.</h3></div></div>
               {/* <div className='box2'><div className='im2'></div><div className='text2'><h2>Money back  guarantee</h2></div><div className='textt2'><h3>Enjoy complete confidence with our 30 days money-back guarantee, giving you the freedom to try our services risk-free.</h3></div></div> */}
               <div className='box3'><div className='im3'><BsFillCloudArrowDownFill /></div><div className='text3'><h2>Unlimited Storage</h2></div><div className='textt3'><h3>Unlock the limitless potential of our unlimited data storage, empowering you to expand your digital horizons without restrictions.</h3></div></div>
-              <div className='box4'><div className='im4'><FaHandshakeSimple /></div><div className='text4'><h2>Partnership</h2></div><div className='textt4'><h3>Partnering with us as an investor opens doors to lucrative opportunities in thriving industries, maximizing your potential for high returns.</h3></div></div>
+              <div className='box4'><div className='im4'></div><div className='text4'><h2>Partnership</h2></div><div className='textt4'><h3>Partnering with us as an investor opens doors to lucrative opportunities in thriving industries, maximizing your potential for high returns.</h3></div></div>
             </div>
 
           </div>

@@ -6,25 +6,22 @@
     .registrationList {
         height: 100%;
         width: 100%;
+        margin-left: 0px;
+        padding: 0px;
     }
 
     .registration {
         padding: 0px;
+        background-color: brown;
     }
 
-
-
-    .registrationList {
-        margin-left: 0px;
-        padding: 0px;
-    }
 
     .regSection {
         border-radius: 0px;
     }
 
     .inputSec {
-        height: 75%;
+        height: 100%;
         width: 100%;
     }
 

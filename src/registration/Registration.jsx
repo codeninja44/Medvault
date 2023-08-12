@@ -70,7 +70,7 @@ function Registration() {
                 // setLga('')
             })
             .catch((err) => {
-                // toast.error(err.response.data.message)
+                toast.error(err.response.data.message)
                 setLoadState(false)
                 console.log("The error ", err)
                 // setErrorMessage(err.response.data.message)
@@ -92,7 +92,7 @@ function Registration() {
                     </div>
                 </div> */}
                 <div className="registrationList">
-                    <div className='arrow' onClick={() => nav('/')}><HiOutlineArrowLeft /></div>
+                    {/* <div className='arrow' onClick={() => nav('/')}><HiOutlineArrowLeft /></div> */}
                     <div className="regSection">
                         <h4>REGISTRATION</h4>
                         <form className="inputSec" onSubmit={register}>
