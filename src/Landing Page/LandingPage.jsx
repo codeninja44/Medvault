@@ -18,6 +18,7 @@ import testifourthcircle from '../assets/testifourthcircle.jpg'
 import testithirdcircle from '../assets/testithirdcircle.jpg'
 // import { FaQuoteRight, } from "react-icons/fa"
 import { useNavigate } from "react-router-dom"
+import video from '../assets/aboutVideo.mp4'
 
 
 const LandingPage = () => {
@@ -160,6 +161,14 @@ const LandingPage = () => {
                                 to focus on what truly matters.
                             </p>
                         </div>
+                    </div>
+                </div>
+                <div className="MVvideodiv">
+                    <div className="custom-video-container">
+                        <video autoPlay muted controls loop poster="./src/assets/emr.jpg">
+                            <source src={video} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
                 <div className="Pricingdiv">

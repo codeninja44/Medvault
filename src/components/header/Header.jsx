@@ -41,8 +41,10 @@ const Header = () => {
                         <span onClick={() => setDropDown(false)}>X</span>
                     </div>
                     <div className="menu" onClick={() => nav('/')} style={{ color: 'white' }}> <p>Home</p></div>
-                    <div className="menu" style={{ color: 'white' }}> <p>About us</p></div>
+                    <div className="menu" style={{ color: 'white' }} onClick={() => nav('/aboutPage')}> <p>About us</p></div>
                     <div className="menu" onClick={() => nav('/contactPage')} style={{ color: 'white' }}> <p>Contact us</p></div>
+                    <div className="menu" style={{ color: 'white' }} onClick={() => nav('/registration')}> <p>Registration</p></div>
+                    <div className="menu" style={{ color: 'white' }} onClick={() => nav('/login')}> <p>Login</p></div>
                 </div>) : null
             }
 

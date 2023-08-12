@@ -902,3 +902,34 @@
     background-color: #0d5253;
     color: white;
 }
+
+.MVvideodiv {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+
+.custom-video-container {
+    width: 93%;
+    height: 95%;
+    border-radius: 10px;
+}
+
+.custom-video-container video {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: fill;
+}
+
+.custom-video-container video::-webkit-media-controls-timeline {
+    display: none;
+}
+
+.custom-video-container video::-webkit-media-controls {
+    display: none;
+}

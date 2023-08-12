@@ -104,7 +104,7 @@ function Registration() {
                             <input type="password" placeholder="Password" className="inputType" value={password} onChange={(e) => setPassword(e.target.value)} required />
                             {/* <input type="Password" placeholder="Confirm password" className="inputType" value={password} onChange={(e) => setPassword(e.target.value)} /> */}
                             <input type="text" placeholder="State" className="inputType" value={state} onChange={(e) => setState(e.target.value)} required />
-                            <input type='file' accept='/image*/' placeholder='image' className="inputType" onChange={File} />
+                            <input type='file' accept='/image*/' placeholder='Facility logo' className="inputType" onChange={File} />
                             <input type="text" placeholder="City" className="inputType" value={city} onChange={(e) => setCity(e.target.value)} required />
                             <input type="text" placeholder="LGA" className="inputType" value={LGA} onChange={(e) => setLga(e.target.value)} required />
                             <button className="regBtn" type='submit'>{loadState ? 'Loading...' : "Register"}</button>

@@ -547,6 +547,16 @@
         height: 30%;
     }
 
+    .MVvideodiv {
+        width: 100%;
+        height: 30vh;
+    }
+
+    .custom-video-container {
+        width: 80%;
+        height: 100%;
+    }
+
 }
 
 @media only screen and (min-width: 580px) and (max-width: 1024px) {
@@ -661,6 +671,11 @@
 
     .signupbtn button {
         font-size: 12px;
+    }
+
+    .MVvideodiv {
+        width: 100%;
+        height: 50vh;
     }
 
 }
