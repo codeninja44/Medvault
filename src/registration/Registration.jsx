@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from 'react'
 import './registrationMobile.css'
 import EmailPopUp from '../popUp/EmailPopUp'
 import { HiOutlineArrowLeft } from 'react-icons/hi'
+import toast, { Toaster } from 'react-hot-toast'
 
 
 
@@ -17,8 +18,8 @@ function Registration() {
     const [state, setState] = useState("")
     const [city, setCity] = useState("")
     const [LGA, setLga] = useState("")
-    const [errorMessage, setErrorMessage] = useState("")
-    const userData = { facilityname, facilityaddress, facilityphone, email, password, state, city, LGA }
+    const [hospitalLogo, setHospitalLogo] = useState('')
+    // const userData = { facilityname, facilityaddress, facilityphone, email, password, state, city, LGA, image }
     // console.log(userData);
 
     const nav = useNavigate()
@@ -29,22 +30,54 @@ function Registration() {
     useEffect(() => {
     }, [loadState])
 
+    const File = (e) => {
+        const file = e.target.files[0]
+        setHospitalLogo(file)
+        console.log(file)
+    }
+
+    const data = new FormData()
+    data.append("facilityname", facilityname)
+    data.append("facilityaddress", facilityaddress)
+    data.append("facilityphone", facilityphone)
+    data.append("email", email)
+    data.append("password", password)
+    // data.append("confirmPassword", confirmPassword)
+    data.append("state", state)
+    data.append("city", city)
+    data.append("LGA", LGA)
+    data.append("hospitalLogo", hospitalLogo)
+
 
     function register(e) {
         e.preventDefault()
         setLoadState(true)
-        localStorage.setItem("email", JSON.stringify(userData.email))
-        axios.post(url, userData)
+        localStorage.setItem("email", JSON.stringify(data.email))
+        axios.post(url, data, {
+            header: { "Content-type": "multipart/form-data" }
+        })
             .then(res => {
                 console.log(res); setVerify(true); setLoadState(false)
-                setErrorMessage(res.data.message)
+                // setErrorMessage(res.data.message)
                 nav('/emailVerificaion')
+                // setFacilityName('')
+                // setFacilityAddress('')
+                // setFacilityPhoneNo('')
+                // setEmail('')
+                // setPassword('')
+                // setState('')
+                // setCity('')
+                // setLga('')
             })
             .catch((err) => {
+                // toast.error(err.response.data.message)
+                setLoadState(false)
                 console.log("The error ", err)
-                setErrorMessage(err.response.data.message)
+                // setErrorMessage(err.response.data.message)
             })
     }
+
+
 
 
     return (
@@ -67,10 +100,11 @@ function Registration() {
                             {/* <p className="inputError">invalid user name</p> */}
                             <input type="text" placeholder="Facility Address" className="inputType" value={facilityaddress} onChange={(e) => setFacilityAddress(e.target.value)} required />
                             <input type="text" placeholder="Facility Phone no" className="inputType" value={facilityphone} onChange={(e) => setFacilityPhoneNo(e.target.value)} required />
-                            <input type="text" placeholder="Email" className="inputType" value={email} onChange={(e) => setEmail(e.target.value)} required />
-                            <input type="Password" placeholder="Password" className="inputType" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                            <input type="email" placeholder="Email" className="inputType" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                            <input type="password" placeholder="Password" className="inputType" value={password} onChange={(e) => setPassword(e.target.value)} required />
                             {/* <input type="Password" placeholder="Confirm password" className="inputType" value={password} onChange={(e) => setPassword(e.target.value)} /> */}
                             <input type="text" placeholder="State" className="inputType" value={state} onChange={(e) => setState(e.target.value)} required />
+                            <input type='file' accept='/image*/' placeholder='image' className="inputType" onChange={File} />
                             <input type="text" placeholder="City" className="inputType" value={city} onChange={(e) => setCity(e.target.value)} required />
                             <input type="text" placeholder="LGA" className="inputType" value={LGA} onChange={(e) => setLga(e.target.value)} required />
                             <button className="regBtn" type='submit'>{loadState ? 'Loading...' : "Register"}</button>
@@ -78,7 +112,6 @@ function Registration() {
                         <div className="sighSec">
                             <div className="signUp">Already have an account?<span className="signBtn" onClick={() => nav("/login")}>Sign up</span ></div>
                         </div>
-                        <p>{errorMessage}</p>
                     </div>
                 </div>
 

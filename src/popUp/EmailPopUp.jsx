@@ -1,8 +1,10 @@
 import styles from './popUp.module.css'
 // import style from './mobile.module.css'
 import image from '../assets/verifyMail.png'
+import { useNavigate } from 'react-router-dom'
 
 function EmailPopUp() {
+    const nav = useNavigate()
 
     const url = "https://medvault.onrender.com/api/resendverificationemail"
 
@@ -19,7 +21,7 @@ function EmailPopUp() {
                     </div>
                 </div>
                 <div className={styles.btn}>
-                    <button className={styles.resendEmail}>Resend email</button>
+                    <button className={styles.resendEmail} onClick={() => nav('/resendEmail')}>Resend email</button>
                 </div>
             </div>
         </div>

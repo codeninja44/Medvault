@@ -1,10 +1,10 @@
-@media only screen and (min-width: 320px) and  (max-width: 580px) {
-    .Header{
+@media only screen and (min-width: 320px) and (max-width: 580px) {
+    .Header {
         width: 100%;
         height: 10vh;
     }
 
-    .MainHero{
+    .MainHero {
         width: 100%;
         height: 70vh;
         padding: 10px;
@@ -15,12 +15,12 @@
         justify-content: space-between;
     }
 
-    .Heroleft{
+    .Heroleft {
         width: 100%;
         height: 60%;
     }
 
-    .Herolefttext{
+    .Herolefttext {
         width: 100%;
         height: 100%;
         text-align: center;
@@ -28,21 +28,21 @@
         flex-direction: column;
     }
 
-    .health{
+    .health {
         font-size: 25px;
         font-weight: 700;
     }
 
-    .with{
+    .with {
         font-size: 25px;
         font-weight: 700;
     }
 
-    .trusted{
+    .trusted {
         font-size: 15px;
     }
 
-    .btn{
+    .btn {
         width: 100%;
         height: 30%;
         display: flex;
@@ -50,27 +50,27 @@
 
     }
 
-    .btn button{
+    .btn button {
         width: 30%;
         height: 50%;
         font-size: 10px;
 
     }
 
-    .Heroright{
+    .Heroright {
         width: 100%;
         height: 60%;
         background-color: #E0F7F6;
     }
 
-    .Herorightbox{
+    .Herorightbox {
         width: 100%;
         height: 100%;
     }
 
-    .Ourservicediv{
+    .Ourservicediv {
         width: 100%;
-        height:100vh;
+        height: 100vh;
 
         display: flex;
         justify-content: space-between;
@@ -78,12 +78,12 @@
         flex-direction: column;
     }
 
-    .Ourservicecontainer{
+    .Ourservicecontainer {
         width: 100%;
         height: 100%;
     }
 
-    .Ourservice{
+    .Ourservice {
         width: 100%;
         height: 10%;
         font-size: 30px;
@@ -92,7 +92,7 @@
         align-items: center;
     }
 
-    .Emrimgholder{
+    .Emrimgholder {
         width: 100%;
         height: 90%;
         display: flex;
@@ -101,71 +101,71 @@
         align-items: center;
     }
 
-    .Emrbox1{
+    .Emrbox1 {
         width: 90%;
         height: 30%;
     }
 
-    .createicon{
+    .createicon {
         font-size: 40px;
     }
 
-    .createtext{
+    .createtext {
         font-size: 10px;
     }
 
-    .descemr1{
+    .descemr1 {
         width: 100%;
         font-size: 8px;
     }
 
-    .Emrbox2{
+    .Emrbox2 {
         width: 90%;
         height: 30%;
     }
 
-    .safeicon{
+    .safeicon {
         font-size: 40px;
     }
 
-    .safetext{
-        font-size: 20px; 
-    }
-
-    .descemr2{
-        width: 100%;
-        font-size: 15px;
-    }
-
-    .Emrbox3{
-        width: 90%;
-        height: 30%;
-    }
-
-    .protecticon{
-        font-size: 40px;
-    }
-
-    .protecttext{
+    .safetext {
         font-size: 20px;
     }
 
-    .descemr3{
+    .descemr2 {
         width: 100%;
         font-size: 15px;
     }
 
-    .Uniquefeaturesdiv{
-        width: 100%;
-        height: max-content; 
+    .Emrbox3 {
+        width: 90%;
+        height: 30%;
     }
 
-    .Uniquefeaturetextbox{
+    .protecticon {
+        font-size: 40px;
+    }
+
+    .protecttext {
+        font-size: 20px;
+    }
+
+    .descemr3 {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .Uniquefeaturesdiv {
+        width: 100%;
+        height: max-content;
+    }
+
+    .Uniquefeaturetextbox {
         width: 100%;
         height: 10vh;
     }
 
-    .Uniquefeaturestext{
+    .Uniquefeaturestext {
         width: 100;
         height: 100%;
         display: flex;
@@ -173,11 +173,11 @@
         align-items: center;
     }
 
-    .Uniquep{
+    .Uniquep {
         font-size: 30px;
     }
 
-    .Uniquefeaturesfirstbox{
+    .Uniquefeaturesfirstbox {
         width: 100%;
         height: 50vh;
         display: flex;
@@ -187,13 +187,13 @@
         text-align: center;
     }
 
-    .Uniqueleftbox{
+    .Uniqueleftbox {
         width: 100%;
         height: 50%;
 
     }
 
-    .Uniquelefttextholder{
+    .Uniquelefttextholder {
         width: 100%;
         height: 50%;
         display: flex;
@@ -202,28 +202,28 @@
 
     }
 
-    .Uniquelefttext{
+    .Uniquelefttext {
         width: 85%;
         font-size: 15px;
         margin-top: 60px;
     }
-    
-    .Uniquerightbox{
+
+    .Uniquerightbox {
         width: 100%;
         height: 50%;
     }
 
-    .Uniquerightimgholder{
+    .Uniquerightimgholder {
         width: 100%;
         height: 100%;
     }
 
-    .Uniquerightimgholder img{
+    .Uniquerightimgholder img {
         width: 100%;
         height: 100%;
     }
 
-.Uniquefeaturessecondbox{
+    .Uniquefeaturessecondbox {
         width: 100%;
         height: 50vh;
         display: flex;
@@ -233,32 +233,32 @@
         text-align: center;
     }
 
-    .secondboxleft{
-        width: 100%;
-        height: 50%; 
-    }
-
-    .secondboxleftimgholder{
-        width: 100%;
-        height: 100%;
-    }
-
-    .secondboxright{
+    .secondboxleft {
         width: 100%;
         height: 50%;
     }
 
-    .secondtextholder{
+    .secondboxleftimgholder {
+        width: 100%;
+        height: 100%;
+    }
+
+    .secondboxright {
+        width: 100%;
+        height: 50%;
+    }
+
+    .secondtextholder {
         width: 85%;
         height: 100%;
     }
 
-    .secondtext{
+    .secondtext {
         font-size: 15px;
         margin-top: 30px;
     }
 
-    .Uniquefeaturethirdbox{
+    .Uniquefeaturethirdbox {
         width: 100%;
         height: 50vh;
         display: flex;
@@ -268,32 +268,32 @@
         text-align: center;
     }
 
-    .thirdleftbox{
+    .thirdleftbox {
         width: 100%;
         height: 50%;
     }
 
-    .thirdlefttextholder{
+    .thirdlefttextholder {
         width: 85%;
         height: 50%;
     }
 
-    .thirdlefttext{
+    .thirdlefttext {
         font-size: 15px;
         margin-top: 30px;
     }
 
-    .thirdrightbox{
+    .thirdrightbox {
         width: 100%;
-        height: 50%; 
+        height: 50%;
     }
 
-    .thirdightimgholder{
+    .thirdightimgholder {
         width: 100%;
         height: 100%;
     }
 
-    .Uniquefeaturesfourthbox{
+    .Uniquefeaturesfourthbox {
         width: 100%;
         height: 50vh;
         display: flex;
@@ -304,50 +304,50 @@
         padding: 10px;
     }
 
-    .fourthboxleft{
+    .fourthboxleft {
         width: 100%;
         height: 50%;
     }
 
-    .fourthboxleftimgholder{
+    .fourthboxleftimgholder {
         width: 100%;
         height: 100%;
     }
 
-    .fourthboxleftimgholder img{
+    .fourthboxleftimgholder img {
         width: 50%;
         height: 100%;
     }
 
-    .fourthboxright{
+    .fourthboxright {
         width: 100%;
         height: 50%;
     }
 
-    .fourthtextholder{
+    .fourthtextholder {
         width: 100%;
         height: 100%;
     }
 
-    .fourthtext{
+    .fourthtext {
         font-size: 15px;
         margin-top: 30px;
     }
 
-    .Pricingdiv{
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center; 
+    .Pricingdiv {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .Pricingcontainer{
+    .Pricingcontainer {
         width: 100%;
         height: 100%;
     }
 
-    .Pricingtextholder{
+    .Pricingtextholder {
         width: 100%;
         height: 10vh;
         font-size: 30px;
@@ -356,7 +356,7 @@
         align-items: center;
     }
 
-    .Pricingboxholder{
+    .Pricingboxholder {
         width: 95%;
         height: 90%;
         display: flex;
@@ -365,65 +365,65 @@
         align-items: center;
     }
 
-    .pricingbox1{
+    .pricingbox1 {
         width: 90%;
         height: 28%;
         /* background-color: gray; */
     }
 
-    .pricingnaira{
+    .pricingnaira {
         font-size: 25px;
     }
 
-    .regular{
+    .regular {
         font-size: 18px;
     }
 
-    .regulardesc{
+    .regulardesc {
         font-size: 18px;
     }
 
-    .pricingbox1{
+    .pricingbox1 {
         width: 90%;
         height: 28%;
         /* background-color: gray; */
     }
 
-    .pricingbox2{
+    .pricingbox2 {
         width: 90%;
         height: 28%;
     }
 
-    .pricenaira2{
+    .pricenaira2 {
         font-size: 25px;
     }
 
-    .Medium{
+    .Medium {
         font-size: 18px;
     }
 
-    .mediumdesc{
+    .mediumdesc {
         font-size: 18px;
     }
 
-    .pricingbox3{
+    .pricingbox3 {
         width: 90%;
-        height: 28%; 
+        height: 28%;
     }
 
-    .pricenaira3{
+    .pricenaira3 {
         font-size: 25px;
     }
 
-    .Premium{
-        font-size: 18px; 
-    }
-
-    .premiumdesc{
+    .Premium {
         font-size: 18px;
     }
 
-    .quote{
+    .premiumdesc {
+        font-size: 18px;
+    }
+
+    .quote {
         width: 100%;
         height: 15vh;
         display: flex;
@@ -432,7 +432,7 @@
         font-size: 15px;
     }
 
-    .quoteholder{
+    .quoteholder {
         width: 95%;
         height: 100%;
         margin-right: 15px;
@@ -441,29 +441,29 @@
         align-items: center;
     }
 
-    .quote{
+    .quote {
         font-size: 10px;
     }
 
-    .Emily{
+    .Emily {
         font-size: 15px;
     }
 
-    .Emily{
+    .Emily {
         font-size: 30px;
         margin-top: 10px;
     }
 
-    .testimonialsmaindiv{
+    .testimonialsmaindiv {
         width: 100%;
         height: 100vh;
     }
 
-    .testimonialscontainer{
+    .testimonialscontainer {
         width: 100%;
     }
 
-    .testimonialstextholder{
+    .testimonialstextholder {
         width: 100%;
         height: 10%;
         font-size: 30px;
@@ -472,7 +472,7 @@
         align-items: center;
     }
 
-    .testimonialsboxholder{
+    .testimonialsboxholder {
         width: 100%;
         height: 100%;
         display: flex;
@@ -481,50 +481,50 @@
         align-items: center;
     }
 
-    .testimonialsbox1{
+    .testimonialsbox1 {
         width: 80%;
         height: 21%;
     }
 
-    .testimonialsbox2{
+    .testimonialsbox2 {
         width: 80%;
         height: 21%;
     }
 
-    .testimonialsbox3{
+    .testimonialsbox3 {
         width: 80%;
         height: 21%;
     }
 
-    .testimonialscircle{
+    .testimonialscircle {
         width: 15%;
         height: 25%;
     }
 
-    .testimonialsname{
+    .testimonialsname {
         font-size: 20px;
     }
 
-    .testimonialstitle{
+    .testimonialstitle {
         font-size: 15px;
     }
 
-    .testimonialsdesc{
+    .testimonialsdesc {
         font-size: 12px;
     }
 
-    .testimonialsbox1bottom{
+    .testimonialsbox1bottom {
         font-size: 20px;
         padding: 10px;
     }
 
-    .downsignupmaindiv{
+    .downsignupmaindiv {
         width: 100%;
         height: 15vh;
         background-color: white;
     }
 
-    .signupwrapper{
+    .signupwrapper {
         width: 95%;
         height: 100%;
         margin-top: 30px;
@@ -538,27 +538,129 @@
         margin-top: 60px;
     }
 
-    .join{
+    .join {
         font-size: 15px;
     }
 
-    .signupbtn{
-        width:30% ;
+    .signupbtn {
+        width: 30%;
         height: 30%;
     }
 
-    
 }
-    
 
-@media only screen and (min-width:  580px) and (max-width: 1024px) {
+@media only screen and (min-width: 580px) and (max-width: 1024px) {
 
-    .MainHero{
+    .MainHero {
         width: 100%;
-        height: 85vh;
+        height: 60vh;
         padding: 20px;
         display: flex;
         justify-content: space-between;
-        background-color: red;
     }
+
+
+    .Herolefttext {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .health {
+        font-size: 60px;
+        margin-top: 70px;
+    }
+
+    .with {
+        font-size: 60px;
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn button {
+        width: 50%;
+        height: 50%;
+        font-size: 15px;
+    }
+
+    .Emrimgholder {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .Uniquefeaturesdiv {
+        width: 100%;
+        height: max-content;
+        /* background-color: aqua; */
+        margin-bottom: 50px;
+    }
+
+    .Pricingboxholder {
+        width: 100%;
+        height: 60%;
+    }
+
+    .quote {
+        width: 100%;
+        height: 15vh;
+    }
+
+    .testimonialsboxholder {
+        width: 100%;
+        height: 50%;
+    }
+
+    .testimonialscircle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: contain;
+    }
+
+    .testimonialsname {
+        color: #0B120B;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .testimonialstitle {
+        color: #636763;
+        font-size: 15px;
+    }
+
+    .testimonialsdesc {
+        font-size: 12px;
+    }
+
+    .downsignupmaindiv {
+        width: 100%;
+        height: 10vh;
+    }
+
+    .join {
+        font-size: 20px;
+        font-weight: 600;
+        color: #F5F5F5;
+    }
+
+    .signupbtn {
+        width: 10%;
+        height: 40%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .signupbtn button {
+        font-size: 12px;
+    }
+
 }

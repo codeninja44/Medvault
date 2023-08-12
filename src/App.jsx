@@ -14,30 +14,37 @@ import ContactUs from './ContactUs/ContactUs'
 import CreateStaff from './CreateStaff/CreateStaff'
 import Forget from './forget/Forget'
 import Resendmail from './resendEmail/ResendEmail'
+import { Toaster } from 'react-hot-toast'
+import AboutUs from './AboutUs/AboutUs'
+
 // import ABOUTUS from './ABOUTFOLD/ABOUTUS'
 
 const App = () => {
   return (
+    <>
+      <Toaster />
+      <HashRouter>
 
-    <HashRouter>
+        <Routes>
+          <Route path='/registration' element={<Registration />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/verification/:token' element={<VerifiedEmail />} />
+          <Route path='/emailVerificaion' element={<EmailPopUp />} />
+          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/staffDashboard' element={<StaffSpace />} />
+          <Route path='/staffInfo' element={<StaffsInfo />} />
+          <Route path='/patient' element={<Patient />} />
+          <Route path='/' element={<LandingPage />} />
+          <Route path='/contactPage' element={<ContactUs />} />
+          <Route path='/createStaff' element={<CreateStaff />} />
+          < Route path='/forgetPassword' element={<Forget />} />
+          <Route path='/resendEmail' element={<Resendmail />} />
+          <Route path='/aboutPage' element={<AboutUs />} />
+          {/* <Route path='/aboutPage' element={<ABOUTUS />} /> */}
+        </Routes>
+      </HashRouter >
+    </>
 
-      <Routes>
-        <Route path='/registration' element={<Registration />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/verification/:token' element={<VerifiedEmail />} />
-        <Route path='/emailVerificaion' element={<EmailPopUp />} />
-        <Route path='/dashboard' element={<Dashboard />} />
-        <Route path='/staffDashboard' element={<StaffSpace />} />
-        <Route path='/staffInfo' element={<StaffsInfo />} />
-        <Route path='/patient' element={<Patient />} />
-        <Route path='/' element={<LandingPage />} />
-        <Route path='/contactPage' element={<ContactUs />} />
-        <Route path='/createStaff' element={<CreateStaff />} />
-        < Route path='/forgetPassword' element={<Forget />} />
-        <Route path='/resendEmail' element={<Resendmail />} />
-        {/* <Route path='/aboutPage' element={<ABOUTUS />} /> */}
-      </Routes>
-    </HashRouter >
 
 
 

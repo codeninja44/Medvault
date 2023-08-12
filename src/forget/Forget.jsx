@@ -3,7 +3,7 @@ import style from './forgetPassword.module.css'
 import axios from 'axios'
 import EmailPopUp from '../popUp/EmailPopUp'
 function ForgetPassword() {
-    const [mail, setmail] = useState('')
+    const [email, setemail] = useState('')
     const url = "https://medvault.onrender.com/api/forgotpassword"
     const [loadState, setLoadState] = useState(false)
     const [verify, setVerify] = useState(false)
@@ -13,12 +13,13 @@ function ForgetPassword() {
     function forgetPassword(e) {
         e.preventDefault()
         setLoadState(true)
-        axios.post(url, mail)
+        axios.post(url, { email })
             .then(res => {
                 console.log(res); setVerify(true); setLoadState(false)
                 seterrorMessage(res.data.message)
             })
             .catch((err) => {
+                setLoadState(false)
                 console.log("The error ", err)
                 seterrorMessage(err.response.data.message)
             })
@@ -32,7 +33,7 @@ function ForgetPassword() {
                 <div className={style.top}>
                     <h3>Forget Password</h3>
                 </div>
-                <input type="email" placeholder='Email' value={mail} className={style.input} onChange={(e) => setmail(e.target.value)} />
+                <input type="email" placeholder='Email' value={email} className={style.input} onChange={(e) => setemail(e.target.value)} />
                 <p className={style.error}>{errorMessage}</p>
                 <button className={style.sendMail} onClick={forgetPassword}>{loadState ? 'a moment...' : 'send email'}</button>
             </div>
