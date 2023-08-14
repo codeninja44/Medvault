@@ -2,7 +2,7 @@
 
 import './Alert.css'
 
-function Alert() {
+function ALERT() {
 
 
   return (
@@ -17,4 +17,4 @@ function Alert() {
   )
 }
 
-export default Alert
+export default ALERT
