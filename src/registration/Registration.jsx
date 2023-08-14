@@ -52,12 +52,12 @@ function Registration() {
     function register(e) {
         e.preventDefault()
         setLoadState(true)
-        localStorage.setItem("email", JSON.stringify(data.email))
         axios.post(url, data, {
             header: { "Content-type": "multipart/form-data" }
         })
             .then(res => {
                 console.log(res); setVerify(true); setLoadState(false)
+                localStorage.setItem("email", JSON.stringify(res.data.data.email))
                 // setErrorMessage(res.data.message)
                 nav('/emailVerificaion')
                 // setFacilityName('')
@@ -66,7 +66,7 @@ function Registration() {
                 // setEmail('')
                 // setPassword('')
                 // setState('')
-                // setCity('')
+                // setCity('') 
                 // setLga('')
             })
             .catch((err) => {

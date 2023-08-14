@@ -13,10 +13,11 @@ import LandingPage from './Landing Page/LandingPage'
 import ContactUs from './ContactUs/ContactUs'
 import CreateStaff from './CreateStaff/CreateStaff'
 import Forget from './forget/Forget'
-import Resendmail from './resendEmail/ResendEmail'
 import { Toaster } from 'react-hot-toast'
 import AboutUs from './AboutUs/AboutUs'
-
+import ResendEmail from './resendEmail/ResendEmail'
+import ResendPopup from './resendPopup/ResendPopup'
+import Alert from './forgetPasswordVerified/ALERT'
 // import ABOUTUS from './ABOUTFOLD/ABOUTUS'
 
 const App = () => {
@@ -38,8 +39,10 @@ const App = () => {
           <Route path='/contactPage' element={<ContactUs />} />
           <Route path='/createStaff' element={<CreateStaff />} />
           < Route path='/forgetPassword' element={<Forget />} />
-          <Route path='/resendEmail' element={<Resendmail />} />
+          <Route path='/resendEmail' element={<ResendEmail />} />
           <Route path='/aboutPage' element={<AboutUs />} />
+          <Route path='/resendPop' element={<ResendPopup />} />
+          <Route path='/alert' element={<Alert />} />
           {/* <Route path='/aboutPage' element={<ABOUTUS />} /> */}
         </Routes>
       </HashRouter >

@@ -1,0 +1,80 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+.contain {
+  background-color: #171717a0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.card {
+  height: 45%;
+  width: 30%;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background-color: #E8F5FF;
+}
+
+/* .img{
+  background-color:#fff;
+  height: 30%;
+
+  margin-top: 1.5%;
+  background-size: contain;
+  width: 30%;
+  border-radius: 90px;
+  background-image: url('');
+
+} */
+.passtext {
+  font: 1em sans-serif;
+  font-size: 25px;
+  font-weight: 100;
+}
+
+.btnlog {
+  height: 50px;
+  width: 100px;
+  border: none;
+  font: 1em sans-serif;
+  font-size: 15px;
+  color: #fff;
+  background-color: #1EBFC1;
+  border-radius: 5px;
+
+
+}
+
+@media only screen and (min-width:320px) and (max-width: 750px) {
+  .card {
+    height: 40%;
+    width: 80%;
+    display: flex;
+  }
+
+  .passtext {
+    font-size: 20px;
+    font-size: 800;
+  }
+
+  .btnlog {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width:760px) and (max-width:1036px) {
+  .card {
+    height: 45%;
+    width: 50%;
+    text-align: center;
+  }
+}

@@ -5,8 +5,7 @@
 
 .contacttextwrapper{
     width: 100%;
-    height: 20vh;
-    background-color: white;
+    height: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,70 +19,164 @@
     font-weight: 700;
 }
 
-.contacticonwrapper{
+.contactusbody{
     width: 100%;
-    height: 25vh;
+    height: 60vh;
+    /* background-color:#1EBFC1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.contactusbodyholder{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contactusleft{
+    width: 40%;
+    height: 95%;
+    background-color: #EDEDED;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.contactusleft input{
+   width: 80%;
+   height: 10%;
+   padding: 10px;
+   border: none;
+   border-radius: 5px;
+   font-size: 10px;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.contactusbtn{
+    width: 80%;
+    height: 10%;
+    background-color: #1EBFC1;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.contactusright{
+    width: 40%;
+    height: 95%;
+    background-color: #0B120B;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.contactusemail{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.contactusemailholder{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
-}
-
-.contactadressdiv{
-    width: 32%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
+    color: white;
 }
 
-.contactaddressicon{
-    font-size: 80px;
-    color: #1EBFC1;
+.contactusemailicon{
+    font-size: 40px;
 }
 
-.contactaddresstext{
-    font-size: 20px
+.contactusemailtext{
+    font-size: 15px;
 }
 
-.contactphonenodiv{
-    width: 32%;
-    height: 100%;
+.contactusphone{
+    width: 100%;
+    height: 10%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
 }
 
-.contactphonenoicon{
-    font-size: 80px;
-    color: #1EBFC1;
-}
-
-.contactphonenotext{
-    font-size: 20px
-}
-
-.contactemaildiv{
-    width: 32%;
+.contactusphoneholder{
+    width: 100%;
     height: 100%;
+    padding: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
+    color: white;
 }
 
-.contactemailicon{
-    font-size: 80px;
-    color: #1EBFC1;
+.contactusphoneicon{
+    font-size: 40px;
 }
 
-.contactemailtext{
-    font-size: 20px 
+.contactusphonetest{
+    font-size: 15px;
 }
 
+.contactusaddress{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
 
+.contactusaddressholder{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
 
+.contactusaddyicon{
+    font-size: 40px;
+}
+
+.contactusaddytext{
+    font-size: 15px;
+}
+
+.contactustime{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center; 
+}
+
+.contactustimeholder{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.contactustimeicon{
+    font-size: 37px;
+}
+
+.contactustimetext{
+    font-size: 15px; 
+}
 

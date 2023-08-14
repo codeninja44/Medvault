@@ -75,6 +75,14 @@ const LandingPage = () => {
                         </div>
                     </div>
                 </div>
+                <div className="MVvideodiv">
+                    <div className="custom-video-container">
+                        <video autoPlay muted controls loop poster="./src/assets/emr.jpg">
+                            <source src={video} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
                 <div className="Uniquefeaturesdiv">
                     <div className="Uniquefeaturetextbox">
                         <div className="Uniquefeaturestext">
@@ -163,14 +171,7 @@ const LandingPage = () => {
                         </div>
                     </div>
                 </div>
-                <div className="MVvideodiv">
-                    <div className="custom-video-container">
-                        <video autoPlay muted controls loop poster="./src/assets/emr.jpg">
-                            <source src={video} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
+
                 <div className="Pricingdiv">
                     <div className="Pricingcontainer">
                         <div className="Pricingtextholder">

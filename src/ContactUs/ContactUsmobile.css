@@ -21,53 +21,72 @@
         font-weight: 700;
     }
 
-    .contacticonwrapper{
-       width: 100%;
-       height: 40vh;
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-       flex-direction: column;
-    }
-
-    .contactadressdiv{
-       width: 100%;
-       height: 30%;
-    }
-
-    .contactaddressicon{
-        font-size: 40px;
-    }
-
-    .contactaddresstext{
-        font-size: 15px;
-    }
-
-    .contactphonenodiv{
+    .contactusbody{
         width: 100%;
-        height: 30%;
+        height: 80vh;
     }
 
-    .contactphonenoicon{
-        font-size: 40px; 
+    .contactusbodyholder{
+        width: 60%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
     }
 
-    .contactphonenotext{
-        font-size: 15px;
-    }
-
-    .contactemaildiv{
+    .contactusleft{
         width: 100%;
-        height: 30%;
+        height: 48%;
     }
 
-    .contactemailicon{
-        font-size: 40px;
+    .contactusleft input{
+        font-size: 8px;
     }
 
-    .contactemailtext{
-        font-size: 15px 
+    .contactusbtn{
+        width: 60%;
+        height: 10%;
+        font-size: 10px;
     }
+    
+    .contactusright{
+        width: 100%;
+        height: 48%;
+    }
+
+    .contactusemailicon{
+        font-size: 20px;
+    }
+
+    .contactusemailtext{
+        font-size: 10px;
+    }
+
+    .contactusphoneicon{
+        font-size: 20px;
+    }
+
+    .contactusphonetest{
+        font-size: 10px; 
+    }
+
+    .contactusaddyicon{
+        font-size: 20px;
+    }
+
+    .contactusaddytext{
+        font-size: 10px;
+    }
+
+    .contactustimeicon{
+        font-size: 20px;
+    }
+
+    .contactustimetext{
+        font-size: 10px; 
+    }
+
 }
 
 
@@ -94,77 +113,58 @@
         color: #0B120B;
         font-weight: 700;
     }
-    
-    .contacticonwrapper{
+
+    .contactusbody{
         width: 100%;
-        height: 25vh;
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .contactadressdiv{
-        width: 32%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .contactaddressicon{
-        font-size: 80px;
-    }
-    
-    .contactaddresstext{
-        font-size: 18px
-    }
-    
-    .contactphonenodiv{
-        width: 32%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .contactphonenoicon{
-        font-size: 80px;
-    }
-    
-    .contactphonenotext{
-        font-size: 18px
-    }
-    
-    .contactemaildiv{
-        width: 32%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .contactemailicon{
-        font-size: 80px;
-    }
-    
-    .contactemailtext{
-        font-size: 18px 
+        height: 30vh;
     }
 
-    .medlogo{
-        width: 100%;
-        height: 20%;
-        display: flex;
-        align-items: flex-end;
+    .contactusbodyholder{
+        width: 60%;
+        height: 100%;
+    }
+
+    .contactusleft{
+        width: 45%;
+        height: 95%;
     }
     
-    .medlogo img{
-        width: 40%;
-        height: 50%;
+    .contactusright{
+        width: 45%;
+        height: 95%;
     }
+
+    .contactusemailicon{
+        font-size: 20px;
+    }
+
+    .contactusemailtext{
+        font-size: 10px;
+    }
+
+    .contactusphoneicon{
+        font-size: 20px;
+    }
+
+    .contactusphonetest{
+        font-size: 10px; 
+    }
+
+    .contactusaddyicon{
+        font-size: 20px;
+    }
+
+    .contactusaddytext{
+        font-size: 10px;
+    }
+
+    .contactustimeicon{
+        font-size: 20px;
+    }
+
+    .contactustimetext{
+        font-size: 10px; 
+    }
+    
+    
 }

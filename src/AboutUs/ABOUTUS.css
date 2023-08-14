@@ -23,18 +23,18 @@
 
 .upbody {
   width: 95%;
-  height: 30%;
+  height: 20%;
   background-color: #1EBFC1;
   border-radius: 10px;
-  background-image: url('assets/Untit.png');
+  /* background-image: url('assets/Untit.png'); */
   background-image: url(https://media.istockphoto.com/id/1434687410/photo/portrait-of-happy-and-successful-african-american-doctor-man-working-inside-office-clinic.jpg?s=612x612&w=0&k=20&c=kKvUmzkotN3FrWTGgS3ar2mm4SLwlV3cbiNC-Bp12YI=);
-  /* filter: blur(10px); */
-
+  margin-top: 30px;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  /* background-size: contain; */
+  background-size: cover;
+  background-position: top;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-position: center;
   /* background-image: url(https://media.istockphoto.com/id/860618040/photo/doctor-with-stethoscope-in-pocket-and-medical-symbols-icons-in-the-background.jpg?s=612x612&w=0&k=20&c=O5e2G0tdvI_UJv653NTLr_wuruyrTjKASjj1WSVTlp4=); */
   /* background-image: url('assets/m'); */
@@ -62,20 +62,12 @@
   border-radius: 20px;
   font-style: normal;
   color: #E0F7F6;
-
-
-
   font-size: 50px;
-
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  margin-top: 14%;
   align-items: center;
   display: flex;
   justify-content: center;
-
-  margin-right: 6%;
   box-shadow: 5px 5px 5px #e0f7f679;
-  /* background-color:#1EBFC1; */
 }
 
 .benno {
@@ -95,10 +87,9 @@
   justify-content: center;
   display: flex;
   align-items: center;
-  border-radius: 5px;
   align-items: center;
-  font-family: sans-serif;
-  font-size: 20px;
+  /* font-family: sans-serif; */
+  font-size: 30px;
   color: #0B120B;
 }
 
@@ -284,7 +275,6 @@
   align-items: center;
   text-align: center;
   font-family: sans-serif;
-  background-color: red;
 }
 
 .draphquote {
@@ -299,51 +289,34 @@
 }
 
 .mission {
-  height: 49%;
+  height: 25%;
   width: 80%;
-  margin-top: 7%;
-
-  background-color: #fff;
   display: flex;
-  flex-direction: row;
-  padding: 5px;
-
   border-radius: 10px;
-
-  /* justify-content: center; */
-  /* align-items: center; */
-
-}
-
-.mi {
-  background-color: #2e8d8f;
-  border-radius: 4px;
-  font: 1em sans-serif;
-  width: 37%;
-  height: 7%;
-  font-size: me;
-  font-size: x-large;
-  font: small-caps;
-  color: #ffff;
-
-  margin-left: 35%;
-  margin-top: 0.1%;
-  margin-bottom: 0.%;
-  display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
 }
 
 .content {
-  height: 100%;
+  height: 90%;
   width: 65%;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   flex-direction: column;
-  margin-left: 180px;
-
-
-  /* background-color: blueviolet; */
 }
+
+.mi {
+  width: 50%;
+  height: 20%;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
 
 .immcom {
   height: 98%;
@@ -374,70 +347,17 @@
   border-radius: 100% 0 0 100% / 50%;
 }
 
-/*  */
-/*  */
-/* .bit1{
-    background-color:whitesmoke;
-    height: 100%;
-    width: 80%;
-  }
-  .bas2{
-    height: 25%;
-    margin-left: 29%;
-    width: 50%;
-    margin-top: 2%;
-    display: flex;
-    background-color: white;
-    padding: 2px;
-    border-radius: 5px;
-  } */
-/* .pic2{
-    background-color: bisque;
-    height: 50%;
-    width: 19%;
-    margin-left: 1%;
-    margin-top: 7%;
-    border-radius: 30px;
-  }
-  .bit2{
-    background-color:whitesmoke;
-    height: 100%;
-    width: 80%;
-  }
-  .bas3{
-    height: 25%;
-    margin-left: 29%;
-    width: 50%;
-    display: flex;
-    margin-top: 2%;
-    padding: 2px;
-    border-radius: 5px;
-    background-color: white;
-  } */
-/* .pic3{
-    background-color: bisque;
-    height: 50%;
-    width: 19%;
-    margin-left: 1%;
-    margin-top: 7%;
-    border-radius: 30px;
-  }
-  .bit3{
-    background-color: whitesmoke;
-    height: 100%;
-    width: 80%;
-  } */
+
 
 .write {
   background-color: #E0F7F6;
   height: 70%;
   width: 70%;
-  margin-left: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 15px;
-  text-align: center;
-  margin-top: 3%;
-  /* font-size: 70px; */
-  font: 1em sans-serif;
+  font-size: 15px;
   border-radius: 10px;
   align-items: center;
   box-shadow: 5px 5px 15px #3558613a;
@@ -446,7 +366,6 @@
 .kk {
   display: flex;
   gap: 1%;
-
   font: 1em sans-serif;
   margin-top: 3%;
   margin-left: 1%;
