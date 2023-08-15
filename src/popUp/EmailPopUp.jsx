@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 function EmailPopUp() {
     const nav = useNavigate()
 
-    const url = "https://medvault.onrender.com/api/resendverificationemail"
+    // const url = "https://medvault.onrender.com/api/resendverificationemail"
 
     return (
         <div className={styles.popUp} >

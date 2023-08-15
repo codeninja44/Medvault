@@ -19,6 +19,7 @@ function Registration() {
     const [city, setCity] = useState("")
     const [LGA, setLga] = useState("")
     const [hospitalLogo, setHospitalLogo] = useState('')
+    const [confirmPassword, setConfirmPassword] = useState()
     // const userData = { facilityname, facilityaddress, facilityphone, email, password, state, city, LGA, image }
     // console.log(userData);
 
@@ -42,11 +43,11 @@ function Registration() {
     data.append("facilityphone", facilityphone)
     data.append("email", email)
     data.append("password", password)
-    // data.append("confirmPassword", confirmPassword)
     data.append("state", state)
     data.append("city", city)
     data.append("LGA", LGA)
     data.append("hospitalLogo", hospitalLogo)
+    data.append("confirmPassword", confirmPassword)
 
 
     function register(e) {
@@ -102,6 +103,7 @@ function Registration() {
                             <input type="text" placeholder="Facility Phone no" className="inputType" value={facilityphone} onChange={(e) => setFacilityPhoneNo(e.target.value)} required />
                             <input type="email" placeholder="Email" className="inputType" value={email} onChange={(e) => setEmail(e.target.value)} required />
                             <input type="password" placeholder="Password" className="inputType" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                            <input type="password" placeholder="Confirm password" className="inputType" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
                             {/* <input type="Password" placeholder="Confirm password" className="inputType" value={password} onChange={(e) => setPassword(e.target.value)} /> */}
                             <input type="text" placeholder="State" className="inputType" value={state} onChange={(e) => setState(e.target.value)} required />
                             <input type='file' accept='/image*/' placeholder='Facility logo' className="inputType" onChange={File} />

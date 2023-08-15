@@ -71,10 +71,11 @@
   }
 }
 
-@media only screen and (min-width:760px) and (max-width:1036px) {
+@media only screen and (min-width:751px) and (max-width:1036px) {
   .card {
     height: 45%;
-    width: 50%;
+    width: 70%;
     text-align: center;
+    background-color: red;
   }
 }
