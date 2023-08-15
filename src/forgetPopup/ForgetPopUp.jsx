@@ -1,4 +1,4 @@
-import styles from './ForgetPopup.module.css'
+import styles from './forgetPopup.module.css'
 import image from '../assets/verifyMail.png'
 
 
