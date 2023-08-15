@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import style from './forgetPassword.module.css'
 import axios from 'axios'
-import EmailPopUp from '../popUp/EmailPopUp'
+import ForgetPopup from '../forgetPopup/ForgetPopUp'
 function ForgetPassword() {
     const [email, setemail] = useState('')
     const url = "https://medvault.onrender.com/api/forgotpassword"
@@ -38,7 +38,7 @@ function ForgetPassword() {
                 <button className={style.sendMail} onClick={forgetPassword}>{loadState ? 'a moment...' : 'send email'}</button>
             </div>
             {
-                verify ? <EmailPopUp /> : null
+                verify ? <ForgetPopup /> : null
             }
         </div>
     )

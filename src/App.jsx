@@ -19,6 +19,7 @@ import ResendEmail from './resendEmail/ResendEmail'
 import ResendPopup from './resendPopup/ResendPopup'
 import ALERT from './forgetPasswordVerified/ALERT'
 import Password from './FORGOTPASSWORD2/Password'
+import ForgetPopup from './forgetPopup/ForgetPopUp'
 // import ABOUTUS from './ABOUTFOLD/ABOUTUS'
 
 const App = () => {
@@ -45,6 +46,7 @@ const App = () => {
           <Route path='/resendPop' element={<ResendPopup />} />
           <Route path='/alert' element={<ALERT />} />
           <Route path='/newPassword' element={<Password />} />
+          <Route path='/forgetPopup' element={<ForgetPopup />} />
           {/* <Route path='/aboutPage' element={<ABOUTUS />} /> */}
         </Routes>
       </HashRouter >

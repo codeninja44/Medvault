@@ -1,0 +1,86 @@
+.popUp {
+    height: 100vh;
+    width: 100%;
+    background: rgba(31, 31, 31, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.card {
+    height: 50%;
+    width: 30%;
+    background-color: #1EBFC1;
+}
+
+.popUpImg {
+    height: 45%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popUpImg img {
+    height: 80%;
+    width: 30%;
+}
+
+.popUpText {
+    height: 35%;
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    font-size: 22px;
+}
+
+.innerContent {
+    height: auto;
+    width: 60%;
+    color: white;
+}
+
+.text {
+    text-align: center;
+}
+
+.resendEmail {
+    height: 50px;
+    width: 120px;
+    background-color: aliceblue;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.resendEmail:hover {
+    background-color: rgb(85, 165, 236);
+}
+
+.btn {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30PX;
+}
+
+@media only screen and (min-width:320px) and (max-width:758px) {
+    .card {
+        height: 45%;
+        width: 85%;
+    }
+
+    .innerContent {
+        height: auto;
+        width: 80%;
+    }
+
+}
