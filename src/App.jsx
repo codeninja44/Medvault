@@ -17,9 +17,9 @@ import { Toaster } from 'react-hot-toast'
 import AboutUs from './AboutUs/AboutUs'
 import ResendEmail from './resendEmail/ResendEmail'
 import ResendPopup from './resendPopup/ResendPopup'
-import ALERT from './forgetPasswordVerified/ALERT'
 import Password from './FORGOTPASSWORD2/Password'
 import ForgetPopup from './forgetPopup/ForgetPopUp'
+import Alert from './forgetVerified/Alert'
 // import ABOUTUS from './ABOUTFOLD/ABOUTUS'
 
 const App = () => {
@@ -44,9 +44,9 @@ const App = () => {
           <Route path='/resendEmail' element={<ResendEmail />} />
           <Route path='/aboutPage' element={<AboutUs />} />
           <Route path='/resendPop' element={<ResendPopup />} />
-          <Route path='/alert' element={<ALERT />} />
           <Route path='/newPassword' element={<Password />} />
           <Route path='/forgetPopup' element={<ForgetPopup />} />
+          <Route path='/alert' element={<Alert />} />
           {/* <Route path='/aboutPage' element={<ABOUTUS />} /> */}
         </Routes>
       </HashRouter >
