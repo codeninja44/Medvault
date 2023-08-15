@@ -1,4 +1,4 @@
-import './Alert.css'
+import './alert.css'
 
 function Alert() {
 
