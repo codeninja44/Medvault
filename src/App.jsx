@@ -44,7 +44,7 @@ const App = () => {
           <Route path='/resendEmail' element={<ResendEmail />} />
           <Route path='/aboutPage' element={<AboutUs />} />
           <Route path='/resendPop' element={<ResendPopup />} />
-          <Route path='/newPassword' element={<Password />} />
+          <Route path='/newPassword/:token' element={<Password />} />
           <Route path='/forgetPopup' element={<ForgetPopup />} />
           <Route path='/alert' element={<Alert />} />
           {/* <Route path='/aboutPage' element={<ABOUTUS />} /> */}
