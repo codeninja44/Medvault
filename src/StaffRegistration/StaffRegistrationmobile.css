@@ -1,0 +1,118 @@
+@media only screen and (min-width: 320px) and  (max-width: 765px) {
+
+    .stafflogowrapper{
+        width: 20%;
+        height: 90%;
+    }
+    
+    .staffregcard{
+        width: 60%;
+    }
+    
+    .staffregtext{
+        font-size: 15px;
+    }
+
+    .staffname{
+        width: 90%;
+        height: 5%;
+        font-size: 8px;
+    }
+
+    .staffphoneno{
+        width: 90%;
+        height: 5%;
+        font-size: 8px;
+    }
+
+    .staffemail{
+        width: 90%;
+        height: 5%;
+        font-size: 8px;
+    }
+
+    .staffpassword{
+        width: 90%;
+        height: 5%;
+        font-size: 8px; 
+    }
+
+    .staffconfirmpass{
+        width: 90%;
+        height: 5%;
+        font-size: 8px; 
+    }
+
+    .staffrole{
+        width: 90%;
+        height: 5%;
+        font-size: 8px; 
+    }
+
+    .staffhoscode{
+        width: 90%;
+        height: 5%;
+        font-size: 8px; 
+    }
+
+    .staffregbutton{
+        width: 90%;
+        height: 5%; 
+        font-size: 8px; 
+    }
+
+    .staffalready{
+        font-size: 10px;
+    }
+
+    .staffregdescription{
+        width: 100%;
+    }
+
+}
+
+
+@media only screen and (min-width: 768px) and  (max-width: 1024px) {
+  
+    .staffregtext{
+        font-size: 15px;
+    }
+
+    .staffalready{
+        font-size: 10px;
+        color: #0B120B;
+    }
+
+    .staffregbutton{
+        height: 8%;
+    }
+
+    .staffname{
+        font-size: 10px;
+    }
+
+    .staffphoneno{
+        font-size: 10px; 
+    }
+
+    .staffemail{
+        font-size: 10px;
+    }
+
+    .staffpassword{
+        font-size: 10px;
+    }
+
+    .staffconfirmpass{
+        font-size: 10px;
+    }
+
+    .staffrole{
+        font-size: 10px;
+    }
+
+    .staffhoscode{
+        font-size: 10px;
+    }
+    
+}

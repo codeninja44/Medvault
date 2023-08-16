@@ -22,6 +22,7 @@ function Login() {
             .then(res => {
                 nav('/dashboard')
                 console.log(res)
+                localStorage.setItem(JSON.stringify(res.data.data))
             })
             .catch((err) => console.log('this is an error', err));
 

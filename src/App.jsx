@@ -20,6 +20,8 @@ import ResendPopup from './resendPopup/ResendPopup'
 import Password from './FORGOTPASSWORD2/Password'
 import ForgetPopup from './forgetPopup/ForgetPopUp'
 import Alert from './forgetVerified/Alert'
+import StaffRegistration from './StaffRegistration/StaffRegistration'
+import CreateStaffAlert from './staffAlert/CreateStaffAlert'
 // import ABOUTUS from './ABOUTFOLD/ABOUTUS'
 
 const App = () => {
@@ -47,6 +49,8 @@ const App = () => {
           <Route path='/newPassword/:token' element={<Password />} />
           <Route path='/forgetPopup' element={<ForgetPopup />} />
           <Route path='/alert' element={<Alert />} />
+          <Route path='/staffRegistration' element={<StaffRegistration />} />
+          <Route path='/newStaffAlert' element={<CreateStaffAlert />} />
           {/* <Route path='/aboutPage' element={<ABOUTUS />} /> */}
         </Routes>
       </HashRouter >

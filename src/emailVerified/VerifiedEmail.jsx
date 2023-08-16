@@ -44,7 +44,9 @@ const VerifiedEmail = () => {
                 .post(`https://medvault.onrender.com/api/verifyemail/${token}`)
                 .then((res) => {
                     console.log(res);
+                    localStorage.setItem()
                     setIsVerified(2)
+
                 })
                 .catch((err) => {
                     console.log("Error response:", err);
