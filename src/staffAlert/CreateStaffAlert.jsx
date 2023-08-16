@@ -1,4 +1,4 @@
-import styles from './CreateStaffAlert.module.css'
+import styles from './createStaffAlert.module.css'
 
 function CreateStaffAlert() {
     return (
