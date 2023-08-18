@@ -11,6 +11,7 @@ function Login() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const nav = useNavigate()
+    const [load, setLoad] = useState(false)
     const loginInfo = { email, password }
 
     const url = 'https://medvault.onrender.com/api/login'
@@ -18,14 +19,17 @@ function Login() {
     function login(e) {
 
         e.preventDefault()
+        setLoad(true)
         axios.post(url, loginInfo)
             .then(res => {
                 localStorage.setItem("token", JSON.stringify(res.data.data.token))
                 localStorage.setItem("id", JSON.stringify(res.data.data.id))
                 nav('/dashboard')
+                setLoad(false)
                 console.log(res)
             })
             .catch((err) => console.log('this is an error', err));
+        setLoad(false)
 
     }
 
@@ -50,7 +54,7 @@ function Login() {
                     <div className="forgetPassword" onClick={() => nav('/forgetPassword')}>
                         <p>Forget password</p>
                     </div>
-                    <button className="regBtn" onClick={login}>Login</button>
+                    <button className="regBtn" onClick={login}>{load ? 'loading...' : "Login"}</button>
                     <div className="sighSec">
                         <div className="signUp">Don't have an account?<span className="signBtn" onClick={() => nav("/registration")}>Register </span></div>
                     </div>

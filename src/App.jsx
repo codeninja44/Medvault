@@ -22,7 +22,7 @@ import ForgetPopup from './forgetPopup/ForgetPopUp'
 import Alert from './forgetVerified/Alert'
 import StaffRegistration from './StaffRegistration/StaffRegistration'
 import CreateStaffAlert from './staffAlert/CreateStaffAlert'
-import PatientsRegistration from './createPatients/CreatePatients'
+// import PatientsRegistration from './createPatients/CreatePatients'
 // import ABOUTUS from './ABOUTFOLD/ABOUTUS'
 
 const App = () => {
@@ -52,7 +52,7 @@ const App = () => {
           <Route path='/alert' element={<Alert />} />
           <Route path='/staffRegistration' element={<StaffRegistration />} />
           <Route path='/newStaffAlert' element={<CreateStaffAlert />} />
-          <Route path='/createPatient' element={<PatientsRegistration />} />
+          {/* <Route path='/createPatient' element={<PatientsRegistration />} /> */}
           {/* <Route path='/aboutPage' element={<ABOUTUS />} /> */}
         </Routes>
       </HashRouter >
