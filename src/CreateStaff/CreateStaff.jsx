@@ -4,7 +4,7 @@ import './CreateStaffmobile.css'
 // import { LiaLessThanSolid } from 'react-icons/lia'
 import { HiOutlineArrowLeft } from 'react-icons/hi'
 import testifourthcircle from '../assets/testifourthcircle.jpg'
-import { useNavigate } from "react-router-dom"
+import { json, useNavigate } from "react-router-dom"
 import axios from "axios"
 import CreateStaffAlert from "../staffAlert/CreateStaffAlert"
 
@@ -16,17 +16,18 @@ const CreateStaff = () => {
     const [popUp, setPopUp] = useState(false)
     const [buttonText, setButtonText] = useState(false)
     const url = "https://medvault.onrender.com/api/creatingastaff"
+    const token = JSON.parse(localStorage.getItem("token"))
 
     function staff(e) {
+        // const nav = useNavigate()
 
         e.preventDefault()
-        axios.post(url, staffInfo)
+        axios.post(url, staffInfo, { headers: { "Authorization": `Bearer ${token}` } })
             .then(res => {
-                // nav('/dashboard')
-                console.log(res)
+                console.log(res);
                 setPopUp(true)
+                nav('/dashboard')
                 setButtonText(true)
-                // localStorage.setItem(JSON.stringify(res.data.data))
             })
             .catch((err) => console.log('this is an error', err));
         setButtonText(false)

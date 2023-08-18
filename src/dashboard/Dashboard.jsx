@@ -5,14 +5,30 @@ import patientIcon from '../assets/patientIcon.png'
 import profile from '../assets/profile.png'
 import staff from '../assets/staff.png'
 import home from '../assets/home.png'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 // import profileIcon from '../assets/profileIcon.png'
 // import dashboard from '../assets/dashboard.png'
+const token = JSON.parse(localStorage.getItem("token"))
+const getId = JSON.parse(localStorage.getItem('id'))
+
 
 
 // import image from '../images/home.png'
 
 function Dashboard() {
+    const [userData, setUserData] = useState(null)
 
+    async function getData() {
+        const res = axios.get(`https://medvault.onrender.com/api/gethospital/${getId}`, { headers: { "Authorization": `Bearer ${token}` } })
+        return res
+    }
+
+    useEffect(() => {
+        getData().then((res) => setUserData(res.data.data))
+
+    }, [])
+    console.log(userData)
     const nav = useNavigate()
 
     return (
@@ -50,11 +66,11 @@ function Dashboard() {
             <div className={style.leftSection}>
                 <div className={style.profile}>
                     <div className={style.profilePic}>
-                        <img src={profile} alt="profile" />
+                        <img src={userData?.hospitalLogo?.url} alt="profile" />
                         <p>View profile</p>
                     </div>
                     <div className={style.adminDetials}>
-                        <p><span>Welcome</span>,Elvis</p>
+                        <p><span>Welcome</span>,{userData?.facilityname}</p>
                         <p className={style.id}>Admin</p>
                     </div>
                 </div>

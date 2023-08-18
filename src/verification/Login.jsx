@@ -20,9 +20,10 @@ function Login() {
         e.preventDefault()
         axios.post(url, loginInfo)
             .then(res => {
+                localStorage.setItem("token", JSON.stringify(res.data.data.token))
+                localStorage.setItem("id", JSON.stringify(res.data.data.id))
                 nav('/dashboard')
                 console.log(res)
-                localStorage.setItem(JSON.stringify(res.data.data))
             })
             .catch((err) => console.log('this is an error', err));
 

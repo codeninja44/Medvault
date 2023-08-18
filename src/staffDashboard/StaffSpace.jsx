@@ -27,7 +27,7 @@ function StaffSpace() {
             <div className={style.leftSection}>
                 <div className={style.profile}>
                     <div className={style.profilePic}>
-                        <img src={dashboard} alt="dashboard" />
+                        {/* <img src={ } alt="dashboard" /> */}
                         <p>View profile</p>
                     </div>
                     <div className={style.adminDetials}>
