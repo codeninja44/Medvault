@@ -359,4 +359,12 @@
         cursor: pointer;
     }
 
+    .registrationList {
+        height: 100%;
+        width: 100%;
+        padding: 0px;
+        display: flex;
+        margin-left: 0px;
+    }
+
 }

@@ -127,6 +127,7 @@ body {
     border: none;
     background-color: #1EBFC1;
     color: white;
+    cursor: pointer;
 }
 
 .staffregdescription {

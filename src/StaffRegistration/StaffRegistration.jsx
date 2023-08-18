@@ -3,6 +3,7 @@ import './StaffRegistration.css'
 import './StaffRegistrationmobile.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-hot-toast'
 
 const StaffRegistration = () => {
    const [name, setName] = useState('')
@@ -19,7 +20,7 @@ const StaffRegistration = () => {
 
    const staffDetails = { name, age, email, phoneNumber, password, confirmPassword, role, hospitalcode, photo }
 
-   const url = "https://medvault.onrender.com/api/createprofile"
+   const url = "https://medvault.onrender.com/api/createprofile/"
 
    const File = (e) => {
       const file = e.target.files[0]
@@ -27,16 +28,40 @@ const StaffRegistration = () => {
       console.log(file)
    }
 
-   function registerStaff(e) {
-      e.preventDefault
-      axios.post(url, staffDetails)
+   // function registerStaff(e) {
+   //    e.preventDefault()
+   //    setLoad(true)
+   //    axios.post(url, staffDetails)
+   //       .then(res => {
+   //          setLoad(false)
+   //          console.log(res)
+   //          nav = ('/staffDashboard')
+   //       })
+   //       .catch((err) => console.log('this is an error', err));
+   // }
+
+
+
+   function register(e) {
+      e.preventDefault()
+      setLoad(true)
+      axios.post(url, staffDetails, {
+         header: { "Content-type": "multipart/form-data" }
+      })
          .then(res => {
-            console.log(res)
-            nav = ('/staffDashboard')
-            setLoad(true)
+            console.log(res);
+            //   setVerify(true);
+            setLoadState(false)
+            nav('/staffDashboard')
          })
-         .catch((err) => console.log('this is an error', err));
+         .catch((err) => {
+            toast.error(err.response.data.message)
+            setLoad(false)
+            console.log("The error ", err)
+         })
    }
+
+
    return (
 
       <>
@@ -59,9 +84,9 @@ const StaffRegistration = () => {
                      <input className='staffconfirmpass' type="password" placeholder='Confirm Password' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                      <input className='staffrole' type="text" placeholder='Role' value={role} onChange={(e) => setRole(e.target.value)} />
                      <input className='staffhoscode' type="text" placeholder='Hospital Code' value={hospitalcode} onChange={(e) => setHospitalcode(e.target.value)} />
-                     <button className='staffregbutton'>{load ? "Loading..." : "Register"}</button>
+                     <button className='staffregbutton' onClick={register}>{load ? "Loading..." : "Register"}</button>
                      <div className='staffregdescription'>
-                        <p className='staffalready'>Already have an account? <span className='stafflogin' onClick={registerStaff}>Log In</span></p>
+                        <p className='staffalready'>Already have an account? <span className='stafflogin' >Log In</span></p>
                      </div>
                   </div>
                </div>
