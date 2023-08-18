@@ -44,7 +44,7 @@ const VerifiedEmail = () => {
                 .post(`https://medvault.onrender.com/api/verifyemail/${token}`)
                 .then((res) => {
                     console.log(res);
-                    localStorage.setItem()
+                    // localStorage.setItem()
                     setIsVerified(2)
 
                 })
@@ -65,11 +65,12 @@ const VerifiedEmail = () => {
                     <div className={style.emailImage}>
                         <img src={image} alt="Email" />
                     </div>
-                    <h3 className={style.headText} style={{ paddingTop: "20px" }}>{isVerified === 1 ? "Verifying Email..." : isVerified === 2 ? <div className={style.clickBtn}>
-                        <p>Email Verified Successfully</p>
-                        <p>Click to login</p>
-                        <button className={style.loginBtn} onClick={() => nav("/login")}>Login</button>
-                    </div> : "Verification Failed"}</h3>
+                    <h3 className={style.headText} style={{ paddingTop: "20px" }}>
+                        {isVerified === 1 ? "Verifying Email..." : isVerified === 2 ? <div className={style.clickBtn}>
+                            <p>Email Verified Successfully</p>
+                            <p>Click to login</p>
+                            <button className={style.loginBtn} onClick={() => nav("/login")}>Login</button>
+                        </div> : "Verification Failed"}</h3>
                 </div>
 
             </div>

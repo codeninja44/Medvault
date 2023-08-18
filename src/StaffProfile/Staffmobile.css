@@ -1,0 +1,429 @@
+
+@media only screen and (min-width:320px) and (max-width:580px) {
+       .staffhead{
+        width: 100%;
+        height: 6% ;
+    } 
+    
+    
+    .profilecontainer{
+        width: 100%;
+        height: 10%;
+        font-size: 8px;
+        padding: 5px;
+    }
+    
+    .ciccy{
+        height: 20px;
+        width:20px;
+        border-radius: 50%; 
+     }
+     .staffbody{
+        background-color:whitesmoke;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+
+
+     .staffcontain{
+        background-color:#46a8aa;
+        height: 85%;
+        padding: 3px;
+        width: 80%;
+        border-radius: 5px;
+    }
+    .staffhead{
+        height: 10%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        background-color: #fff;
+        align-items: center;
+        border-radius: 5px 5px 0px 0px;
+    
+    }
+    .imgy{
+        height: 80%;
+        width: 20%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('./src/assets/facimage.png');
+    }
+    .icony{
+        /* margin-left: 70%; */
+        background-color:#fff;
+        border: 1px #1EBFC1 solid ;
+        border-radius: 100px;
+        height: 30px;
+        display: flex;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        /* transition: 1ms; */
+        transition: ease-in-out;
+        font-size: 12px;
+    }
+    .icony:hover{
+        background-color:#1EBFC1;
+        transition: 100ms;
+        transition: ease-in-out;
+    }
+    .bodycontainer{
+        background-color: #FFF;
+        height: 90%;
+        width: 100%;
+        border-radius: 0px 0px 5px 5px;
+    }
+    .profilecontainer{
+        width: 100%;
+        height: 15%;
+        font: 1em sans-serif;
+        font-size: 10px;
+        font-weight: normal;
+        font-weight: lighter;
+        align-items: center;
+        justify-content: space-around;
+        display:flex;
+        gap: 20%;
+        flex-direction: row;
+        /* background-color: gray; */
+    }
+    .ciccy{
+        height: 45px;
+        width: 45px;
+        background-repeat: no-repeat;
+        /* background-size: 100% 100%; */
+        background-size: cover;
+        border-radius: 100px;
+        background-image: url(https://media.istockphoto.com/id/942262770/photo/portrait-of-female-doctor-against-wall-in-hospital.jpg?s=612x612&w=0&k=20&c=tBReoGH7Jr7moeawtl0JGke7Ew9pXRokoUoTYwHb93I=);
+        /* background-color: blueviolet; */
+    }
+    
+    .ciccy img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 100px;
+    
+    }
+    .profilebody{
+        height: 85%;
+        /* background-color: blueviolet; */
+        width: 100%;
+        padding: 15px;
+        font-size: 9px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+    .profilefnamecontainer{
+        /* background-color: #fff; */
+        width:60%;
+        font-size: 16px;
+        padding: 0.5px;
+        font: 1em sans-serif;
+    
+        height: 20%;
+    }
+    
+    .profilefname{
+        width: 100%;
+        height: 60%;
+        border: 2px #1EBFC1 solid ;
+        border-radius: 5px;
+        /* background-color:whitesmoke; */
+        display: flex;
+    }
+    
+    .profilefemailcontainer{
+        /* background-color: #fff; */
+        width:60%;
+        font-size: 16px;
+        padding: 0.5px;
+        font: 1em sans-serif;
+    
+        height: 20%;
+    }
+    
+    .profilefemail{
+        width: 100%;
+        height: 60%;
+        border-radius: 5px;
+        border: 2px #1EBFC1 solid ;
+        /* background-color:whitesmoke; */
+        display: flex;
+    }
+    
+    .profilefphonecontainer{
+        /* background-color: #fff; */
+        width:60%;
+        font-size: 16px;
+        padding: 0.5px;
+        font: 1em sans-serif;
+    
+        height: 20%;
+    }
+    
+    .profilefphone{
+        width: 100%;
+        height: 60%;
+        border: 2px #1EBFC1 solid ;
+        border-radius: 5px;
+        /* background-color:whitesmoke; */
+        display: flex;
+    }
+    
+    .profilefrolecontainer{
+        /* background-color: #fff; */
+        width:60%;
+        font-size: 16px;
+        padding: 0.5px;
+        font: 1em sans-serif;
+    
+        height: 20%;
+    }
+    
+    .profilefrole{
+        width: 100%;
+        border: 2px #1EBFC1 solid ;
+        height: 60%;
+        border-radius: 5px;
+        /* background-color:whitesmoke; */
+        display: flex;
+    }
+    
+    
+    .profilefidcontainer{
+        /* background-color: #fff; */
+        width:60%;
+        font-size: 16px;
+        padding: 0.5px;
+        font: 1em sans-serif;
+    
+        height: 20%;
+    }
+    
+    .profilefid{
+        width: 100%;
+        height: 60%;
+        border-radius: 5px;
+        border: 2px #1EBFC1 solid ;
+        /* background-color:whitesmoke; */
+        display: flex;
+    }
+    
+    
+    
+
+}
+
+
+
+
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+
+    .staffbody{
+        background-color:whitesmoke;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .staffcontain{
+        background-color:#46a8aa;
+        height: 80%;
+        padding: 3px;
+        width: 60%;
+        border-radius: 5px;
+    }
+    .staffhead{
+        height: 8%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        background-color: #fff;
+        padding: 9px;
+        align-items: center;
+        border-radius: 5px 5px 0px 0px;
+    
+    }
+    /* .imgy{
+        height: 80%;
+        width: 20%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('./src/assets/facimage.png');
+    } */
+    .icony{
+        /* margin-left: 70%; */
+        background-color:#fff;
+        border: 1px #1EBFC1 solid ;
+        border-radius: 100px;
+        height: 40px;
+        display: flex;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        font-size: 12px;
+    }
+    .icony:hover{
+        background-color:#1EBFC1;
+    }
+    .bodycontainer{
+        background-color: #FFF;
+        height: 92%;
+        width: 100%;
+        border-radius: 0px 0px 5px 5px;
+    }
+    .profilecontainer{
+        width: 100%;
+        height: 15%;
+        font: 1em sans-serif;
+        font-size: 15px;
+        font-weight: normal;
+        font-weight: lighter;
+        align-items: center;
+        justify-content: space-around;
+        display:flex;
+        gap: 45%;
+        flex-direction: row;
+        /* background-color: gray; */
+    }
+    .ciccy{
+        height: 75px;
+        width: 75px;
+        background-repeat: no-repeat;
+        /* background-size: 100% 100%; */
+        background-size: cover;
+        border-radius: 100px;
+        background-image: url(https://media.istockphoto.com/id/942262770/photo/portrait-of-female-doctor-against-wall-in-hospital.jpg?s=612x612&w=0&k=20&c=tBReoGH7Jr7moeawtl0JGke7Ew9pXRokoUoTYwHb93I=);
+        /* background-color: blueviolet; */
+    }
+    
+    .ciccy img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 100px;
+    
+    }
+    .profilebody{
+        height: 85%;
+        /* background-color: blueviolet; */
+        width: 100%;
+        padding: 15px;
+        font-size: 9px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+    .profilefnamecontainer{
+        /* background-color: #fff; */
+        width:60%;
+        font-size: 16px;
+        padding: 0.5px;
+        font: 1em sans-serif;
+    
+        height: 20%;
+    }
+    
+    .profilefname{
+        width: 100%;
+        height: 50%;
+        border: 2px #1EBFC1 solid ;
+        border-radius: 5px;
+        /* background-color:whitesmoke; */
+        display: flex;
+    }
+    
+    .profilefemailcontainer{
+        /* background-color: #fff; */
+        width:60%;
+        font-size: 16px;
+        padding: 0.5px;
+        font: 1em sans-serif;
+    
+        height: 20%;
+    }
+    
+    .profilefemail{
+        width: 100%;
+        height: 50%;
+        border-radius: 5px;
+        border: 2px #1EBFC1 solid ;
+        /* background-color:whitesmoke; */
+        display: flex;
+    }
+    
+    .profilefphonecontainer{
+        /* background-color: #fff; */
+        width:60%;
+        font-size: 16px;
+        padding: 0.5px;
+        font: 1em sans-serif;
+    
+        height: 20%;
+    }
+    
+    .profilefphone{
+        width: 100%;
+        height: 50%;
+        border: 2px #1EBFC1 solid ;
+        border-radius: 5px;
+        /* background-color:whitesmoke; */
+        display: flex;
+    }
+    
+    .profilefrolecontainer{
+        /* background-color: #fff; */
+        width:60%;
+        font-size: 16px;
+        padding: 0.5px;
+        font: 1em sans-serif;
+    
+        height: 20%;
+    }
+    
+    .profilefrole{
+        width: 100%;
+        border: 2px #1EBFC1 solid ;
+        height: 50%;
+        border-radius: 5px;
+        /* background-color:whitesmoke; */
+        display: flex;
+    }
+    
+    
+    .profilefidcontainer{
+        /* background-color: #fff; */
+        width:60%;
+        font-size: 16px;
+        padding: 0.5px;
+        font: 1em sans-serif;
+    
+        height: 20%;
+    }
+    
+    .profilefid{
+        width: 100%;
+        height: 50%;
+        border-radius: 5px;
+        border: 2px #1EBFC1 solid ;
+        /* background-color:whitesmoke; */
+        display: flex;
+    }
+}

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import './CreateStaff.css'
 import './CreateStaffmobile.css'
-import { LiaLessThanSolid } from 'react-icons/lia'
+// import { LiaLessThanSolid } from 'react-icons/lia'
 import { HiOutlineArrowLeft } from 'react-icons/hi'
 import testifourthcircle from '../assets/testifourthcircle.jpg'
 import { useNavigate } from "react-router-dom"
@@ -15,7 +15,7 @@ const CreateStaff = () => {
     const staffInfo = { email, hospitalcode }
     const [popUp, setPopUp] = useState(false)
     const [buttonText, setButtonText] = useState(false)
-    const url = "https://medvault.onrender.com/api/creatingastaff/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthcmVlbUBtYWlsaW5hdG9yLmNvbSIsImlzbG9naW4iOmZhbHNlLCJpYXQiOjE2OTIxOTYyOTMsImV4cCI6MTY5MjE5NzE5M30.EQ1TyUkylGwPp76dZKEeAWJU-zfQQ454K-ZoEH08ffQ"
+    const url = "https://medvault.onrender.com/api/creatingastaff"
 
     function staff(e) {
 
@@ -57,7 +57,7 @@ const CreateStaff = () => {
                     </div>
                     <div className="createstaffbtndiv">
                         <div className="createstaffbtnholder">
-                            <button className="createstaffbtn" onClick={staff}>{buttonText ? "creating" : 'send'}</button>
+                            <button className="createstaffbtn" onClick={staff}>{buttonText ? "creating..." : 'send'}</button>
                         </div>
                     </div>
                 </div>
