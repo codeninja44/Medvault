@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom'
 import style from './patient.module.css'
 
 function Patient() {
+    const nav = useNavigate()
 
     return (
         <div className={style.staffsInfo}>
@@ -19,7 +21,7 @@ function Patient() {
                     </div>
                 </div>
                 <div className={style.line}></div>
-                <button className={style.create}>Create</button>
+                <button className={style.create} onClick={() => nav('/registerPatient')}>Create</button>
             </div>
         </div>
     )

@@ -3,46 +3,38 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import VerifiedEmail from "../emailVerified/VerifiedEmail"
 import { HiOutlineArrowLeft } from 'react-icons/hi'
-// import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons"
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { useEffect, useRef, useState } from "react"
+import { toast } from "react-hot-toast"
 
 function Login() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const nav = useNavigate()
     const [load, setLoad] = useState(false)
+    const nav = useNavigate()
     const loginInfo = { email, password }
 
     const url = 'https://medvault.onrender.com/api/login'
 
     function login(e) {
-
         e.preventDefault()
         setLoad(true)
         axios.post(url, loginInfo)
             .then(res => {
+                setLoad(false)
                 localStorage.setItem("token", JSON.stringify(res.data.data.token))
                 localStorage.setItem("id", JSON.stringify(res.data.data.id))
                 nav('/dashboard')
-                setLoad(false)
                 console.log(res)
             })
-            .catch((err) => console.log('this is an error', err));
-        setLoad(false)
-
+            .catch((err) => {
+                console.log('this is an error', err),
+                    setLoad(false),
+                    toast.error(err.response.data.message)
+            }
+            );
     }
 
     return (
         <div className="registration">
-            {/* //     <div className="illustration">
-        //         <div className="topIllustration">
-        //             <img src="./src/images/undraw_secure_login_pdn4 1.png" alt="" />
-        //         </div>
-        //         <div className="bottomIllustration">
-        //             <img src="./src/images/Arrow 1.png" alt="" />
-        //         </div>
-            </div> */}
             <div className='arrow' onClick={() => nav('/')}><HiOutlineArrowLeft /></div>
             <div className="registrationList">
                 <div className="regSection">

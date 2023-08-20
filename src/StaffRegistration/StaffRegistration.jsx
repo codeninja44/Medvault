@@ -18,33 +18,16 @@ const StaffRegistration = () => {
    const nav = useNavigate()
    const [load, setLoad] = useState(false)
 
-   // const staffDetails = { name, age, email, phoneNumber, password, confirmPassword, role, hospitalcode, photo }
 
    const url = "https://medvault.onrender.com/api/createprofile"
    const token = JSON.parse(localStorage.getItem("token"))
 
-   // function register(e) {
-   //    e.preventDefault()
-   //    setLoad(true)
-   //    axios.post(url, staffDetails, { headers: { "Authorization": `Bearer ${token}` } })
-   //       .then(res => {
-   //          console.log(res);
-   //          //   setVerify(true);
-   //          setLoad(false)
-   //          nav('/staffDashboard')
-   //       })
-   //       .catch((err) => {
-   //          toast.error(err.response.data.message)
-   //          setLoad(false)
-   //          console.log("The error ", err)
-   //       })
-   // }
 
-   const File = (e) => {
-      const file = e.target.files[0]
-      setPhoto(file)
-      console.log(file)
-   }
+   // const File = (e) => {
+   //    const file = e.target.files[0]
+   //    setPhoto(file)
+   //    console.log(file)
+   // }
 
    const data = new FormData()
    data.append("name", name)
@@ -113,6 +96,8 @@ const StaffRegistration = () => {
                </div>
             </form>
          </body>
+
+
       </>
    )
 }

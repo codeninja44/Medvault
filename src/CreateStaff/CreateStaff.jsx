@@ -22,15 +22,18 @@ const CreateStaff = () => {
         // const nav = useNavigate()
 
         e.preventDefault()
+        setButtonText(true)
         axios.post(url, staffInfo, { headers: { "Authorization": `Bearer ${token}` } })
             .then(res => {
                 console.log(res);
                 setPopUp(true)
                 nav('/dashboard')
-                setButtonText(true)
+                setButtonText(false)
             })
-            .catch((err) => console.log('this is an error', err));
-        setButtonText(false)
+            .catch((err) => {
+                console.log('this is an error', err),
+                    setButtonText(false)
+            });
     }
 
     return (

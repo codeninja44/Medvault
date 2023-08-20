@@ -3,9 +3,7 @@ import axios from 'axios'
 import { useEffect, useState, useRef } from 'react'
 import './registrationMobile.css'
 import EmailPopUp from '../popUp/EmailPopUp'
-import { HiOutlineArrowLeft } from 'react-icons/hi'
 import toast, { Toaster } from 'react-hot-toast'
-
 
 
 function Registration() {
@@ -14,14 +12,14 @@ function Registration() {
     const [facilityphone, setFacilityPhoneNo] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    // const [confirmPassword, setConfirmPassword] = useState("")   
     const [state, setState] = useState("")
     const [city, setCity] = useState("")
     const [LGA, setLga] = useState("")
     const [hospitalLogo, setHospitalLogo] = useState('')
     const [confirmPassword, setConfirmPassword] = useState()
-    // const userData = { facilityname, facilityaddress, facilityphone, email, password, state, city, LGA, image }
-    // console.log(userData);
+
+    console.log(facilityname)
+
 
     const nav = useNavigate()
     const url = "https://medvault.onrender.com/api/registration"
@@ -59,22 +57,12 @@ function Registration() {
             .then(res => {
                 console.log(res); setVerify(true); setLoadState(false)
                 localStorage.setItem("email", JSON.stringify(res.data.data.email))
-                // setErrorMessage(res.data.message)
                 nav('/emailVerificaion')
-                // setFacilityName('')
-                // setFacilityAddress('')
-                // setFacilityPhoneNo('')
-                // setEmail('')
-                // setPassword('')
-                // setState('')
-                // setCity('') 
-                // setLga('')
             })
             .catch((err) => {
                 toast.error(err.response.data.message)
                 setLoadState(false)
                 console.log("The error ", err)
-                // setErrorMessage(err.response.data.message)
             })
     }
 
@@ -84,14 +72,6 @@ function Registration() {
     return (
         <div>
             <div className="registration">
-                {/* <div className="illustration">
-                    <div className="topIllustration">
-                        <img src="./src/images/undraw_sign_in_re_o58h 1.png" alt="" />
-                    </div>
-                    <div className="bottomIllustration">
-                        <img src="./src/images/Arrow 1.png" alt="" />
-                    </div>
-                </div> */}
                 <div className="registrationList">
                     {/* <div className='arrow' onClick={() => nav('/')}><HiOutlineArrowLeft /></div> */}
                     <div className="regSection">
