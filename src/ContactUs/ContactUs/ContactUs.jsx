@@ -1,11 +1,11 @@
 import React from "react"
 import './ContactUs.css'
 import './ContactUsmobile.css'
-import LandingPage from "../Landing Page/LandingPage"
-import Header from "../components/header/Header"
+// import LandingPage from "../Landing Page/LandingPage"
 import { MdHealthAndSafety, MdEmail, MdLocationOn } from "react-icons/md"
 import { BsFillTelephoneFill, BsFillClockFill } from "react-icons/bs"
-import Footer from "../Footer/Footer"
+import Header from "../../components/header/Header"
+import Footer from "../../Footer/Footer"
 
 const ContactUs = () => {
 
@@ -15,7 +15,7 @@ const ContactUs = () => {
             <div className="ContactMain">
                 <div className="contacttextwrapper">
                     <p className="contactustext">Contact Us</p>
-                    <p>Feel free to contact us anytime.</p>
+                    <p className="contactustext2">Feel free to contact us anytime.</p>
                 </div>
 
                 <div className="contactusbody">

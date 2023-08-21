@@ -86,7 +86,6 @@
 
 .btn button:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transform: scale(1.01);
     background-color: #0d5253;
 }
 
@@ -108,7 +107,6 @@
 
 .Herorightbox:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transform: scale(1.01);
     background-color: #0d5253;
 }
 
@@ -167,7 +165,6 @@
 
 .Emrbox1:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transform: scale(1.01);
     background-color: #0d5253;
 }
 
@@ -202,7 +199,6 @@
 
 .Emrbox2:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transform: scale(1.01);
     background-color: #0d5253;
 }
 
@@ -237,7 +233,6 @@
 
 .Emrbox3:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transform: scale(1.01);
     background-color: #0d5253;
 }
 
@@ -536,7 +531,6 @@
 
 .pricingbox1:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transform: scale(1.01);
     background-color: #EDEDED;
 }
 
@@ -598,7 +592,6 @@
 
 .pricingbox2:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transform: scale(1.01);
     background-color: #EDEDED;
 }
 
@@ -661,7 +654,6 @@
 
 .pricingbox3:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transform: scale(1.01);
     background-color: #EDEDED;
 }
 
@@ -788,7 +780,6 @@
 
 .testimonialsbox1:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transform: scale(1.01);
     background-color: #EDEDED;
 }
 
@@ -857,7 +848,6 @@
 
 .testimonialsbox2:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transform: scale(1.01);
     background-color: #EDEDED;
 }
 
@@ -876,7 +866,6 @@
 
 .testimonialsbox3:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transform: scale(1.01);
     background-color: #EDEDED;
 }
 
@@ -929,7 +918,6 @@
 
 .signupbtn button:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transform: scale(1.01);
     background-color: #0d5253;
     color: white;
 }

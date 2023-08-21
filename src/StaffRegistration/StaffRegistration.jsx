@@ -14,7 +14,7 @@ const StaffRegistration = () => {
    const [confirmPassword, setConfirmPassword] = useState('')
    const [role, setRole] = useState('')
    const [hospitalcode, setHospitalcode] = useState('')
-   const [photo, setPhoto] = useState('')
+   // const [photo, setPhoto] = useState('')
    const nav = useNavigate()
    const [load, setLoad] = useState(false)
 
@@ -38,7 +38,7 @@ const StaffRegistration = () => {
    data.append("confirmPassword", confirmPassword)
    data.append("role", role)
    data.append("hospitalcode", hospitalcode)
-   data.append("photo", photo)
+   // data.append("photo", photo)
 
 
    function register(e) {
@@ -82,7 +82,6 @@ const StaffRegistration = () => {
                         <input className='staffphoneno' type="text" placeholder='Phone No' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
                         <input className='staffemail' type="text" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
                         <input className='staffemail' type="text" placeholder='Age' value={age} onChange={(e) => setAge(e.target.value)} />
-                        <input type='file' accept='/image*/' placeholder='Facility logo' className="inputType" onChange={File} />
                         <input className='staffpassword' type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
                         <input className='staffconfirmpass' type="password" placeholder='Confirm Password' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                         <input className='staffrole' type="text" placeholder='Role' value={role} onChange={(e) => setRole(e.target.value)} />

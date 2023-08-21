@@ -72,6 +72,7 @@ function Dashboard() {
                     <div className={style.adminDetials}>
                         <p><span>Welcome</span>,{userData?.facilityname}</p>
                         <p className={style.id}>Admin</p>
+                        <p>{userData?.hospitalCode}</p>
                     </div>
                 </div>
                 <div className={style.hospitaldetails}>
