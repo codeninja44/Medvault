@@ -1,5 +1,5 @@
 import React from 'react';
-import './AboutUs.css'
+import './ABOUTUS.css'
 import './AboutUsmobile.css'
 import { MdHealthAndSafety } from "react-icons/md"
 import { BsFillCloudArrowDownFill } from "react-icons/bs"
