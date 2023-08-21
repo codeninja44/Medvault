@@ -37,7 +37,7 @@ const LandingPage = () => {
                             <p className="health">Health in <span className="safety">Safety</span></p>
                             <span className="with">with Medvault.</span>
                             <p className="trusted">Your trusted partner for secure,seamless and smart patient care.</p>
-                            <div className="btn"><button onClick={() => nav('/registration')}>Create Account</button></div>
+                            <button onClick={() => nav('/registration')}>Create Account</button>
                         </div>
 
                     </div>

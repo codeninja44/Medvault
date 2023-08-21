@@ -317,7 +317,7 @@
 
     .dropDown {
         height: 100vh;
-        width: 100%;
+        width: 70%;
         position: fixed;
         /* background-color: #211D23; */
         left: 0;
@@ -365,6 +365,25 @@
         padding: 0px;
         display: flex;
         margin-left: 0px;
+    }
+
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+
+
+
+
+
+    .firstList {
+        height: 100%;
+        width: 40%;
+    }
+
+    .buttons {
+        height: 100%;
+        width: 25%;
+        padding-bottom: 25px;
     }
 
 }

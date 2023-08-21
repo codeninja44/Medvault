@@ -1,0 +1,265 @@
+@media only screen and (min-width: 320px) and  (max-width: 580px) {
+    .Aboutusbody{
+        width: 100%;
+        height: 220vh;
+    }
+    .aboutustextdiv{
+        width: 100%;
+        height: 5%;
+        font-size: 30px;
+    }
+
+    .aboutusimgdiv{
+        width: 100%;
+        height: 40%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutus1{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .aboutus2{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .aboutus3{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+    }
+
+    .aboutus4{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
+
+    .aboutusdescdiv{
+        width: 100%;
+        height: 10%;
+    }
+
+    .aboutusdescwrapper{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .aboutusdesctext{
+        font-size: 15px;
+    }
+
+    .aboutusdetailsdiv{
+        width: 100%;
+        height: 5%;
+    }
+
+    .year{
+        font-size: 20px;
+    }
+
+    .founded{
+        font-size: 12px;
+    }
+
+    .employeesnumber{
+        font-size: 20px;  
+    }
+
+    .employees{
+        font-size: 12px; 
+    }
+
+    .abtusersno{
+        font-size: 20px;
+    }
+
+    .abtusers{
+        font-size: 12px;
+    }
+
+    .abtvolumenumber{
+        font-size: 20px;
+    }
+
+    .abtvolume{
+        font-size: 12px;
+    }
+
+    .aboutuslast{
+        width: 100%;
+        height: 40%;
+    }
+
+    .aboutuslastwrappetextdiv{
+        width: 100%;
+        height: 10%;
+        font-size: 30px;
+    }
+
+    .aboutusboxesdiv{
+        width: 100%;
+        height: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .aboutusbox1{
+        width: 50%;
+        height: 30%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .aboutusboxcircle1{
+        width: 40px;
+        height: 40px;
+        border-radius: 100px;
+    }
+
+    .aboutusboxcircle1icon{
+        font-size: 30px;
+    }
+
+    .aboutussecurity{
+        font-size: 20px;
+    }
+
+    .aboutusbox1desc{
+        font-size: 12px;
+    }
+
+    .aboutusbox2{
+        width: 50%;
+        height: 30%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .aboutusboxcircle2icon{
+        font-size: 30px;
+    }
+
+    .aboutustorage{
+        font-size: 20px;
+    }
+
+    .aboutusbox2desc{
+        font-size: 12px; 
+    }
+
+    .aboutusbox3{
+        width: 50%;
+        height: 30%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .aboutusboxcircle3icon{
+        font-size: 30px;
+    }
+
+    .aboutuspartnership{
+        font-size: 20px;
+    }
+
+    .aboutusbox3desc{
+        font-size: 12px; 
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .Aboutusbody{
+        width: 100%;
+        height: 150vh;
+    }
+  
+    .aboutusimgdiv{
+     width: 100%;
+     height: 30%;
+   }
+
+   .aboutusdescdiv{
+    width: 100%;
+    height: 20%;
+   }
+
+   .aboutusdesctext{
+    font-size: 20px;
+   }
+
+   .aboutusdetailsdiv{
+      width: 100%;
+      height: 10%;
+   }
+
+   .aboutuslast{
+    width: 100%;
+    height: 30%;
+   }
+
+   .aboutusboxcircle1{
+    width: 40px;
+    height: 40px;
+   }
+
+   .aboutusboxcircle1icon{
+    font-size: 30px;
+   }
+
+   .aboutussecurity{
+    font-size: 20px;
+   }
+
+   .aboutusbox1desc{
+    font-size: 15px;
+   }
+
+   .aboutusboxcircle2icon{
+    font-size: 30px;
+   }
+
+   .aboutustorage{
+    font-size: 20px;
+   }
+
+   .aboutusbox2desc{
+    font-size: 15px;
+   }
+
+   .aboutusboxcircle3icon{
+    font-size: 30px;
+   }
+
+   .aboutuspartnership{
+    font-size: 20px;
+   }
+
+   .aboutusbox3desc{
+    font-size: 15px;
+   }
+}

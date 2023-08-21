@@ -1,4 +1,4 @@
-.Main {
+/* .Main {
     width: 100%;
     height: max-content;
     background-color: white;
@@ -65,26 +65,36 @@
     color: gray;
 }
 
-.btn {
+/* .btn {
+    border: none;
     width: 80%;
-    height: 30%;
+    height: 15%;
+    border-radius: 10px;
+    color: #fff;
+    font-size: medium;
+    background-color: red;
+    cursor: pointer;
     display: flex;
-    align-items: end;
+    justify-content: center;
+    align-items: center;
+} */
 
-}
 
-.btn button {
-    width: 40%;
-    height: 60%;
+
+
+button {
+    width: 250px;
+    height: 60px;
     border-radius: 10px;
     border: none;
     background-color: #1EBFC1;
     font-size: 20px;
     color: white;
     cursor: pointer;
+    margin-top: 30px;
 }
 
-.btn button:hover {
+button:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     background-color: #0d5253;
 }
@@ -253,7 +263,7 @@
 
 .MVvideodiv {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;

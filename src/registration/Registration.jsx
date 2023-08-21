@@ -18,9 +18,6 @@ function Registration() {
     const [hospitalLogo, setHospitalLogo] = useState('')
     const [confirmPassword, setConfirmPassword] = useState()
 
-    console.log(facilityname)
-
-
     const nav = useNavigate()
     const url = "https://medvault.onrender.com/api/registration"
     const [verify, setVerify] = useState(false)
@@ -57,6 +54,7 @@ function Registration() {
             .then(res => {
                 console.log(res); setVerify(true); setLoadState(false)
                 localStorage.setItem("email", JSON.stringify(res.data.data.email))
+                localStorage.setItem("hospitalcode", JSON.stringify(res.data.data.hospitalcode))
                 nav('/emailVerificaion')
             })
             .catch((err) => {
@@ -92,7 +90,7 @@ function Registration() {
                             <button className="regBtn" type='submit'>{loadState ? 'Loading...' : "Register"}</button>
                         </form>
                         <div className="sighSec">
-                            <div className="signUp">Already have an account?<span className="signBtn" onClick={() => nav("/login")}>Sign up</span ></div>
+                            <div className="signUp">Already have an account?<span className="signBtn" onClick={() => nav("/login")}>Log In</span ></div>
                         </div>
                     </div>
                 </div>

@@ -1,37 +1,37 @@
 @media only screen and (min-width:320px) and (max-width:580px) {
 
-    .ContactMain{
+    .ContactMain {
         width: 100%;
-        height: 100vh;
-      }
+        height: 130vh;
+    }
 
-      .contacttextwrapper{
+    .contacttextwrapper {
         width: 100%;
         height: 20vh;
         background-color: white;
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align:  center;
+        text-align: center;
         flex-direction: column;
     }
 
-    .contactustext{
+    .contactustext {
         font-size: 30px;
         font-weight: 700;
         color: #0B120B;
     }
 
-    .contactustext2{
+    .contactustext2 {
         color: #0B120B;
     }
 
-    .contactusbody{
+    .contactusbody {
         width: 100%;
-        height: 80vh;
+        height: 100vh;
     }
 
-    .contactusbodyholder{
+    .contactusbodyholder {
         width: 60%;
         height: 100%;
         display: flex;
@@ -40,56 +40,57 @@
         flex-direction: column;
     }
 
-    .contactusleft{
+    .contactusleft {
         width: 100%;
         height: 48%;
     }
 
-    .contactusleft input{
+    .contactusleft input {
         font-size: 8px;
     }
 
-    .contactusbtn{
+    .contactusbtn {
         width: 60%;
         height: 10%;
         font-size: 10px;
+        margin-left: 25px;
     }
-    
-    .contactusright{
+
+    .contactusright {
         width: 100%;
         height: 48%;
     }
 
-    .contactusemailicon{
+    .contactusemailicon {
         font-size: 20px;
     }
 
-    .contactusemailtext{
-        font-size: 10px;
+    .contactusemailtext {
+        font-size: 8px;
     }
 
-    .contactusphoneicon{
+    .contactusphoneicon {
         font-size: 20px;
     }
 
-    .contactusphonetest{
-        font-size: 10px; 
+    .contactusphonetest {
+        font-size: 8px;
     }
 
-    .contactusaddyicon{
+    .contactusaddyicon {
         font-size: 20px;
     }
 
-    .contactusaddytext{
-        font-size: 10px;
+    .contactusaddytext {
+        font-size: 8px;
     }
 
-    .contactustimeicon{
+    .contactustimeicon {
         font-size: 20px;
     }
 
-    .contactustimetext{
-        font-size: 10px; 
+    .contactustimetext {
+        font-size: 8px;
     }
 
 }
@@ -97,83 +98,83 @@
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
-    .ContactMain{
+    .ContactMain {
         width: 100%;
         height: 110vh;
     }
 
-    .contacttextwrapper{
+    .contacttextwrapper {
         width: 100%;
         height: 20vh;
         background-color: white;
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align:  center;
+        text-align: center;
         flex-direction: column;
     }
 
-    .contactustext{
+    .contactustext {
         font-size: 50px;
         color: #0B120B;
         font-weight: 700;
     }
 
-    .contactustext2{
+    .contactustext2 {
         color: #0B120B;
     }
 
-    .contactusbody{
+    .contactusbody {
         width: 100%;
         height: 30vh;
     }
 
-    .contactusbodyholder{
+    .contactusbodyholder {
         width: 60%;
         height: 100%;
     }
 
-    .contactusleft{
-        width: 45%;
-        height: 95%;
-    }
-    
-    .contactusright{
+    .contactusleft {
         width: 45%;
         height: 95%;
     }
 
-    .contactusemailicon{
+    .contactusright {
+        width: 45%;
+        height: 95%;
+    }
+
+    .contactusemailicon {
         font-size: 20px;
     }
 
-    .contactusemailtext{
+    .contactusemailtext {
         font-size: 10px;
     }
 
-    .contactusphoneicon{
+    .contactusphoneicon {
         font-size: 20px;
     }
 
-    .contactusphonetest{
-        font-size: 10px; 
-    }
-
-    .contactusaddyicon{
-        font-size: 20px;
-    }
-
-    .contactusaddytext{
+    .contactusphonetest {
         font-size: 10px;
     }
 
-    .contactustimeicon{
+    .contactusaddyicon {
         font-size: 20px;
     }
 
-    .contactustimetext{
-        font-size: 10px; 
+    .contactusaddytext {
+        font-size: 10px;
     }
-    
-    
+
+    .contactustimeicon {
+        font-size: 20px;
+    }
+
+    .contactustimetext {
+        font-size: 10px;
+    }
+
+
 }

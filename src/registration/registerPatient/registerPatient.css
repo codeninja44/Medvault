@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.App {
+  width: 100%;
+  height: 100vh;
+  /* background-color: gray; */
+  display: flex;
+  justify-content: center;
+  outline: none;
+  /* align-items: center; */
+}
+
+.App2 {
+  width: 50%;
+  height: 100%;
+  background-color: #E0F7F6;
+  /* background-image: url("../public/Doc.jpg"); */
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.inputSec {
+  height: 100%;
+  width: 100%;
+}
+
+.detailsHeader {
+  width: 90%;
+  height: 25%;
+  /* background-color: floralwhite; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detailsHeader p {
+  font-size: 19px;
+  font-weight: 580;
+  color: rgba(0, 170, 255, 0.95);
+  /* color: #F8F7F5; */
+}
+
+.detailsHeader button {
+  width: 25%;
+  height: 85%;
+  border: none;
+  background-color: white;
+  border-radius: 3px;
+  /* background: none; */
+}
+
+.PatientsInfo {
+  width: 95%;
+  height: 70%;
+  border-radius: 3px;
+  overflow-y: scroll;
+}
+
+.NameA {
+  width: 95%;
+  height: 13%;
+  /* background-color: purple; */
+  display: flex;
+  align-items: center;
+  gap: 77px;
+  margin-left: 10px;
+}
+
+.NameA input {
+  height: 60%;
+  width: 50%;
+  outline: none;
+  border: 1px solid rgba(0, 170, 255, 0.95);
+  border-radius: 3px;
+}
+
+.NameA p {
+  font-weight: 520;
+}
+
+.NameB {
+  width: 95%;
+  height: 13%;
+  /* background-color: purple; */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+
+}
+
+.NameB input {
+  height: 60%;
+  width: 50%;
+  outline: none;
+  border: 1px solid rgba(0, 170, 255, 0.95);
+  border-radius: 3px;
+}
+
+.NameB p {
+  font-weight: 520;
+}
+
+.NameC {
+  width: 95%;
+  height: 13%;
+  /* background-color: purple; */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 10px;
+}
+
+.NameC input {
+  height: 60%;
+  width: 50%;
+  outline: none;
+  border: 1px solid rgba(0, 170, 255, 0.95);
+  border-radius: 3px;
+}
+
+.NameC p {
+  font-weight: 520;
+}
+
+.NameD {
+  width: 95%;
+  height: 13%;
+  /* background-color: purple; */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 10px;
+}
+
+.NameD input {
+  height: 60%;
+  width: 50%;
+  outline: none;
+  border: 1px solid rgba(0, 170, 255, 0.95);
+  border-radius: 3px;
+}
+
+.NameD p {
+  font-weight: 520;
+}
+
+.NameE {
+  width: 95%;
+  height: 13%;
+  /* background-color: purple; */
+  display: flex;
+  align-items: center;
+  gap: 93px;
+  margin-left: 10px;
+}
+
+.NameE input {
+  height: 60%;
+  width: 50%;
+  outline: none;
+  border: 1px solid rgba(0, 170, 255, 0.95);
+  border-radius: 3px;
+}
+
+.NameE p {
+  font-weight: 520;
+}
+
+.NameF {
+  width: 95%;
+  height: 13%;
+  /* background-color: purple; */
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  gap: 85px;
+}
+
+.NameF input {
+  height: 60%;
+  width: 50%;
+  outline: none;
+  border: 1px solid rgba(0, 170, 255, 0.95);
+  border-radius: 3px;
+}
+
+.NameF p {
+  font-weight: 520;
+}
+
+.NameH {
+  width: 95%;
+  height: 13%;
+  /* background-color: purple; */
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  gap: 25px;
+}
+
+.NameH input {
+  height: 60%;
+  width: 50%;
+  outline: none;
+  border: 1px solid rgba(0, 170, 255, 0.95);
+  border-radius: 3px;
+}
+
+.NameH p {
+  font-weight: 520;
+}
+
+.NameI {
+  width: 95%;
+  height: 13%;
+  /* background-color: purple; */
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  gap: 25px;
+}
+
+.NameI input {
+  height: 60%;
+  width: 50%;
+  outline: none;
+  border: 1px solid rgba(0, 170, 255, 0.95);
+  border-radius: 3px;
+}
+
+.NameI p {
+  font-weight: 520;
+}
+
+.NameJ {
+  width: 95%;
+  height: 13%;
+  /* background-color: purple; */
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  gap: 10px;
+}
+
+.NameJ input {
+  height: 60%;
+  width: 50%;
+  outline: none;
+  border: 1px solid rgba(0, 170, 255, 0.95);
+  border-radius: 3px;
+}
+
+.NameJ p {
+  font-weight: 520;
+}
+
+.NameK {
+  width: 95%;
+  height: 13%;
+  /* background-color: purple; */
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  gap: 130px;
+}
+
+.NameK input {
+  height: 60%;
+  width: 50%;
+  outline: none;
+  border: 1px solid rgba(0, 170, 255, 0.95);
+  border-radius: 3px;
+}
+
+.NameK p {
+  font-weight: 520;
+  width: 30%;
+}
+
+.NameG {
+  width: 95%;
+  height: 13%;
+  /* background-color: purple; */
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  gap: 15px;
+}
+
+.NameG p {
+  font-weight: 520;
+}
+
+.Diagnosis {
+  width: 80%;
+  height: 50%;
+  background-origin: pink;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  justify-content: space-around;
+}
+
+.Diagnosis p {
+  font-weight: 520;
+}
+
+.Diagnosis input {
+  width: 85%;
+  height: 60%;
+  border: 1px solid rgba(0, 170, 255, 0.95);
+  border-radius: 4px;
+}
+
+.createPatient {
+  width: 30%;
+  height: 10%;
+  border: none;
+  background-color: rgba(0, 170, 255, 0.95);
+  border-radius: 5px;
+  color: white;
+  font-weight: 520;
+  margin-bottom: 10px;
+  margin-left: 10px;
+
+}

@@ -8,7 +8,6 @@
         width: 100%;
         margin-left: 0px;
         padding: 0px;
-        background-color: red;
     }
 
     .registration {
@@ -36,6 +35,7 @@
         height: 35px;
         width: 90%;
         border: none;
+        margin-right: 70px;
     }
 
     .signUp {

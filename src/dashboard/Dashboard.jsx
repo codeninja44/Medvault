@@ -7,11 +7,14 @@ import staff from '../assets/staff.png'
 import home from '../assets/home.png'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import Adminprofile from '../AdminProfile/Adminprofile'
+
 // import profileIcon from '../assets/profileIcon.png'
 // import dashboard from '../assets/dashboard.png'
+
+
 const token = JSON.parse(localStorage.getItem("token"))
 const getId = JSON.parse(localStorage.getItem('id'))
-
 
 
 // import image from '../images/home.png'
@@ -19,8 +22,15 @@ const getId = JSON.parse(localStorage.getItem('id'))
 function Dashboard() {
     const [userData, setUserData] = useState(null)
 
+    // const hospitalCode = ("YOUR_HOSPITAL_CODE");
+
+    // useEffect(() => {
+    //     localStorage.setItem("hospitalCode", JSON.stringify(hospitalCode));
+    // }, [hospitalCode]);
+
     async function getData() {
-        const res = axios.get(`https://medvault.onrender.com/api/gethospital/${getId}`, { headers: { "Authorization": `Bearer ${token}` } })
+        const res = axios.get(`https://medvault.onrender.com/api/gethospital/${getId}`,
+            { headers: { "Authorization": `Bearer ${token}` } })
         return res
     }
 
@@ -28,84 +38,92 @@ function Dashboard() {
         getData().then((res) => setUserData(res.data.data))
 
     }, [])
+
+
+
+
     console.log(userData)
     const nav = useNavigate()
 
     return (
-        <div className={style.dashboardBody}>
-            <div className={style.rightNav}>
-                <div className={style.top}>
-                    <div className={style.logo} onClick={() => nav('/')}>
-                        <img src={image} alt="image" />
+        <>
+            <div className={style.dashboardBody}>
+                <div className={style.rightNav}>
+                    <div className={style.top}>
+                        <div className={style.logo} onClick={() => nav('/')}>
+                            <img src={image} alt="image" />
+                        </div>
+                        <div className={style.navSec}>
+                            <div className={style.firstNav} onClick={() => nav('/')}>
+                                <div className={style.dashboardIcon1}>
+                                    <div>
+                                        <img src={home} alt="" />
+                                    </div>
+                                </div>
+                                <div className={style.text}>Home</div>
+                            </div>
+                            <div className={style.secondNav} onClick={() => nav('/staffInfo')}>
+                                <div className={style.dashboardIcon2}>
+                                    <img src={staff} alt="staff" />
+                                </div>
+                                <div>Staffs</div>
+                            </div>
+                            <div className={style.navs} onClick={() => nav('/patient')}>
+                                <div className={style.dashboardIcon}>
+                                    <img src={patientIcon} alt="patientIcon" />
+                                </div>
+                                <div>Patients</div>
+                            </div>
+                        </div>
                     </div>
-                    <div className={style.navSec}>
-                        <div className={style.firstNav} onClick={() => nav('/')}>
-                            <div className={style.dashboardIcon1}>
-                                <div>
-                                    <img src={home} alt="" />
+                    <div className={style.logout}>Logout</div>
+                </div>
+                <div className={style.leftSection}>
+                    <div className={style.profile}>
+                        <div className={style.profilePic}>
+                            <img src={userData?.hospitalLogo?.url} alt="profile" />
+                            <p>View profile</p>
+                        </div>
+                        <div className={style.adminDetials}>
+                            <p><span>Welcome</span>,{userData?.facilityname}</p>
+                            <p className={style.id}>Admin</p>
+                            <p>{userData?.hospitalCode}</p>
+                        </div>
+                    </div>
+                    <div className={style.hospitaldetails}>
+                        <div className={style.totals}>
+                            <span>30+</span>
+                            <p>Staffs</p>
+                        </div>
+                        <div className={style.totals}>
+                            <span>2000+</span>
+                            <p>Patients</p>
+                        </div>
+                    </div>
+                    <div className={style.plans}>
+                        <div className={style.planBody}>
+                            <p className={style.planHeader}><span>Pl</span>ans</p>
+                            <div className={style.planSec}>
+                                <div className={style.planCards}>
+                                    <span>Regular</span>
+                                    <p>#250,000</p>
+                                </div>
+                                <div className={style.planCards2}>
+                                    <span>Medium</span>
+                                    <p>#250,000</p>
+                                </div>
+                                <div className={style.planCards3}>
+                                    <span>Premium</span>
+                                    <p>#250,000</p>
                                 </div>
                             </div>
-                            <div className={style.text}>Home</div>
-                        </div>
-                        <div className={style.secondNav} onClick={() => nav('/staffInfo')}>
-                            <div className={style.dashboardIcon2}>
-                                <img src={staff} alt="staff" />
-                            </div>
-                            <div>Staffs</div>
-                        </div>
-                        <div className={style.navs} onClick={() => nav('/patient')}>
-                            <div className={style.dashboardIcon}>
-                                <img src={patientIcon} alt="patientIcon" />
-                            </div>
-                            <div>Patients</div>
                         </div>
                     </div>
                 </div>
-                <div className={style.logout}>Logout</div>
-            </div>
-            <div className={style.leftSection}>
-                <div className={style.profile}>
-                    <div className={style.profilePic}>
-                        <img src={userData?.hospitalLogo?.url} alt="profile" />
-                        <p>View profile</p>
-                    </div>
-                    <div className={style.adminDetials}>
-                        <p><span>Welcome</span>,{userData?.facilityname}</p>
-                        <p className={style.id}>Admin</p>
-                        <p>{userData?.hospitalCode}</p>
-                    </div>
-                </div>
-                <div className={style.hospitaldetails}>
-                    <div className={style.totals}>
-                        <span>30+</span>
-                        <p>Staffs</p>
-                    </div>
-                    <div className={style.totals}>
-                        <span>2000+</span>
-                        <p>Patients</p>
-                    </div>
-                </div>
-                <div className={style.plans}>
-                    <div className={style.planBody}>
-                        <p className={style.planHeader}><span>Pl</span>ans</p>
-                        <div className={style.planSec}>
-                            <div className={style.planCards}>
-                                <span>Regular</span>
-                                <p>#250,000</p>
-                            </div>
-                            <div className={style.planCards2}>
-                                <span>Medium</span>
-                                <p>#250,000</p>
-                            </div>
-                            <div className={style.planCards3}>
-                                <span>Premium</span>
-                                <p>#250,000</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            </div >
+            <Adminprofile />
+        </>
+
     )
 }
 
