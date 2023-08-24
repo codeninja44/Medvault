@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+input {
+    background-color: gray;
+}
+
+.body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.mainBody {
+    height: 90%;
+    width: 45%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    flex-direction: column;
+    border: 0.5px solid black;
+}
+
+.mainBodyP {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.mainBodyP span {
+    color: #1EBFC1;
+    font-size: 30px;
+}
+
+.image {
+    height: 80%;
+    width: 14%;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+
+
+.image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.top {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    padding-top: 10px;
+    padding-left: 10px;
+    gap: 15px;
+}
+
+.text {
+    height: 35%;
+    width: 20%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.text p {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.text :nth-child(2) {
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    margin-top: 13px;
+    height: 25px;
+    width: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.secondSec {
+    height: 80%;
+    width: 100%;
+}
+
+.patientNumber {
+    display: flex;
+    padding-left: 15px;
+    gap: 30px;
+    height: 10%;
+    width: 100%;
+}
+
+.patientNumber p {
+    font-size: 20px;
+    font-weight: 700;
+    height: 80%;
+    width: 40%;
+    color: #1EBFC1;
+}
+
+.patientNumber p span {
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+    height: 25px;
+    /* width: 50%; */
+    background-color: white;
+}
+
+.bloodGroup {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    padding-left: 17px;
+}
+
+.homeAddress {
+    height: 100%;
+    width: 30%;
+    font-size: 20px;
+    font-weight: 400;
+    /* color: #1EBFC1; */
+}
+
+.homeAddress span {
+    font-size: 15px;
+    height: 70%;
+    width: 20%;
+    background-color: white;
+}
+
+.homeAddress2 {
+    height: 100%;
+    width: 50%;
+    font-size: 20px;
+    font-weight: 700;
+    /* color: #1EBFC1; */
+
+}
+
+
+.homeAddress2 span {
+    font-size: 15px;
+    height: 70%;
+    width: 20%;
+    background-color: white;
+}
+
+.city {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    padding-left: 17px;
+}
+
+.address {
+    height: 100%;
+    width: 20%;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.address2 {
+    height: 100%;
+    width: 40%;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.address2 span {
+    font-size: 15px;
+    height: 70%;
+    width: 20%;
+    background-color: white;
+}
+
+.address span {
+    font-size: 15px;
+    height: 70%;
+    width: 20%;
+    background-color: white;
+}
+
+.hospital {
+    height: 10%;
+    width: 100%;
+    padding-left: 17px;
+    display: flex;
+    gap: 15px;
+}
+
+.code {
+    height: 100%;
+    width: 30%;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.code span {
+    font-size: 15px;
+    height: 70%;
+    width: 20%;
+    background-color: white;
+}
+
+.code2 {
+    height: 100%;
+    width: 15%;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.code2 span {
+    font-size: 15px;
+    height: 70%;
+    width: 20%;
+    background-color: white;
+}
+
+.code3 {
+    height: 100%;
+    width: 40%;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.code3 span {
+    font-size: 15px;
+    height: 70%;
+    width: 20%;
+    background-color: white;
+}
+
+.spouse {
+    height: 10%;
+    width: 100%;
+    padding-left: 17px;
+    display: flex;
+    gap: 15px;
+}
+
+.spouseDetail {
+    height: 100%;
+    width: 40%;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.spouseDetail span {
+    font-size: 15px;
+    height: 70%;
+    width: 20%;
+    background-color: white;
+}
+
+.contact {
+    height: 10%;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    padding-left: 17px;
+}
+
+.contact :nth-child(1) {
+    height: 100%;
+    width: 40%;
+}
+
+.contact :nth-child(1) span {
+    font-size: 15px;
+    height: 70%;
+    width: 20%;
+    background-color: white;
+}
+
+.sec {
+    height: 40%;
+    width: 100%;
+    padding-left: 17px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sec p {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.diagnosis {
+    height: 60%;
+    width: 98%;
+    border-radius: 10px;
+}
+
+.update {
+    margin: 0;
+    height: 40px;
+    width: 90px;
+}

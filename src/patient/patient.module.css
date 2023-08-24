@@ -39,6 +39,7 @@
     align-items: center;
     border: 1px solid rgb(69, 68, 68);
     color: black;
+    margin-top: 15px;
 }
 
 .profileInfo {
@@ -55,6 +56,13 @@
 .image {
     height: 90%;
     width: 60px;
+    border-radius: 60px;
+    object-fit: cover;
+}
+
+.image img {
+    height: 100%;
+    width: 100%;
     border-radius: 60px;
 }
 

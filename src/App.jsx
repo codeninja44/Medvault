@@ -23,6 +23,8 @@ import StaffRegistration from './StaffRegistration/StaffRegistration'
 import CreateStaffAlert from './staffAlert/CreateStaffAlert'
 import ContactUs from './ContactUs/ContactUs/ContactUs'
 import RegisterPatient from './registerPatient/ResgisterPatient'
+import PatientInfo from './patientInfo/PatientInfo'
+import Edit from './edit/Edit'
 // import PatientsRegistration from './createPatients/CreatePatients'
 // import ABOUTUS from './ABOUTFOLD/ABOUTUS'
 
@@ -40,7 +42,9 @@ const App = () => {
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/staffDashboard' element={<StaffSpace />} />
           <Route path='/staffInfo' element={<StaffsInfo />} />
-          <Route path='/patient' element={<Patient />} />
+          <Route path='/api/hospitals/patient/:hospitalcode' element={<Patient />} />
+          <Route path='/api/getonepatient/:patientID' element={<PatientInfo />} />
+          <Route path='/api/updatePatient/:patientID' element={<Edit />} />
           <Route path='/' element={<LandingPage />} />
           <Route path='/contactPage' element={<ContactUs />} />
           <Route path='/createStaff' element={<CreateStaff />} />

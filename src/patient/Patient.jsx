@@ -1,15 +1,19 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import style from './patient.module.css'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+// import { useParams } from 'react-router-dom'
 
 const token = JSON.parse(localStorage.getItem("token"))
 // const patientID = JSON.parse(localStorage.getItem("patientID"))
-const hospitalcode = JSON.parse(localStorage.getItem("hospitalcode"))
+// const hospitalcode = JSON.parse(localStorage.getItem("hospitalcode")) 
 
 
 function Patient() {
-    const [patientInfo, setPaientInfo] = useState([])
+    const nav = useNavigate()
+    // const [patientInfo, setPaientInfo] = useState([])
+    // console.log((hospitalcode))
+    const { hospitalcode } = useParams()
 
 
     //     patientInfo.map(({ }) => (
@@ -17,24 +21,37 @@ function Patient() {
     // }
 
 
-    useEffect(() => {
-        setPaientInfo(hospitalcode)
-    }, [])
 
-    const [userData, setUserData] = useState(null)
+    const [userData, setUserData] = useState([])
 
-    async function getData() {
-        const res = axios.get(`https://medvault.onrender.com/api/getAllpatientByHospital/${hospitalcode}`,
-            { headers: { "Authorization": `Bearer ${token}` } })
-        return res
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
     }
+    const url1 = `https://medvault.onrender.com/api/hospitals/patient/${hospitalcode}`
+    // const url2 = `https://medvault.onrender.com/api/delete/${patientID}`
 
+
+
+    function getData() {
+
+        axios.get(url1, config)
+            .then((res) => {
+                console.log(res)
+                setUserData(res.data.data)
+            }
+            )
+            .catch(err => {
+                console.log(err)
+            })
+
+    }
     useEffect(() => {
-        getData().then((res) => setUserData(res.data.data))
+        getData()
 
     }, [])
     console.log(userData)
-    const nav = useNavigate()
 
     return (
         <div className={style.staffsInfo}>
@@ -44,15 +61,30 @@ function Patient() {
                     <p>Search</p>
                 </div>
                 <div className={style.info}>
-                    <div className={style.infoDisplay}>
-                        <div className={style.profileInfo}>
-                            <div className={style.image}>
-                                <img src={userData?.patientImage.url} alt="profile" />
+                    {
+                        userData.map((e) => (
+                            <div className={style.infoDisplay} onClick={() => {
+                                nav(`/api/getonepatient/${e.patientID}`)
+                            }}>
+                                <div className={style.profileInfo}>
+                                    <div className={style.image}>
+                                        <img src={e.patientImage.url} alt="profile" />
+                                    </div>
+                                    <p>{e.patientName}</p>
+                                </div>
+                                <button className={style.delete} onClick={() => {
+                                    axios.delete(`https://medvault.onrender.com/api/delete/${e.patientID}`, config)
+                                        .then(res => {
+                                            console.log(res);
+
+                                        })
+                                        .catch(err => {
+                                            console.log(err);
+                                        })
+                                }} >Delete</button>
                             </div>
-                            <p>Frank Ikenga</p>
-                        </div>
-                        <button className={style.delete}>Delete</button>
-                    </div>
+                        ))
+                    }
                 </div>
                 <div className={style.line}></div>
                 <button className={style.create} onClick={() => nav('/registerPatient')}>Create</button>

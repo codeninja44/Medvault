@@ -15,6 +15,8 @@ import Adminprofile from '../AdminProfile/Adminprofile'
 
 const token = JSON.parse(localStorage.getItem("token"))
 const getId = JSON.parse(localStorage.getItem('id'))
+const hospitalcode = JSON.parse(localStorage.getItem("hospitalcode"))
+console.log(hospitalcode)
 
 
 // import image from '../images/home.png'
@@ -68,7 +70,7 @@ function Dashboard() {
                                 </div>
                                 <div>Staffs</div>
                             </div>
-                            <div className={style.navs} onClick={() => nav('/patient')}>
+                            <div className={style.navs} onClick={() => nav(`/api/hospitals/patient/${hospitalcode}`)}>
                                 <div className={style.dashboardIcon}>
                                     <img src={patientIcon} alt="patientIcon" />
                                 </div>
