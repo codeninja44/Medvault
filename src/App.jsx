@@ -25,6 +25,7 @@ import ContactUs from './ContactUs/ContactUs/ContactUs'
 import RegisterPatient from './registerPatient/ResgisterPatient'
 import PatientInfo from './patientInfo/PatientInfo'
 import Edit from './edit/Edit'
+import Recover from './recoverPatient/Recover'
 // import PatientsRegistration from './createPatients/CreatePatients'
 // import ABOUTUS from './ABOUTFOLD/ABOUTUS'
 
@@ -48,7 +49,7 @@ const App = () => {
           <Route path='/' element={<LandingPage />} />
           <Route path='/contactPage' element={<ContactUs />} />
           <Route path='/createStaff' element={<CreateStaff />} />
-          < Route path='/forgetPassword' element={<Forget />} />
+          <Route path='/forgetPassword' element={<Forget />} />
           <Route path='/resendEmail' element={<ResendEmail />} />
           <Route path='/aboutPage' element={<AboutUs />} />
           <Route path='/resendPop' element={<ResendPopup />} />
@@ -58,6 +59,7 @@ const App = () => {
           <Route path='/staffRegistration' element={<StaffRegistration />} />
           <Route path='/newStaffAlert' element={<CreateStaffAlert />} />
           <Route path='/registerPatient' element={<RegisterPatient />} />
+          <Route path='/recoverPatient' element={<Recover />} />
         </Routes>
       </HashRouter >
     </>

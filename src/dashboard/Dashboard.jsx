@@ -1,4 +1,5 @@
 import style from './dashboard.module.css'
+// import style from './dashboardmobile.module.css'
 import image from '../assets/whiteLogo.png'
 import { useNavigate } from 'react-router-dom'
 import patientIcon from '../assets/patientIcon.png'
@@ -16,19 +17,27 @@ import Adminprofile from '../AdminProfile/Adminprofile'
 const token = JSON.parse(localStorage.getItem("token"))
 const getId = JSON.parse(localStorage.getItem('id'))
 const hospitalcode = JSON.parse(localStorage.getItem("hospitalcode"))
-console.log(hospitalcode)
-
 
 // import image from '../images/home.png'
 
 function Dashboard() {
     const [userData, setUserData] = useState(null)
+    const nav = useNavigate()
 
-    // const hospitalCode = ("YOUR_HOSPITAL_CODE");
+    const url = `https://medvault.onrender.com/api/logouthospital/${getId}`
 
-    // useEffect(() => {
-    //     localStorage.setItem("hospitalCode", JSON.stringify(hospitalCode));
-    // }, [hospitalCode]);
+    function logout(e) {
+        e.preventDefault
+        axios.post(url)
+            .then((res) => {
+                nav('/')
+                localStorage.setItem("token", JSON.stringify(''))
+                console.log(res)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }
 
     async function getData() {
         const res = axios.get(`https://medvault.onrender.com/api/gethospital/${getId}`,
@@ -45,7 +54,8 @@ function Dashboard() {
 
 
     console.log(userData)
-    const nav = useNavigate()
+    const hospitaldetails = localStorage.setItem("hospitaldetails", JSON.stringify(userData))
+    // const nav = useNavigate()
 
     return (
         <>
@@ -58,7 +68,7 @@ function Dashboard() {
                         <div className={style.navSec}>
                             <div className={style.firstNav} onClick={() => nav('/')}>
                                 <div className={style.dashboardIcon1}>
-                                    <div>
+                                    <div className={style.dashboardhomeicon}>
                                         <img src={home} alt="" />
                                     </div>
                                 </div>
@@ -68,17 +78,17 @@ function Dashboard() {
                                 <div className={style.dashboardIcon2}>
                                     <img src={staff} alt="staff" />
                                 </div>
-                                <div>Staffs</div>
+                                <div className={style.text}>Staffs</div>
                             </div>
                             <div className={style.navs} onClick={() => nav(`/api/hospitals/patient/${hospitalcode}`)}>
                                 <div className={style.dashboardIcon}>
                                     <img src={patientIcon} alt="patientIcon" />
                                 </div>
-                                <div>Patients</div>
+                                <div className={style.text}>Patients</div>
                             </div>
                         </div>
                     </div>
-                    <div className={style.logout}>Logout</div>
+                    <div className={style.logout} onClick={logout} style={{ cursor: 'pointer' }}>Logout</div>
                 </div>
                 <div className={style.leftSection}>
                     <div className={style.profile}>

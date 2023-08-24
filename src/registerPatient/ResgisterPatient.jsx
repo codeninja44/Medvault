@@ -110,6 +110,7 @@ const RegisterPatient = () => {
         setLoad(false)
         localStorage.setItem("email", JSON.stringify(res.data.data.email))
         localStorage.setItem('patientID', JSON.stringify(res.data.data.patientID))
+        // localStorage.setItem('patientDetails', JSON.stringify(res.data.data.patientID))
         nav('/emailVerificaion')
       })
       .catch((err) => {

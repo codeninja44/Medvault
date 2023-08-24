@@ -64,7 +64,8 @@ function Edit() {
     const patientIdentification = patient.patientID
 
     const url2 = `https://medvault.onrender.com/api/updatePatient/${patientIdentification}`
-    function setNew() {
+    function setNew(e) {
+        e.preventDefault
         axios.patch(url2, allData, config)
             .then(res => {
                 console.log(res)

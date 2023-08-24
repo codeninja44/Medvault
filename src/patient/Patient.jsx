@@ -4,16 +4,20 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 // import { useParams } from 'react-router-dom'
 
-const token = JSON.parse(localStorage.getItem("token"))
+
 // const patientID = JSON.parse(localStorage.getItem("patientID"))
 // const hospitalcode = JSON.parse(localStorage.getItem("hospitalcode")) 
 
 
 function Patient() {
+    const storedHospitalDetails = JSON.parse(localStorage.getItem("hospitaldetails"));
+    console.log(storedHospitalDetails);
     const nav = useNavigate()
     // const [patientInfo, setPaientInfo] = useState([])
     // console.log((hospitalcode))
+    const token = JSON.parse(localStorage.getItem("token"))
     const { hospitalcode } = useParams()
+    console.log(hospitalcode)
 
 
     //     patientInfo.map(({ }) => (
@@ -29,7 +33,7 @@ function Patient() {
             Authorization: `Bearer ${token}`
         }
     }
-    const url1 = `https://medvault.onrender.com/api/hospitals/patient/${hospitalcode}`
+    const url1 = `https://medvault.onrender.com/api/hospitals/patient/${storedHospitalDetails.hospitalcode}`
     // const url2 = `https://medvault.onrender.com/api/delete/${patientID}`
 
 
@@ -88,6 +92,7 @@ function Patient() {
                 </div>
                 <div className={style.line}></div>
                 <button className={style.create} onClick={() => nav('/registerPatient')}>Create</button>
+                <button className={style.create} onClick={() => nav('/recoverPatient')} style={{ marginLeft: '530px' }}>Recover</button>
             </div>
         </div>
     )

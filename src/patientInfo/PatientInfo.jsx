@@ -21,7 +21,7 @@ function PatientInfo() {
     const url1 = `https://medvault.onrender.com/api/getonepatient/${patientID}`
     // const url2 = `https://medvault.onrender.com/api/delete/${patientID}`
 
-    function getData() {
+    function getData(e) {
 
         axios.get(url1, config)
             .then((res) => {

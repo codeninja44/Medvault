@@ -14,7 +14,7 @@ const StaffRegistration = () => {
    const [confirmPassword, setConfirmPassword] = useState('')
    const [role, setRole] = useState('')
    const [hospitalcode, setHospitalcode] = useState('')
-   // const [photo, setPhoto] = useState('')
+   const [photo, setPhoto] = useState('')
    const nav = useNavigate()
    const [load, setLoad] = useState(false)
 
@@ -23,11 +23,11 @@ const StaffRegistration = () => {
    const token = JSON.parse(localStorage.getItem("token"))
 
 
-   // const File = (e) => {
-   //    const file = e.target.files[0]
-   //    setPhoto(file)
-   //    console.log(file)
-   // }
+   const File = (e) => {
+      const file = e.target.files[0]
+      setPhoto(file)
+      console.log(file)
+   }
 
    const data = new FormData()
    data.append("name", name)
@@ -38,7 +38,7 @@ const StaffRegistration = () => {
    data.append("confirmPassword", confirmPassword)
    data.append("role", role)
    data.append("hospitalcode", hospitalcode)
-   // data.append("photo", photo)
+   data.append("photo", photo)
 
 
    function register(e) {
@@ -51,7 +51,7 @@ const StaffRegistration = () => {
             console.log(res);
             // setVerify(true); 
             setLoad(false)
-            nav('/staffDashboard')
+            nav("/login")
 
          })
          .catch((err) => {
@@ -84,6 +84,7 @@ const StaffRegistration = () => {
                         <input className='staffemail' type="text" placeholder='Age' value={age} onChange={(e) => setAge(e.target.value)} />
                         <input className='staffpassword' type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
                         <input className='staffconfirmpass' type="password" placeholder='Confirm Password' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+                        <input type='file' accept='/image*/' className="inputType" onChange={File} />
                         <input className='staffrole' type="text" placeholder='Role' value={role} onChange={(e) => setRole(e.target.value)} />
                         <input className='staffhoscode' type="text" placeholder='Hospital Code' value={hospitalcode} onChange={(e) => setHospitalcode(e.target.value)} />
                         <button className='staffregbutton' type='submit'>{load ? "Loading..." : "Register"}</button>

@@ -296,6 +296,23 @@
         width: 35%;
     }
 
+    .dashboardhomeicon img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .dashboardIcon2 {
+        width: 20px;
+        height: 20px;
+    }
+
+    .dashboardIcon {
+        width: 20px;
+        height: 20px;
+    }
+
+
+
     .logo {
         height: 20%;
         width: 80%;
@@ -491,5 +508,13 @@
         height: 55%;
         width: 21%;
         border-radius: 100px;
+    }
+
+    .totals {
+        width: 90%;
+    }
+
+    .hospitaldetails {
+        padding: 20px;
     }
 }
