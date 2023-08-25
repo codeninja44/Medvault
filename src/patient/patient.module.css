@@ -16,6 +16,7 @@
     align-items: center;
     padding-left: 10px;
     gap: 5px;
+    margin-bottom: 20px;
 }
 
 .innerBody {
@@ -24,9 +25,11 @@
 }
 
 .info {
-    height: 75%;
+    height: 80%;
     width: 100%;
     padding-top: 15px;
+    overflow: auto;
+    padding-top: 20px;
 }
 
 .infoDisplay {
@@ -40,6 +43,7 @@
     border: 1px solid rgb(69, 68, 68);
     color: black;
     margin-top: 15px;
+    padding-right: 15px;
 }
 
 .profileInfo {
@@ -73,7 +77,8 @@
     margin-right: 20px;
     border-radius: 5px;
     cursor: pointer;
-    background-color: red;
+    background-color: rgb(235, 76, 76);
+    margin: 0px;
 }
 
 .searchIcon {

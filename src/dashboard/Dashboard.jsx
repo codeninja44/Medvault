@@ -22,6 +22,8 @@ const hospitalcode = JSON.parse(localStorage.getItem("hospitalcode"))
 
 function Dashboard() {
     const [userData, setUserData] = useState(null)
+    const [dropDown, setDropDown] = useState(false)
+    // const [facilityname, setFacilityName] = useState(userData.facilityname)
     const nav = useNavigate()
 
     const url = `https://medvault.onrender.com/api/logouthospital/${getId}`
@@ -92,14 +94,17 @@ function Dashboard() {
                 </div>
                 <div className={style.leftSection}>
                     <div className={style.profile}>
-                        <div className={style.profilePic}>
+                        <div className={style.profilePic} >
                             <img src={userData?.hospitalLogo?.url} alt="profile" />
-                            <p>View profile</p>
+                            <p onClick={() => setDropDown(!dropDown)} style={{ cursor: 'pointer' }}>View profile</p>
                         </div>
                         <div className={style.adminDetials}>
                             <p><span>Welcome</span>,{userData?.facilityname}</p>
-                            <p className={style.id}>Admin</p>
-                            <p>{userData?.hospitalCode}</p>
+                            <div style={{ display: 'flex', gap: '20px', marginTop: "10px" }}>
+                                <p className={style.id}>Admin</p>
+                                <p style={{ fontSize: '15px', fontWeight: '600' }}>{userData?.hospitalcode}</p>
+                            </div>
+
                         </div>
                     </div>
                     <div className={style.hospitaldetails}>
@@ -133,7 +138,76 @@ function Dashboard() {
                     </div>
                 </div>
             </div >
-            <Adminprofile />
+            {
+                dropDown ? (<div className="dropDown">
+                    <div className='Adminbody' >
+                        <div className='Admincontain'>
+                            <div className='Adminhead'>
+                                <div className="menu1">
+                                    <span onClick={() => setDropDown(false)}>X</span>
+                                </div>
+                            </div>
+                            <div className='Admincontainer'>
+                                <div className='profileadmincontainer'>
+                                    <h2>Profile</h2>
+                                    <div className='curved'>
+
+                                    </div>
+                                </div>
+                                <div className='adminprofilebody'>
+                                    <div className='profilefnamecon'>
+                                        <h2>Facility Name</h2>
+
+                                        <input className='profilefnameAdmin' />
+                                    </div>
+
+                                    <div className='profilefphonecon'>
+                                        <h2>Facility Phone Number</h2>
+                                        <input className='profilefphoneAdmin' />
+                                    </div>
+
+                                    <div className='profilefemailcon'>
+                                        <h2>Facility Email</h2>
+                                        <input className='profilefemailAdmin' />
+                                    </div>
+
+
+
+                                    <div className='profilefaddresscon'>
+                                        <h2>Facility Address</h2>
+                                        <input className='profilefaddressAdmin' />
+                                    </div>
+
+                                    <div className='profilefhoscon'>
+                                        <h2>Hosipital Code </h2>
+                                        <input className='profilefhosAdmin' />
+                                    </div>
+
+                                    <div className='profilefstatecon'>
+                                        <h2>State</h2>
+                                        <input className='profilefstateAdmin' />
+                                    </div>
+
+                                    <div className='profilefcitycon'>
+                                        <h2>City</h2>
+                                        <input className='profilefcityAdmin' />
+                                    </div>
+
+                                    <div className='profileflgacon'>
+                                        <h2>L.G.A</h2>
+                                        <input className='profileflgaAdmin' />
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>) : null
+            }
         </>
 
     )

@@ -5,6 +5,31 @@
     justify-content: center;
     align-items: center;
     top: 0;
+    position: fixed;
+    left: 0;
+}
+
+.menu1 {
+    display: flex;
+    justify-content: flex-end;
+    height: 5%;
+    padding-right: 20px;
+    width: 100%;
+}
+
+.menu1 span:hover {
+    transition: all 350ms ease-in;
+    transform: scale(1.2);
+}
+
+.menu1 span {
+    color: red;
+    font-size: 25px;
+    cursor: pointer;
+    transform: scale(1.0);
+    transition: all 350ms ease-in;
+    font-weight: 600;
+
 }
 
 .Admincontain {
