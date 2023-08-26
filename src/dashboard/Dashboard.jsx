@@ -18,7 +18,6 @@ import useDashboard from '../hooks/useDashboard'
 const token = JSON.parse(localStorage.getItem("token"))
 const getId = JSON.parse(localStorage.getItem('id'))
 const hospitalcode = JSON.parse(localStorage.getItem("hospitalcode"))
-// const [facilityname, setFacilityName] = useState(userData.facilityname)
 
 
 // import image from '../images/home.png'
@@ -26,6 +25,13 @@ const hospitalcode = JSON.parse(localStorage.getItem("hospitalcode"))
 function Dashboard() {
     const [userData, setUserData] = useState(null)
     const [dropDown, setDropDown] = useState(false)
+    const [facilityname, setfacilityname] = useState('')
+    const [email, setemail] = useState('')
+    const [facilityaddress, setfacilityaddress] = useState('')
+    const [facilityphone, setfacilityphone] = useState('')
+    const [state, setstate] = useState('')
+    const [city, setcity] = useState('')
+    const [LGA, setLGA] = useState('')
     const login = useDashboard()
 
     console.log(login.admin)
@@ -55,9 +61,18 @@ function Dashboard() {
 
 
     useEffect(() => {
-        getData().then((res) => setUserData(res.data.data))
-
+        getData().then((res) => {
+            setUserData(res.data.data);
+            setfacilityname(res.data.data.facilityname);
+            setemail(res.data.data.email)
+            setfacilityaddress(res.data.data.facilityaddress)
+            setfacilityphone(res.data.data.facilityphone)
+            setstate(res.data.data.state)
+            setcity(res.data.data.city)
+            setLGA(res.data.data.LGA)
+        })
     }, [])
+
 
 
     // console.log(res)
@@ -65,7 +80,6 @@ function Dashboard() {
 
 
 
-    console.log(userData)
     const hospitaldetails = localStorage.setItem("hospitaldetails", JSON.stringify(userData))
 
     // const nav = useNavigate()
@@ -170,44 +184,44 @@ function Dashboard() {
                                     <div className='profilefnamecon'>
                                         <h2>Facility Name</h2>
 
-                                        <input className='profilefnameAdmin' />
+                                        <input className='profilefnameAdmin' value={facilityname} onChange={(e) => setfacilityname(e.target.value)} />
                                     </div>
 
                                     <div className='profilefphonecon'>
                                         <h2>Facility Phone Number</h2>
-                                        <input className='profilefphoneAdmin' />
+                                        <input className='profilefphoneAdmin' value={facilityphone} onChange={(e) => setfacilityphone(e.target.value)} />
                                     </div>
 
                                     <div className='profilefemailcon'>
                                         <h2>Facility Email</h2>
-                                        <input className='profilefemailAdmin' />
+                                        <input className='profilefemailAdmin' value={email} onChange={(e) => setemail(e.target.value)} />
                                     </div>
 
 
 
                                     <div className='profilefaddresscon'>
                                         <h2>Facility Address</h2>
-                                        <input className='profilefaddressAdmin' />
+                                        <input className='profilefaddressAdmin' value={facilityaddress} onChange={(e) => setfacilityaddress(e.target.value)} />
                                     </div>
 
                                     <div className='profilefhoscon'>
                                         <h2>Hosipital Code </h2>
-                                        <input className='profilefhosAdmin' />
+                                        <input className='profilefhosAdmin' value={userData.hospitalcode} disabled />
                                     </div>
 
                                     <div className='profilefstatecon'>
                                         <h2>State</h2>
-                                        <input className='profilefstateAdmin' />
+                                        <input className='profilefstateAdmin' value={state} onChange={(e) => setstate(e.target.value)} />
                                     </div>
 
                                     <div className='profilefcitycon'>
                                         <h2>City</h2>
-                                        <input className='profilefcityAdmin' />
+                                        <input className='profilefcityAdmin' value={city} onChange={(e) => setcity(e.target.value)} />
                                     </div>
 
                                     <div className='profileflgacon'>
                                         <h2>L.G.A</h2>
-                                        <input className='profileflgaAdmin' />
+                                        <input className='profileflgaAdmin' value={LGA} onChange={(e) => setLGA(e.target.value)} />
                                     </div>
 
 
