@@ -26,7 +26,7 @@ function Login() {
                 console.log(res)
             })
             .catch((err) => {
-                console.log('this is an error', err),
+                console.log(err),
                     setLoad(false),
                     toast.error(err.response.data.message)
             }

@@ -9,6 +9,7 @@ import home from '../assets/home.png'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Adminprofile from '../AdminProfile/Adminprofile'
+import useDashboard from '../hooks/useDashboard'
 
 // import profileIcon from '../assets/profileIcon.png'
 // import dashboard from '../assets/dashboard.png'
@@ -17,13 +18,18 @@ import Adminprofile from '../AdminProfile/Adminprofile'
 const token = JSON.parse(localStorage.getItem("token"))
 const getId = JSON.parse(localStorage.getItem('id'))
 const hospitalcode = JSON.parse(localStorage.getItem("hospitalcode"))
+// const [facilityname, setFacilityName] = useState(userData.facilityname)
+
 
 // import image from '../images/home.png'
 
 function Dashboard() {
     const [userData, setUserData] = useState(null)
     const [dropDown, setDropDown] = useState(false)
-    // const [facilityname, setFacilityName] = useState(userData.facilityname)
+    const login = useDashboard()
+
+    console.log(login.admin)
+
     const nav = useNavigate()
 
     const url = `https://medvault.onrender.com/api/logouthospital/${getId}`
@@ -33,8 +39,7 @@ function Dashboard() {
         axios.post(url)
             .then((res) => {
                 nav('/')
-                localStorage.setItem("token", JSON.stringify(''))
-                console.log(res)
+                localStorage.removeItem('token')
             })
             .catch((err) => {
                 console.log(err)
@@ -47,16 +52,22 @@ function Dashboard() {
         return res
     }
 
+
+
     useEffect(() => {
         getData().then((res) => setUserData(res.data.data))
 
     }, [])
 
 
+    // console.log(res)
+
+
 
 
     console.log(userData)
     const hospitaldetails = localStorage.setItem("hospitaldetails", JSON.stringify(userData))
+
     // const nav = useNavigate()
 
     return (
@@ -76,12 +87,13 @@ function Dashboard() {
                                 </div>
                                 <div className={style.text}>Home</div>
                             </div>
-                            <div className={style.secondNav} onClick={() => nav('/staffInfo')}>
+                            {login.admin ? <div className={style.secondNav} onClick={() => nav('/staffInfo')} >
                                 <div className={style.dashboardIcon2}>
                                     <img src={staff} alt="staff" />
                                 </div>
                                 <div className={style.text}>Staffs</div>
-                            </div>
+                            </div> : null}
+
                             <div className={style.navs} onClick={() => nav(`/api/hospitals/patient/${hospitalcode}`)}>
                                 <div className={style.dashboardIcon}>
                                     <img src={patientIcon} alt="patientIcon" />

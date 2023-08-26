@@ -20,11 +20,6 @@ function Patient() {
     console.log(hospitalcode)
 
 
-    //     patientInfo.map(({ }) => (
-    //             ))
-    // }
-
-
 
     const [userData, setUserData] = useState([])
 
@@ -76,11 +71,12 @@ function Patient() {
                                     </div>
                                     <p>{e.patientName}</p>
                                 </div>
-                                <button className={style.delete} onClick={() => {
+                                <button className={style.delete} onClick={(event) => {
+                                    event.stopPropagation()
                                     axios.delete(`https://medvault.onrender.com/api/delete/${e.patientID}`, config)
                                         .then(res => {
                                             console.log(res);
-
+                                            getData()
                                         })
                                         .catch(err => {
                                             console.log(err);
