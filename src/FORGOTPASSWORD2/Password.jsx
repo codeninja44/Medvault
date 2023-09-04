@@ -50,7 +50,7 @@ function Password() {
             </div>
           </div>
           <input type="password" placeholder='New Password' className='in11' style={{ backgroundColor: 'white' }} value={existingPassword} onChange={(e) => setExistingPassword(e.target.value)} />
-          <input type="password" placeholder='Confirm password' className='in22' style={{ backgroundColor: 'white' }} value={password} onChange={(e) => setPassword(e.target.value)} />
+          {/* <input type="password" placeholder='Confirm password' className='in22' style={{ backgroundColor: 'white' }} value={password} onChange={(e) => setPassword(e.target.value)} /> */}
           <button className='btn' onClick={verifyUser}>{load ? "Loading..." : 'change Password'}</button>
         </div>
         {

@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import CreatedSuccessfully from '../Created PopUp/CreatedSuccessfully'
 import Swal from "sweetalert2"
+import logo from '../assets/logo.png'
+
 
 const RegisterPatient = () => {
   const [patientImage, setPatientImage] = useState()
@@ -31,6 +33,7 @@ const RegisterPatient = () => {
   // const [otherContacts, setHospitalCode] = useState('')
   const [spousePhonenumber, setSpouseNumber] = useState('')
   const [diagnosis, setDiagnosis] = useState('')
+
 
   const handleMaleChange = () => {
     setMale(!male);
@@ -133,6 +136,9 @@ const RegisterPatient = () => {
 
   return (
     <div className='App'>
+      <div className='stafflogowrapper' style={{ height: '100px', width: '150px' }}>
+        <img src={logo} alt="logo" onClick={() => nav('/dashboard')} />
+      </div>
       <div className='App2'>
         <form className="inputSec" onSubmit={register}>
           <div className='detailsHeader'>
@@ -145,54 +151,55 @@ const RegisterPatient = () => {
               borderRadius: "5px",
               paddingTop: '30px',
               paddingLeft: '20px',
-              background: 'white'
+              background: 'white',
+              border: "1px solid rgba(0, 170, 255, 0.95)"
             }} onChange={File} />
 
           </div>
           <div className='PatientsInfo'>
             <div className='NameA'>
               <p>Name: </p>
-              <input placeholder='' type='text' value={patientName} onChange={(e) => setName(e.target.value)} />
+              <input placeholder='' type='text' value={patientName} onChange={(e) => setName(e.target.value)} style={{ backgroundColor: 'white' }} />
             </div>
 
             <div className='NameB'>
               <p>Phone Number: </p>
-              <input placeholder='' type='number' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
+              <input placeholder='' type='number' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} style={{ backgroundColor: 'white' }} />
             </div>
 
             <div className='NameC'>
               <p>E-Mail Address: </p>
-              <input placeholder='' type='email' value={email} onChange={(e) => setEmailAddress(e.target.value)} />
+              <input placeholder='' type='email' value={email} onChange={(e) => setEmailAddress(e.target.value)} style={{ backgroundColor: 'white' }} />
             </div>
 
             <div className='NameC'>
               <p>Blood group: </p>
-              <input placeholder='' type='text' value={bloodGroup} onChange={(e) => setBloodGroup(e.target.value)} />
+              <input placeholder='' type='text' value={bloodGroup} onChange={(e) => setBloodGroup(e.target.value)} style={{ backgroundColor: 'white' }} />
             </div>
 
             <div className='NameD'>
               <p>Home Address: </p>
-              <input placeholder='' type='text' value={homeAddress} onChange={(e) => setHomeAddress(e.target.value)} />
+              <input placeholder='' type='text' value={homeAddress} onChange={(e) => setHomeAddress(e.target.value)} style={{ backgroundColor: 'white' }} />
             </div>
 
             <div className='NameE'>
               <p>City: </p>
-              <input placeholder='' type='' value={city} onChange={(e) => setCity(e.target.value)} />
+              <input placeholder='' type='' value={city} onChange={(e) => setCity(e.target.value)} style={{ backgroundColor: 'white' }} />
             </div>
 
             <div className='NameF'>
               <p>State: </p>
-              <input placeholder='' type='text' value={state} onChange={(e) => setState(e.target.value)} />
+              <input placeholder='' type='text' value={state} onChange={(e) => setState(e.target.value)} style={{ backgroundColor: 'white' }} />
             </div>
 
             <div className='NameH'>
               <p>Date Of Birth: </p>
-              <input placeholder='' type='text' value={dateOfBirth} onChange={(e) => setDateOfBirth(e.target.value)} />
+              <input placeholder='' type='text' value={dateOfBirth} onChange={(e) => setDateOfBirth(e.target.value)} style={{ backgroundColor: 'white' }} />
             </div>
 
             <div className='NameH'>
               <p>Hospital code: </p>
-              <input placeholder='' type='text' value={hospitalcode} onChange={(e) => setHospitalcode(e.target.value)} />
+              <input placeholder='' type='text' value={hospitalcode} onChange={(e) => setHospitalcode(e.target.value)} style={{ backgroundColor: 'white' }} />
             </div>
 
 
@@ -217,17 +224,17 @@ const RegisterPatient = () => {
 
             <div className='NameI'>
               <p>Spouse Name(if Married or Divorced): </p>
-              <input placeholder='' type='text' value={spouseName} onChange={(e) => setSpouseName(e.target.value)} />
+              <input placeholder='' type='text' value={spouseName} onChange={(e) => setSpouseName(e.target.value)} style={{ backgroundColor: 'white' }} />
             </div>
 
             <div className='NameJ'>
               <p>Spouse Number(if Married or Divorced): </p>
-              <input placeholder='' type='text' value={spousePhonenumber} onChange={(e) => setSpouseNumber(e.target.value)} />
+              <input placeholder='' type='text' value={spousePhonenumber} onChange={(e) => setSpouseNumber(e.target.value)} style={{ backgroundColor: 'white' }} />
             </div>
 
             <div className='NameK'>
               <p>Other contact: </p>
-              <input placeholder='' type='text' value={otherContacts} onChange={(e) => setOtherContacts(e.target.value)} />
+              <input placeholder='' type='text' value={otherContacts} onChange={(e) => setOtherContacts(e.target.value)} style={{ backgroundColor: 'white' }} />
             </div>
 
 
@@ -241,7 +248,7 @@ const RegisterPatient = () => {
               <textarea id="diagnosis" value={diagnosis} style={{
                 flex: "2",
                 padding: "10px",
-                border: "1px solid #ccc",
+                border: "1px solid rgba(0, 170, 255, 0.95)",
                 backgroundColor: "white",
                 borderRadius: "5px",
                 width: "100%"

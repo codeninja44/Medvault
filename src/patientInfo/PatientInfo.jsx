@@ -18,6 +18,7 @@ function PatientInfo() {
     const [otherContacts, setotherContacts] = useState('')
     const [editLoad, setEditLoad] = useState(false)
     const [photo, setPhoto] = useState()
+    const [diagnosis, setDiagnosis] = useState('')
 
     const updatePatient = {
         patientName,
@@ -69,6 +70,8 @@ function PatientInfo() {
                 setspousePhonenumber(res.data.data.spousePhonenumber)
                 setotherContacts(res.data.data.otherContacts)
                 setPhoto(res.data.data.patientImage.url)
+                setDiagnosis(res.data.data.diagnosis)
+
 
 
 
@@ -162,7 +165,8 @@ function PatientInfo() {
                             </div>
                             <div className="form-group">
                                 <label for="diagnosis">Diagnosis:</label>
-                                <textarea id="diagnosis" name="diagnosis" >{ }</textarea>
+                                <textarea id="diagnosis" name="diagnosis" value={diagnosis} onChange={(e) => setDiagnosis(e.target.value)}></textarea>
+                                <button style={{ height: '50px', width: '110px', fontSize: '15px', backgroundColor: 'white', color: '#1EBFC1', marginBottom: '20px', marginLeft: "10px", borderRadius: '5px' }}>Add diagnosis</button>
                             </div>
                             <button className='updateBtn' onClick={updatePatientInfo}>{editLoad ? "Updating..." : 'Update'}</button>
                         </form>

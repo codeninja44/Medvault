@@ -18,8 +18,8 @@ function Patient() {
     // const [patientInfo, setPaientInfo] = useState([])
     // console.log((hospitalcode))
     const token = JSON.parse(localStorage.getItem("token"))
-    const { hospitalcode } = useParams()
-    console.log(hospitalcode)
+    // const { hospitalcode } = useParams()
+    // console.log(hospitalcode)
 
 
 
@@ -30,7 +30,7 @@ function Patient() {
             Authorization: `Bearer ${token}`
         }
     }
-    const url1 = `https://medvault.onrender.com/api/hospitals/patient/${storedHospitalDetails}`
+    const url1 = `https://medvault.onrender.com/api/hospitals/patient/${storedHospitalDetails.hospitalcode}`
 
 
 

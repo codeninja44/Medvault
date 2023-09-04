@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom"
 import VerifiedEmail from "../emailVerified/VerifiedEmail"
 import { HiOutlineArrowLeft } from 'react-icons/hi'
 import { toast } from "react-hot-toast"
+// import logo from '../../assets/logo.png'
+import logo from '../assets/logo.png'
 
 function Login() {
     const [email, setEmail] = useState("")
@@ -33,30 +35,30 @@ function Login() {
             );
     }
 
-    return ( 
+    return (
         <>
-        <div className='stafflogowrapper'>
-                       <img onClick={() => nav('/')} src="./src/assets/logo.png" alt="logo" />
-                  </div>
-        <div className="registration">
-            {/* <div className='arrow' onClick={() => nav('/')}><HiOutlineArrowLeft /></div> */}
-            <div className="registrationList">
-                <div className="regSection">
-                    <h4>LOGIN</h4>
-                    <div className="loginInput">
-                        <input type="text" placeholder="Email" className="inputType" value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <input type="Password" placeholder="Password" className="inputType" value={password} onChange={(e) => setPassword(e.target.value)} />
-                    </div>
-                    <div className="forgetPassword" onClick={() => nav('/forgetPassword')}>
-                        <p>Forget password</p>
-                    </div>
-                    <button className="regBtn" onClick={login}>{load ? 'loading...' : "Login"}</button>
-                    <div className="sighSec">
-                        <div className="signUp">Don't have an account?<span className="signBtn" onClick={() => nav("/registration")}>Register </span></div>
+            <div className='stafflogowrapper'>
+                <img src={logo} alt="logo" />
+            </div>
+            <div className="registration">
+                {/* <div className='arrow' onClick={() => nav('/')}><HiOutlineArrowLeft /></div> */}
+                <div className="registrationList">
+                    <div className="regSection">
+                        <h4>LOGIN</h4>
+                        <div className="loginInput">
+                            <input type="text" placeholder="Email" className="inputType" value={email} onChange={(e) => setEmail(e.target.value)} />
+                            <input type="Password" placeholder="Password" className="inputType" value={password} onChange={(e) => setPassword(e.target.value)} />
+                        </div>
+                        <div className="forgetPassword" onClick={() => nav('/forgetPassword')}>
+                            <p>Forget password</p>
+                        </div>
+                        <button className="regBtn" onClick={login}>{load ? 'loading...' : "Login"}</button>
+                        <div className="sighSec">
+                            <div className="signUp">Don't have an account?<span className="signBtn" onClick={() => nav("/registration")}>Register </span></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div >
+            </div >
         </>
     )
 }
