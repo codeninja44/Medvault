@@ -9,11 +9,11 @@ function Password() {
   // const [isVerified, setIsVerified] = useState(1)
   const [verified, setVerified] = useState(false)
   const [load, setLoad] = useState(false)
-  const [existingPassword, setExistingPassword] = useState('')
+  // const [existingPassword, setExistingPassword] = useState('')
   const [password, setPassword] = useState('')
 
 
-  const forgetInfo = { password, existingPassword }
+  const forgetInfo = { password }
 
   const nav = useNavigate()
 
@@ -23,7 +23,7 @@ function Password() {
   const verifyUser = () => {
     setLoad(true)
     axios
-      .post(`https://medvault.onrender.com/api/changepassword/${token}`, forgetInfo)
+      .post(`https://medvault.onrender.com/api/resetpassword/${token}`, forgetInfo)
       .then((res) => {
         console.log(res);
         setVerified(true)
@@ -49,7 +49,7 @@ function Password() {
               <h2>Set a new password</h2>
             </div>
           </div>
-          <input type="password" placeholder='New Password' className='in11' style={{ backgroundColor: 'white' }} value={existingPassword} onChange={(e) => setExistingPassword(e.target.value)} />
+          <input type="password" placeholder='New Password' className='in11' style={{ backgroundColor: 'white' }} value={password} onChange={(e) => setPassword(e.target.value)} />
           {/* <input type="password" placeholder='Confirm password' className='in22' style={{ backgroundColor: 'white' }} value={password} onChange={(e) => setPassword(e.target.value)} /> */}
           <button className='btn' onClick={verifyUser}>{load ? "Loading..." : 'change Password'}</button>
         </div>
