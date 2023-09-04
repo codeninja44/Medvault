@@ -47,11 +47,11 @@ function StaffDetails() {
     return (
         <>
             <div className='stafflogowrapper'>
-                <img onClick={() => nav('/api/hospitals/patient/:hospitalcode')} src="./src/assets/logo.png" alt="logo" />
+                <img onClick={() => nav('/staffInfo')} src="./src/assets/logo.png" alt="logo" />
             </div>
             <main>
                 <div className="overall">
-                    <h1 style={{ textAlign: 'center', marginBottom: '10px' }}>Patient Information</h1>
+                    <h1 style={{ textAlign: 'center', marginBottom: '10px' }}>Staff Information</h1>
                     <section className="patient-image">
                         <p>Staff image:</p>
                         <img src={photo} alt="Patient's Photo" />
@@ -81,7 +81,7 @@ function StaffDetails() {
                             </div>
                             <div className="form-group">
                                 <label for="phoneNumber">Hospital code:</label>
-                                <input type="tel" id="phoneNumber" name="phoneNumber" value={useData?.hospitalcode} readOnly />
+                                <input type="tel" id="phoneNumber" name="Hospital code" value={useData?.hospitalcode} readOnly />
                             </div>
 
                             <div className="form-group">

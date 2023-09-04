@@ -30,7 +30,7 @@ function Patient() {
             Authorization: `Bearer ${token}`
         }
     }
-    const url1 = `https://medvault.onrender.com/api/hospitals/patient/${storedHospitalDetails.hospitalcode}`
+    const url1 = `https://medvault.onrender.com/api/hospitals/patient/${storedHospitalDetails}`
 
 
 

@@ -524,6 +524,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .planCards span {
@@ -545,6 +546,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .planCards2 span {
@@ -566,6 +568,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .planCards3 span {
@@ -724,6 +727,8 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        cursor: pointer;
+
     }
 
     .planCards span {
@@ -744,6 +749,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        cursor: pointer;
     }
 
     .planCards2 span {
@@ -764,6 +770,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        cursor: pointer;
     }
 
     .planCards3 span {

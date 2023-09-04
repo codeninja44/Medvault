@@ -18,7 +18,8 @@ function PatientInfo() {
     const [otherContacts, setotherContacts] = useState('')
     const [editLoad, setEditLoad] = useState(false)
     const [photo, setPhoto] = useState()
-    const [diagnosis, setDiagnosis] = useState('')
+    const [diagnosisText, setDiagnosis] = useState('')
+    const [updating, setUpdating] = useState(false)
 
     const updatePatient = {
         patientName,
@@ -39,6 +40,7 @@ function PatientInfo() {
     const isAdmin = JSON.parse(localStorage.getItem('isAdmin'))
     const [useData, setUserData] = useState([])
     const nav = useNavigate()
+    const newDiagnosis = { diagnosisText, patientID }
 
 
     // const [userData, setUserData] = useState([])
@@ -86,6 +88,7 @@ function PatientInfo() {
         getData()
 
     }, [])
+    console.log(diagnosisText)
 
     const url2 = `https://medvault.onrender.com/api/updatePatient/${patientID}`
 
@@ -100,6 +103,23 @@ function PatientInfo() {
             .catch((err) => {
                 console.log(err)
                 setEditLoad(false)
+            })
+    }
+
+    const url5 = `https://medvault.onrender.com/api/addDiagnosis`
+
+
+    const addDiagnosis = (e) => {
+        e.preventDefault()
+        setUpdating(true)
+        axios.post(url5, newDiagnosis, config)
+            .then((res) => {
+                console.log(res)
+                setUpdating(false)
+            })
+            .catch((err) => {
+                console.log(err)
+                setUpdating(false)
             })
     }
 
@@ -165,8 +185,17 @@ function PatientInfo() {
                             </div>
                             <div className="form-group">
                                 <label for="diagnosis">Diagnosis:</label>
-                                <textarea id="diagnosis" name="diagnosis" value={diagnosis} onChange={(e) => setDiagnosis(e.target.value)}></textarea>
-                                <button style={{ height: '50px', width: '110px', fontSize: '15px', backgroundColor: 'white', color: '#1EBFC1', marginBottom: '20px', marginLeft: "10px", borderRadius: '5px' }}>Add diagnosis</button>
+                                <textarea id="diagnosis" name="diagnosis" value={diagnosisText} onChange={(e) => setDiagnosis(e.target.value)}></textarea>
+                                <button style={{
+                                    height: '50px',
+                                    width: '110px',
+                                    fontSize: '15px',
+                                    backgroundColor: 'white',
+                                    color: '#1EBFC1',
+                                    marginBottom: '20px',
+                                    marginLeft: "10px",
+                                    borderRadius: '5px'
+                                }} onClick={addDiagnosis}>{updating ? "updating..." : 'Add diagnosis'}</button>
                             </div>
                             <button className='updateBtn' onClick={updatePatientInfo}>{editLoad ? "Updating..." : 'Update'}</button>
                         </form>

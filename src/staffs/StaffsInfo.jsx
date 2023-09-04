@@ -30,7 +30,7 @@ function Patient() {
             Authorization: `Bearer ${token}`
         }
     }
-    const url1 = `https://medvault.onrender.com/api/hospitals/staff/${storedHospitalDetails.hospitalcode}`
+    const url1 = `https://medvault.onrender.com/api/hospitals/staff/${storedHospitalDetails}`
 
 
 
@@ -72,7 +72,7 @@ function Patient() {
             <div className={style.staffsInfo}>
                 <div className={style.innerBody}>
                     <div className={style.search}>
-                        <input className={style.searchIcon} placeholder="Search Patient Name" onChange={(e) => searchFunctionality(e.target.value)} />
+                        <input className={style.searchIcon} placeholder="Search staff Name" onChange={(e) => searchFunctionality(e.target.value)} />
 
                     </div>
                     <div className={style.info}>
@@ -127,7 +127,7 @@ function Patient() {
                     </div>
                     <div className={style.line}></div>
                     <button className={style.create} onClick={() => nav('/createStaff')}>Create</button>
-                    <button className={style.create} onClick={() => nav('/recoverPatient')} >Recover</button>
+                    {/* <button className={style.create} onClick={() => nav('/recoverPatient')} >Recover</button>+ */}
                 </div>
             </div>
         </>

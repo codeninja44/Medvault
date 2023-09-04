@@ -69,3 +69,57 @@ textarea {
     margin: 0px;
     color: #1EBFC1;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 580px) {
+    .innerBody {
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+
+    }
+
+    .search {
+        height: 8%;
+        width: 60%;
+    }
+
+    .searchIcon {
+        height: 70%;
+        width: 80%;
+        margin-left: 10px;
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .image {
+        height: 40px;
+        width: 40px;
+        border-radius: 100px;
+    }
+
+    p {
+        font-size: 12px;
+
+    }
+
+    .delete {
+        height: 45%;
+        width: 70px;
+        font-size: 10px;
+    }
+
+    .create {
+        width: 30%;
+        font-size: 12px;
+    }
+
+    .bottomBtn {
+        height: 40%;
+        width: 100%;
+        background-color: red;
+    }
+
+
+
+
+}

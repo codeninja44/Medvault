@@ -34,7 +34,7 @@ const Header = () => {
 
     function isLoggedIn() {
         return (
-            login.login ? <div className='loginbtn' onClick={logout} style={{ cursor: 'pointer' }}>Logout</div> : <button className='loginbtn' onClick={() => nav('/login')} style={{ margin: '0px' }}>Login</button>
+            <button className='loginbtn' onClick={() => nav('/login')} style={{ margin: '0px' }}>Login</button>
         )
     }
 

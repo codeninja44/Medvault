@@ -15,6 +15,7 @@ import useDashboard from '../hooks/useDashboard'
 const token = JSON.parse(localStorage.getItem("token"))
 const getId = JSON.parse(localStorage.getItem('id'))
 const hospitalcode = JSON.parse(localStorage.getItem("hospitalcode"))
+const staffId = JSON.parse(localStorage.getItem('staffID'))
 
 function Dashboard() {
     const [userData, setUserData] = useState()
@@ -68,7 +69,7 @@ function Dashboard() {
     }
 
     async function getStaffData() {
-        const res = await axios.get(`https://medvault.onrender.com/api/getonestaff/${9703}`,
+        const res = await axios.get(`https://medvault.onrender.com/api/getonestaff/${staffId}`,
             { headers: { "Authorization": `Bearer ${token}` } })
         return res
     }
@@ -142,6 +143,81 @@ function Dashboard() {
                 setEditLoad(false)
             })
     }
+    function payKorapay() {
+        let key = `key${Math.random()}`
+        window.Korapay.initialize({
+            key: "pk_test_8XuQNe4HNzMi4fCLBvX1LqcKoQdmnarHUVp6iQ9s",
+            reference: key,
+            amount: 20000,
+            currency: "NGN",
+            customer: {
+                name: "John Doe",
+                email: "bc@gmail.com"
+            },
+            onClose: function () {
+                // Handle when modal is closed
+            },
+            onSuccess: function (data) {
+                // Handle when payment is successful
+
+
+            },
+            onFailed: function (data) {
+                // Handle when payment fails
+            }
+
+        });
+    }
+    function payKorapay2() {
+        let key = `key${Math.random()}`
+        window.Korapay.initialize({
+            key: "pk_test_8XuQNe4HNzMi4fCLBvX1LqcKoQdmnarHUVp6iQ9s",
+            reference: key,
+            amount: 50000,
+            currency: "NGN",
+            customer: {
+                name: "John Doe",
+                email: "bc@gmail.com"
+            },
+            onClose: function () {
+                // Handle when modal is closed
+            },
+            onSuccess: function (data) {
+                // Handle when payment is successful
+
+
+            },
+            onFailed: function (data) {
+                // Handle when payment fails
+            }
+
+        });
+    }
+    function payKorapay3() {
+        let key = `key${Math.random()}`
+        window.Korapay.initialize({
+            key: "pk_test_8XuQNe4HNzMi4fCLBvX1LqcKoQdmnarHUVp6iQ9s",
+            reference: key,
+            amount: 100000,
+            currency: "NGN",
+            customer: {
+                name: "John Doe",
+                email: "bc@gmail.com"
+            },
+            onClose: function () {
+                // Handle when modal is closed
+            },
+            onSuccess: function (data) {
+                // Handle when payment is successful
+
+
+            },
+            onFailed: function (data) {
+                // Handle when payment fails
+            }
+
+        });
+    }
 
 
 
@@ -214,17 +290,17 @@ function Dashboard() {
                         <div className={style.planBody}>
                             <p className={style.planHeader}><span>Pl</span>ans</p>
                             <div className={style.planSec}>
-                                <div className={style.planCards}>
+                                <div className={style.planCards} onClick={payKorapay}>
                                     <span>Regular</span>
-                                    <p>#250,000</p>
+                                    <p>&#8358;20,000</p>
                                 </div>
-                                <div className={style.planCards2}>
+                                <div className={style.planCards2} onClick={payKorapay2}>
                                     <span>Medium</span>
-                                    <p>#250,000</p>
+                                    <p>&#8358;50,000</p>
                                 </div>
-                                <div className={style.planCards3}>
+                                <div className={style.planCards3} onClick={payKorapay3}>
                                     <span>Premium</span>
-                                    <p>#250,000</p>
+                                    <p>&#8358;100,000</p>
                                 </div>
                             </div>
                         </div>

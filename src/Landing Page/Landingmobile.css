@@ -15,10 +15,13 @@
         justify-content: space-between;
     }
 
+
+
     .Heroleft {
         width: 100%;
         height: 60%;
     }
+
 
     .Herolefttext {
         width: 100%;
@@ -619,19 +622,19 @@
         font-size: 35px;
     }
 
-    .pricenaira2{
+    .pricenaira2 {
         font-size: 35px;
     }
 
-    .pricenaira3{
+    .pricenaira3 {
         font-size: 35px;
     }
 
-    .regulardesc{
+    .regulardesc {
         font-size: 15px;
     }
 
-    .regularcircle{
+    .regularcircle {
         width: 20px;
         height: 20px;
     }
@@ -640,16 +643,16 @@
         font-size: 15px;
     }
 
-    .premiumdesc{
-        font-size: 15px; 
+    .premiumdesc {
+        font-size: 15px;
     }
 
-    .premiumcircle{
+    .premiumcircle {
         width: 20px;
         height: 20px;
     }
 
-    .mediumcircle{
+    .mediumcircle {
         width: 20px;
         height: 20px;
     }
@@ -686,7 +689,7 @@
         font-size: 12px;
     }
 
-    .testimonialsbox1bottom{
+    .testimonialsbox1bottom {
         font-size: 20px;
     }
 
@@ -715,6 +718,14 @@
     .MVvideodiv {
         width: 100%;
         height: 50vh;
+    }
+
+    .custom-video-container video::-webkit-media-controls-timeline {
+        display: none;
+    }
+
+    .custom-video-container video::-webkit-media-controls {
+        display: none;
     }
 
 }

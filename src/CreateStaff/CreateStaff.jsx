@@ -18,6 +18,10 @@ const CreateStaff = () => {
     const url = "https://medvault.onrender.com/api/creatingastaff"
     const token = JSON.parse(localStorage.getItem("token"))
 
+
+    const storedHospitalDetails = JSON.parse(localStorage.getItem("hospitaldetails"));
+    console.log(storedHospitalDetails);
+
     function staff(e) {
         // const nav = useNavigate()
 
@@ -48,7 +52,7 @@ const CreateStaff = () => {
                         </div>
                     </div>
                     <div className="createstafftextdiv">
-                        <p className="createstafftext">Create New Staff</p>
+                        <p className="createstafftext" style={{ fontSize: '40px', fontWeight: '600' }}>Create staff</p>
                     </div>
                     <div className="createstaffimagediv">
                         <div className="createstaffimageholder">
@@ -57,7 +61,7 @@ const CreateStaff = () => {
                     </div>
                     <div className="createstaffinputdiv">
                         <input className="createinput1" type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <input className="createinput2" type="text" placeholder="Hospital code" value={hospitalcode} onChange={(e) => setHospitalCode(e.target.value)} />
+                        <input className="createinput2" type="text" placeholder="Hospital code" value={storedHospitalDetails} readOnly />
                     </div>
                     <div className="createstaffbtndiv">
                         <div className="createstaffbtnholder">

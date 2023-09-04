@@ -64,6 +64,7 @@ body {
     padding: 5px;
     border: none;
     outline: none;
+    background-color: white;
 }
 
 .staffphoneno {
@@ -73,6 +74,7 @@ body {
     padding: 5px;
     border: none;
     outline: none;
+    background-color: white;
 }
 
 .staffemail {
@@ -82,6 +84,7 @@ body {
     padding: 5px;
     border: none;
     outline: none;
+    background-color: white;
 }
 
 .staffpassword {
@@ -91,6 +94,7 @@ body {
     padding: 5px;
     border: none;
     outline: none;
+    background-color: white;
 }
 
 .staffconfirmpass {
@@ -100,6 +104,7 @@ body {
     padding: 5px;
     border: none;
     outline: none;
+    background-color: white;
 }
 
 .staffrole {
@@ -109,6 +114,15 @@ body {
     padding: 5px;
     border: none;
     outline: none;
+    background-color: white;
+}
+
+.inputstafftype{
+    background-color: white;
+    width: 60%;
+    height: 8%;
+    border-radius: 5px;
+    border: none;
 }
 
 .staffhoscode {
@@ -118,16 +132,18 @@ body {
     padding: 5px;
     border: none;
     outline: none;
+    background-color: white;
 }
 
 .staffregbutton {
     width: 60%;
-    height: 10%;
+    height: 8%;
     border-radius: 10px;
     border: none;
     background-color: #1EBFC1;
     color: white;
     cursor: pointer;
+    font-size: 15px;
 }
 
 .staffregdescription {

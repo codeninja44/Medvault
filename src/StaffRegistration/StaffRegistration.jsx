@@ -84,7 +84,7 @@ const StaffRegistration = () => {
                         <input className='staffemail' type="text" placeholder='Age' value={age} onChange={(e) => setAge(e.target.value)} />
                         <input className='staffpassword' type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
                         <input className='staffconfirmpass' type="password" placeholder='Confirm Password' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
-                        <input type='file' accept='/image*/' className="inputType" onChange={File} />
+                        <input type='file' accept='/image*/' className="inputstafftype" onChange={File} />
                         <input className='staffrole' type="text" placeholder='Role' value={role} onChange={(e) => setRole(e.target.value)} />
                         <input className='staffhoscode' type="text" placeholder='Hospital Code' value={hospitalcode} onChange={(e) => setHospitalcode(e.target.value)} />
                         <button className='staffregbutton' type='submit'>{load ? "Loading..." : "Register"}</button>

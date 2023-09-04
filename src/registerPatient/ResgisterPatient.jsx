@@ -34,6 +34,8 @@ const RegisterPatient = () => {
   const [spousePhonenumber, setSpouseNumber] = useState('')
   const [diagnosis, setDiagnosis] = useState('')
 
+  const storedHospitalDetails = JSON.parse(localStorage.getItem("hospitaldetails"));
+  console.log(storedHospitalDetails);
 
   const handleMaleChange = () => {
     setMale(!male);
@@ -199,7 +201,7 @@ const RegisterPatient = () => {
 
             <div className='NameH'>
               <p>Hospital code: </p>
-              <input placeholder='' type='text' value={hospitalcode} onChange={(e) => setHospitalcode(e.target.value)} style={{ backgroundColor: 'white' }} />
+              <input placeholder='' type='text' value={storedHospitalDetails} onChange={(e) => setHospitalcode(e.target.value)} style={{ backgroundColor: 'white' }} readOnly />
             </div>
 
 

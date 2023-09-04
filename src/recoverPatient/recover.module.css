@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #1EBFC1;
 }
 
 .contentSec {
@@ -15,6 +16,7 @@
     flex-direction: column;
     padding: 15px;
     padding-top: 30px;
+    border-radius: 15px;
 }
 
 .contentSec input {
@@ -54,4 +56,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.header p {
+    font-weight: 600;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 580px) {
+    .contentSec {
+        height: 40%;
+        width: 80%;
+        background-color: #E0F7F6;
+    }
+
+    .contentSec input {
+        height: 40px;
+        width: 90%;
+        font-size: 12px;
+    }
+
+    .inputSec button {
+        height: 40px;
+        width: 40%;
+        font-size: 12px;
+    }
+
+    .header p {
+        font-size: 15px;
+    }
 }
