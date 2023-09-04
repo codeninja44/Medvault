@@ -6,12 +6,13 @@
     .aboutustextdiv{
         width: 100%;
         height: 5%;
-        font-size: 30px;
     }
+
+   
 
     .aboutusimgdiv{
         width: 100%;
-        height: 40%;
+        height: 50%;
         display: flex;
         justify-content: space-evenly;
         flex-direction: column;
@@ -61,7 +62,7 @@
     }
 
     .aboutusdesctext{
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .aboutusdetailsdiv{

@@ -4,19 +4,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 .search {
-    height: 7%;
-    width: 20%;
-    background-color: rgb(210, 208, 208);
+    height: 8%;
+    width: 30%;
+    /* background-color: rgb(210, 208, 208); */
+    background-color: #1EBFC1;
     border-radius: 20px;
     display: flex;
     align-items: center;
-    padding-left: 10px;
+    /* padding-left: 10px; */
     gap: 5px;
     margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .innerBody {
@@ -33,8 +36,8 @@
 }
 
 .infoDisplay {
-    height: 15%;
-    width: 100%;
+    height: 12%;
+    width: 90%;
     border-radius: 15px;
     display: flex;
     flex-direction: row;
@@ -58,9 +61,9 @@
 }
 
 .image {
-    height: 90%;
-    width: 60px;
-    border-radius: 60px;
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
     object-fit: cover;
 }
 
@@ -71,7 +74,7 @@
 }
 
 .delete {
-    height: 70%;
+    height: 48%;
     width: 90px;
     border: none;
     margin-right: 20px;
@@ -79,13 +82,16 @@
     cursor: pointer;
     background-color: rgb(235, 76, 76);
     margin: 0px;
+    font-size: 15px;
 }
 
 .searchIcon {
-    height: 70%;
-    width: 20%;
+    height: 80%;
+    width: 80%;
     background-color: white;
     margin-left: 10px;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 .line {
@@ -94,14 +100,16 @@
     background-color: gray;
 }
 
+
 .create {
-    height: 10%;
+    height: 5%;
     width: 130px;
     border-radius: 5px;
     border: none;
     margin-left: 30px;
     margin-top: 20px;
     background-color: #1EBFC1;
+    font-size: 15px;
 }
 
 @media screen and (max-width: 390px) {
@@ -114,18 +122,46 @@
 
     .search {
         height: 8%;
-        width: 40%;
+        width: 60%;
     }
 
     .searchIcon {
         height: 70%;
-        width: 20%;
+        width: 80%;
         margin-left: 10px;
+        font-size: 12px;
+        padding: 5px;
     }
 
     .image {
-        height: 80%;
-        width: 50px;
-        border-radius: 50px;
+        height: 40px;
+        width: 40px;
+        border-radius: 100px;
     }
+
+    p {
+        font-size: 12px;
+
+    }
+
+    .delete {
+        height: 45%;
+        width: 70px;
+        font-size: 10px;
+    }
+
+    .create {
+        width: 30%;
+        font-size: 12px;
+    }
+
+    .bottomBtn {
+        height: 40%;
+        width: 100%;
+        background-color: red;
+    }
+
+
+
+
 }

@@ -1,12 +1,41 @@
-import styles from './patientInfo.module.css'
+import './patientInfo.css'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
 
 function PatientInfo() {
 
+    const [patientName, setPatientName] = useState('')
+    const [dateOfBirth, setdateOfBirth] = useState('')
+    const [gender, setgender] = useState('')
+    const [homeAddress, sethomeAddress] = useState('')
+    const [email, setemail] = useState('')
+    const [phoneNumber, setphoneNumber] = useState('')
+    const [bloodGroup, setbloodGroup] = useState('')
+    const [relationshipStatus, setrelationshipStatus] = useState('')
+    const [spouseName, setspouseName] = useState('')
+    const [spousePhonenumber, setspousePhonenumber] = useState('')
+    const [otherContacts, setotherContacts] = useState('')
+    const [editLoad, setEditLoad] = useState(false)
+    const [photo, setPhoto] = useState()
+
+    const updatePatient = {
+        patientName,
+        dateOfBirth,
+        gender,
+        homeAddress,
+        email,
+        phoneNumber,
+        bloodGroup,
+        relationshipStatus,
+        spouseName,
+        spousePhonenumber,
+        otherContacts
+    }
+
     const token = JSON.parse(localStorage.getItem("token"))
-    const { patientID } = useParams()
+    const patientID = JSON.parse(localStorage.getItem('patientID'))
+    const isAdmin = JSON.parse(localStorage.getItem('isAdmin'))
     const [useData, setUserData] = useState([])
     const nav = useNavigate()
 
@@ -28,6 +57,21 @@ function PatientInfo() {
                 console.log(res)
                 localStorage.setItem('data', JSON.stringify(res.data.data))
                 setUserData(res.data.data)
+                setPatientName(res.data.data.patientName)
+                setdateOfBirth(res.data.data.dateOfBirth)
+                setgender(res.data.data.gender)
+                setemail(res.data.data.email)
+                setphoneNumber(res.data.data.phoneNumber)
+                sethomeAddress(res.data.data.homeAddress)
+                setbloodGroup(res.data.data.setbloodGroup)
+                setrelationshipStatus(res.data.data.relationshipStatus)
+                setspouseName(res.data.data.spouseName)
+                setspousePhonenumber(res.data.data.spousePhonenumber)
+                setotherContacts(res.data.data.otherContacts)
+                setPhoto(res.data.data.patientImage.url)
+
+
+
             }
             )
             .catch(err => {
@@ -40,69 +84,95 @@ function PatientInfo() {
 
     }, [])
 
-    return (
-        <div className={styles.body}>
-            <div className={styles.mainBody}>
-                <p className={styles.mainBodyP}>Patient <span> Datails</span></p>
-                <div className={styles.top}>
-                    <div className={styles.image}>
-                        {/* <img src={useData.patientImage.url} alt="image" /> */}
-                    </div>
-                    <div className={styles.text}>
-                        <p>Frank Ikenga</p>
-                        <p>9195</p>
-                    </div>
-                </div>
-                <div className={styles.secondSec}>
-                    <div className={styles.patientNumber}>
-                        <p>Phone number: <span>09161894001</span></p>
-                        <p>E-mail: <span className={styles.number}>beshelelvis@gmail.com</span></p>
-                    </div>
-                    <div className={styles.bloodGroup}>
-                        <div className={styles.homeAddress}>
-                            <p>Blood group: <span>AA</span></p>
+    const url2 = `https://medvault.onrender.com/api/updatePatient/${patientID}`
 
-                        </div>
-                        <div className={styles.homeAddress2}>
-                            <p>Home address: <span>6 Ladipo street</span></p>
-                        </div>
-                    </div>
-                    <div className={styles.city}>
-                        <div className={styles.address}>
-                            <p>City: <span>Lagos</span></p>
-                        </div>
-                        <div className={styles.address}>
-                            <p>State: <span>Lagos</span></p>
-                        </div>
-                        <div className={styles.address2}>
-                            <p>Date of birth: <span>31 Aug 1999</span></p>
-                        </div>
-                    </div>
-                    <div className={styles.hospital}>
-                        <div className={styles.code}>
-                            <p>Hospital code: <span>4328</span></p>
-                        </div>
-                        <div className={styles.code2}>Gender: <span>M</span></div>
-                        <div className={styles.code3}>Relationship Status: <span>single</span></div>
-                    </div>
-                    <div className={styles.spouse}>
-                        <div className={styles.spouseDetail}>Spouse name: <span>Frank Ikenga</span></div>
-                        <div className={styles.spouseDetail}>Spouse number: <span>09161894001</span></div>
-                    </div>
-                    <div className={styles.contact}>
-                        <div> Other contact: <span>0908030481</span></div>
-                    </div>
-                    <div className={styles.sec}>
-                        <p> Diagnosis: </p>
-                        <div className={styles.diagnosis}>
-                            <span>terytuyiuoipuytretyuiopuytretuyioysryuioiutrertuoytreruioiuytreyuiouytryui</span>
-                        </div>
-                        <button className={styles.edit} onClick={() => nav(`/api/updatePatient/${patientID}`)}>Edit</button>
-                    </div>
-                    <div></div>
-                </div>
+    const updatePatientInfo = (e) => {
+        e.preventDefault()
+        setEditLoad(true)
+        axios.patch(url2, updatePatient, config)
+            .then((res) => {
+                console.log(res)
+                setEditLoad(false)
+            })
+            .catch((err) => {
+                console.log(err)
+                setEditLoad(false)
+            })
+    }
+
+
+    return (
+        <>
+            <div className='stafflogowrapper'>
+                <img onClick={() => nav('/api/hospitals/patient/:hospitalcode')} src="./src/assets/logo.png" alt="logo" />
             </div>
-        </div >
+            <main>
+                <div className="overall">
+                    <h1 style={{ textAlign: 'center', marginBottom: '10px' }}>Patient Information</h1>
+                    <section className="patient-image">
+                        <p>Patient image:</p>
+                        <img src={photo} alt="Patient's Photo" />
+                    </section>
+
+                    <section className="patient-info">
+                        <form>
+                            <div className="form-group">
+                                <label htmlFor="patientName">Name:</label>
+                                <input type="text" className='textType' id="patientName" name="patientName" value={patientName} onChange={(e) => setPatientName(e.target.value)} />
+                            </div>
+                            <div className="form-group">
+                                <label for="dateOfBirth">Date of Birth:</label>
+                                <input type="date" id="dateOfBirth" name="dateOfBirth" value={dateOfBirth} onChange={(e) => setdateOfBirth(e.target.value)} />
+                            </div>
+                            <div className="form-group">
+                                <label for="gender">Gender:</label>
+                                <input type="text" className='textType' id="gender" name="gender" value={gender} onChange={(e) => setgender(e.target.value)} />
+                            </div>
+                            <div className="form-group">
+                                <label for="homeAddress">Home Address:</label>
+                                <textarea id="homeAddress" name="homeAddress" value={homeAddress} onChange={(e) => sethomeAddress(e.target.value)}></textarea>
+                            </div>
+                            <div className="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" className='emailInput' value={email} onChange={(e) => setemail(e.target.value)} />
+                            </div>
+                            <div className="form-group">
+                                <label for="phoneNumber">Phone Number:</label>
+                                <input type="tel" id="phoneNumber" name="phoneNumber" value={phoneNumber} onChange={(e) => setphoneNumber(e.target.value)} />
+                            </div>
+                            <div className="form-group">
+                                <label for="bloodGroup">Blood Group:</label>
+                                <input type="text" className='textType' id="bloodGroup" name='blood Group' value={bloodGroup} onChange={(e) => setbloodGroup(e.target.value)} />
+                            </div>
+                            <div className="form-group">
+                                <label for="relationshipStatus">Relationship Status:</label>
+                                <input type="text" className='textType' id="relationshipStatus" name="relationshipStatus" value={relationshipStatus} onChange={(e) => setrelationshipStatus(e.target.value)} />
+                            </div>
+                            <div className="form-group">
+                                <label for="spouseName">Spouse Name:</label>
+                                <input type="text" className='textType' id="spouseName" name="spouseName" value={spouseName} onChange={(e) => setspouseName(e.target.value)} />
+                            </div>
+                            <div className="form-group">
+                                <label for="spousePhonenumber">Spouse Phone Number:</label>
+                                <input type="tel" id="spousePhonenumber" name="spousePhonenumber" value={spousePhonenumber} onChange={(e) => setspousePhonenumber(e.target.value)} />
+                            </div>
+                            <div className="form-group">
+                                <label for="otherContacts">Other Contacts:</label>
+                                <textarea id="otherContacts" name="otherContacts" value={otherContacts} onChange={(e) => setotherContacts(e.target.value)}></textarea>
+                            </div>
+                            <div className="form-group">
+                                <label for="diagnosis">Diagnosis:</label>
+                                <textarea id="diagnosis" name="diagnosis" >{ }</textarea>
+                            </div>
+                            <button className='updateBtn' onClick={updatePatientInfo}>{editLoad ? "Updating..." : 'Update'}</button>
+                        </form>
+                    </section>
+                </div>
+            </main>
+
+
+
+        </>
     )
 }
 

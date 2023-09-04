@@ -33,9 +33,13 @@ function Login() {
             );
     }
 
-    return (
+    return ( 
+        <>
+        <div className='stafflogowrapper'>
+                       <img onClick={() => nav('/')} src="./src/assets/logo.png" alt="logo" />
+                  </div>
         <div className="registration">
-            <div className='arrow' onClick={() => nav('/')}><HiOutlineArrowLeft /></div>
+            {/* <div className='arrow' onClick={() => nav('/')}><HiOutlineArrowLeft /></div> */}
             <div className="registrationList">
                 <div className="regSection">
                     <h4>LOGIN</h4>
@@ -53,6 +57,7 @@ function Login() {
                 </div>
             </div>
         </div >
+        </>
     )
 }
 

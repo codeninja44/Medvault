@@ -188,6 +188,13 @@
     font-size: 13px;
     outline: none;
     color: black;
+    display: flex;
+    align-items: center;
+}
+
+.fileInput{
+    border: none;
+    background: none;
 }
 
 .inputSec {
@@ -202,9 +209,9 @@
 }
 
 .arrow {
-    color: black;
     font-size: 23px;
     cursor: pointer;
+
 }
 
 .inputError {

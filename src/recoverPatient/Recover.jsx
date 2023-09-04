@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import style from './recover.module.css'
 import axios from 'axios'
+import Swal from "sweetalert2"
+import { useNavigate } from 'react-router-dom'
 
 function Recover() {
     const [patientID, setPatientID] = useState('')
@@ -18,12 +20,24 @@ function Recover() {
             Authorization: `Bearer ${token}`
         }
     }
+    const storedHospitalDetails = JSON.parse(localStorage.getItem("hospitaldetails"));
+console.log(storedHospitalDetails, "this is the hospital detail")
+    const nav = useNavigate()
     const url = `https://medvault.onrender.com/api/recover/${patientID}`
     function restore(e) {
         e.preventDefault()
         setLoadState(true)
         axios.patch(url, {}, config)
             .then(res => {
+                Swal.fire({
+                    title: "Success",
+                    icon: "success",
+                    text: "Patient has been recovered successfully",
+                    showCancelButton: false,
+                    showConfirmButton: false,
+                    timer: 2000,
+                })
+                nav(`/api/hospitals/patient/${storedHospitalDetails.hospitalcode}`)
                 setLoadState(false)
                 console.log(res)
             }
@@ -39,7 +53,7 @@ function Recover() {
         <div className={style.resendEmail}>
             <div className={style.contentSec}>
                 <div className={style.header}>
-                    <p>Retrieve Patient</p>
+                    <p>Recover Patient</p>
                 </div>
                 <div className={style.inputSec}>
                     <input type="text" placeholder="Patient ID" value={patientID} onChange={(e) => setPatientID(e.target.value)} />

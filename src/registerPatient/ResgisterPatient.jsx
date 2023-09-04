@@ -4,6 +4,8 @@ import "./registerPatientMobile.css"
 import { toast } from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import CreatedSuccessfully from '../Created PopUp/CreatedSuccessfully'
+import Swal from "sweetalert2"
 
 const RegisterPatient = () => {
   const [patientImage, setPatientImage] = useState()
@@ -105,16 +107,24 @@ const RegisterPatient = () => {
     )
 
       .then(res => {
-        console.log(res);
-        setVerify(true);
+        // setVerify(true);
         setLoad(false)
+        Swal.fire({
+          title: "Success",
+          icon: "success",
+          text: "Patient has been created successfully",
+          showCancelButton: false,
+          showConfirmButton: false,
+          timer: 2000,
+        })
+        console.log(res);
         localStorage.setItem("email", JSON.stringify(res.data.data.email))
         localStorage.setItem('patientID', JSON.stringify(res.data.data.patientID))
-        // localStorage.setItem('patientDetails', JSON.stringify(res.data.data.patientID))
-        nav('/emailVerificaion')
+        nav('/dashboard')
+
       })
       .catch((err) => {
-        toast.error(err.response.data.message)
+        toast.error(err?.response?.data?.message)
         setLoad(false)
         console.log("The error ", err)
       })
@@ -127,7 +137,7 @@ const RegisterPatient = () => {
         <form className="inputSec" onSubmit={register}>
           <div className='detailsHeader'>
             <p>Patient Details</p>
-            <input placeholder='photo' type='file' accept='/image*/' style={{
+            <input placeholder='photo' type='file' accept='image/*' style={{
               height: '145px',
               width: '150px',
               border: 'none',
@@ -223,7 +233,12 @@ const RegisterPatient = () => {
 
             <div className='Diagnosis'>
               <p>Diagnosis: </p>
-              <input placeholder='' type='text' value={diagnosis} style={{ outline: 'none' }} onChange={(e) => setDiagnosis(e.target.value)} />
+              <input placeholder='' type='text' style={{ outline: 'none' }} />
+            </div>
+
+            <div className="form-group">
+              <label for="diagnosis">Diagnosis:</label>
+              <textarea id="diagnosis" value={diagnosis} name="diagnosis" onChange={(e) => setDiagnosis(e.target.value)}>{ }</textarea>
             </div>
 
             <button className='createPatient' type='submit'>{load ? 'Creating...' : 'Create patient'}</button>
@@ -232,7 +247,8 @@ const RegisterPatient = () => {
         </form>
       </div>
       {
-        verify ? <EmailPopUp /> : null
+        // verify ? <EmailPopUp /> : null
+        // verify ? <CreatedSuccessfully/> : null
       }
     </div>
 

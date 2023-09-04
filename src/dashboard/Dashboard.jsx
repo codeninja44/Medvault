@@ -1,5 +1,4 @@
 import style from './dashboard.module.css'
-// import style from './dashboardmobile.module.css'
 import image from '../assets/whiteLogo.png'
 import { useNavigate } from 'react-router-dom'
 import patientIcon from '../assets/patientIcon.png'
@@ -11,19 +10,14 @@ import axios from 'axios'
 import Adminprofile from '../AdminProfile/Adminprofile'
 import useDashboard from '../hooks/useDashboard'
 
-// import profileIcon from '../assets/profileIcon.png'
-// import dashboard from '../assets/dashboard.png'
 
 
 const token = JSON.parse(localStorage.getItem("token"))
 const getId = JSON.parse(localStorage.getItem('id'))
 const hospitalcode = JSON.parse(localStorage.getItem("hospitalcode"))
 
-
-// import image from '../images/home.png'
-
 function Dashboard() {
-    const [userData, setUserData] = useState(null)
+    const [userData, setUserData] = useState()
     const [dropDown, setDropDown] = useState(false)
     const [facilityname, setfacilityname] = useState('')
     const [email, setemail] = useState('')
@@ -32,16 +26,28 @@ function Dashboard() {
     const [state, setstate] = useState('')
     const [city, setcity] = useState('')
     const [LGA, setLGA] = useState('')
+    const [editLoad, setEditLoad] = useState(false)
+    const [staffDetails, setStaffDetails] = useState()
+    const [name, setName] = useState('')
+    const [age, setage] = useState('')
+    const [phoneNumber, setphoneNumber] = useState('')
+    const [role, setrole] = useState('')
+
+    const allData = { facilityname, facilityaddress, email, facilityphone, state, city, LGA }
+    const updateStaff = { name, age, phoneNumber, role }
+
+
     const login = useDashboard()
 
-    console.log(login.admin)
+    // console.log(login.admin)
 
     const nav = useNavigate()
 
     const url = `https://medvault.onrender.com/api/logouthospital/${getId}`
 
+
     function logout(e) {
-        e.preventDefault
+        e.preventDefault()
         axios.post(url)
             .then((res) => {
                 nav('/')
@@ -52,37 +58,97 @@ function Dashboard() {
             })
     }
 
-    async function getData() {
+
+
+
+    async function getAdminData() {
         const res = axios.get(`https://medvault.onrender.com/api/gethospital/${getId}`,
             { headers: { "Authorization": `Bearer ${token}` } })
         return res
     }
 
+    async function getStaffData() {
+        const res = await axios.get(`https://medvault.onrender.com/api/getonestaff/${9703}`,
+            { headers: { "Authorization": `Bearer ${token}` } })
+        return res
+    }
 
 
     useEffect(() => {
-        getData().then((res) => {
-            setUserData(res.data.data);
-            setfacilityname(res.data.data.facilityname);
-            setemail(res.data.data.email)
-            setfacilityaddress(res.data.data.facilityaddress)
-            setfacilityphone(res.data.data.facilityphone)
-            setstate(res.data.data.state)
-            setcity(res.data.data.city)
-            setLGA(res.data.data.LGA)
-        })
-    }, [])
+        if (!token) return
+        if (login.admin) {
+            getAdminData().then((res) => {
+                setUserData(res.data.data);
+                setfacilityname(res.data.data.facilityname);
+                setemail(res.data.data.email)
+                setfacilityaddress(res.data.data.facilityaddress)
+                setfacilityphone(res.data.data.facilityphone)
+                setstate(res.data.data.state)
+                setcity(res.data.data.city)
+                setLGA(res.data.data.LGA)
+                localStorage.setItem("hospitaldetails", JSON.stringify(userData.hospitalcode))
+            })
+        }
+        else {
+            getStaffData().then((res) => {
+                console.log(res)
+                setStaffDetails(res.data.data)
+                setName(res.data.data.name)
+                setage(res.data.data.age)
+                setphoneNumber(res.data.data.phoneNumber)
+                setrole(res.data.data.role)
+                setemail(res.data.data.email)
+                localStorage.setItem("hospitaldetails", JSON.stringify(userData.hospitalcode))
+            })
+
+        }
+
+    }, [token, login.admin])
+
+
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    }
+
+    const url3 = `https://medvault.onrender.com/api/updatehospitalinfo/${userData?.hospitalcode}`
+    const updateProfile = (e) => {
+        e.preventDefault()
+        console.log("Hello There")
+        setEditLoad(true)
+        axios.put(url3, allData, config)
+            .then((res) => {
+                setEditLoad(false)
+                console.log(res)
+            })
+            .catch((err) => {
+                console.log(err)
+                setEditLoad(false)
+            })
+    }
+
+    const url4 = `https://medvault.onrender.com/api/staffupdate/${staffDetails?.staffID}`
+    const updateStaffProfile = (e) => {
+        e.preventDefault()
+        setEditLoad(true)
+        axios.put(url4, updateStaff, config)
+            .then((res) => {
+                setEditLoad(false)
+                console.log(res)
+            })
+            .catch((err) => {
+                console.log(err)
+                setEditLoad(false)
+            })
+    }
 
 
 
-    // console.log(res)
 
 
 
 
-    const hospitaldetails = localStorage.setItem("hospitaldetails", JSON.stringify(userData))
-
-    // const nav = useNavigate()
 
     return (
         <>
@@ -121,29 +187,30 @@ function Dashboard() {
                 <div className={style.leftSection}>
                     <div className={style.profile}>
                         <div className={style.profilePic} >
-                            <img src={userData?.hospitalLogo?.url} alt="profile" />
+                            <img src={login.admin ? userData?.hospitalLogo?.url : staffDetails?.photo.url} alt="profile" />
                             <p onClick={() => setDropDown(!dropDown)} style={{ cursor: 'pointer' }}>View profile</p>
                         </div>
                         <div className={style.adminDetials}>
-                            <p><span>Welcome</span>,{userData?.facilityname}</p>
+                            <p><span>Welcome</span>,{login.admin ? userData?.facilityname : staffDetails?.name}</p>
                             <div style={{ display: 'flex', gap: '20px', marginTop: "10px" }}>
-                                <p className={style.id}>Admin</p>
-                                <p style={{ fontSize: '15px', fontWeight: '600' }}>{userData?.hospitalcode}</p>
+                                <p className={style.id}>{login.admin ? 'Admin' : 'Staff'}</p>
+                                <p style={{ fontSize: '15px', fontWeight: '600' }}>{login.admin ? userData?.hospitalcode : staffDetails?.hospitalcode}</p>
                             </div>
 
                         </div>
                     </div>
                     <div className={style.hospitaldetails}>
-                        <div className={style.totals}>
+                        {login.admin ? <div className={style.totals}>
                             <span>30+</span>
                             <p>Staffs</p>
-                        </div>
+                        </div> : null}
+
                         <div className={style.totals}>
                             <span>2000+</span>
                             <p>Patients</p>
                         </div>
                     </div>
-                    <div className={style.plans}>
+                    {login.admin ? <div className={style.plans}>
                         <div className={style.planBody}>
                             <p className={style.planHeader}><span>Pl</span>ans</p>
                             <div className={style.planSec}>
@@ -161,7 +228,8 @@ function Dashboard() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> : null}
+
                 </div>
             </div >
             {
@@ -169,6 +237,7 @@ function Dashboard() {
                     <div className='Adminbody' >
                         <div className='Admincontain'>
                             <div className='Adminhead'>
+                                <button style={{ height: '35px', width: '70px', borderRadius: '5px' }} onClick={login.admin ? updateProfile : updateStaffProfile}>{editLoad ? "updating..." : "Edit"}</button>
                                 <div className="menu1">
                                     <span onClick={() => setDropDown(false)}>X</span>
                                 </div>
@@ -182,47 +251,50 @@ function Dashboard() {
                                 </div>
                                 <div className='adminprofilebody'>
                                     <div className='profilefnamecon'>
-                                        <h2>Facility Name</h2>
+                                        <h2>{login.admin ? "Facility name" : 'Staff name'}</h2>
 
-                                        <input className='profilefnameAdmin' value={facilityname} onChange={(e) => setfacilityname(e.target.value)} />
+                                        <input className='profilefnameAdmin' value={login.admin ? facilityname : name} onChange={login.admin ? (e) => setfacilityname(e.target.value) : (e) => setName(e.target.value)} />
                                     </div>
 
                                     <div className='profilefphonecon'>
-                                        <h2>Facility Phone Number</h2>
-                                        <input className='profilefphoneAdmin' value={facilityphone} onChange={(e) => setfacilityphone(e.target.value)} />
+                                        <h2>{login.admin ? "Facility phone number" : 'Staff Phone Number'}</h2>
+                                        <input className='profilefphoneAdmin' value={login.admin ? facilityphone : phoneNumber} onChange={login.admin ? (e) => setfacilityphone(e.target.value) : (e) => setphoneNumber(e.target.value)} />
                                     </div>
 
                                     <div className='profilefemailcon'>
-                                        <h2>Facility Email</h2>
+                                        <h2>{login.admin ? "Facility Email" : 'Staff Email'}</h2>
                                         <input className='profilefemailAdmin' value={email} onChange={(e) => setemail(e.target.value)} />
                                     </div>
 
 
 
                                     <div className='profilefaddresscon'>
-                                        <h2>Facility Address</h2>
-                                        <input className='profilefaddressAdmin' value={facilityaddress} onChange={(e) => setfacilityaddress(e.target.value)} />
+                                        <h2>{login.admin ? "Address" : 'Role'}</h2>
+                                        <input className='profilefaddressAdmin' value={login.admin ? facilityaddress : role} onChange={(e) => setfacilityaddress(e.target.value)} />
                                     </div>
 
                                     <div className='profilefhoscon'>
                                         <h2>Hosipital Code </h2>
-                                        <input className='profilefhosAdmin' value={userData.hospitalcode} disabled />
+                                        <input className='profilefhosAdmin' value={login.admin ? userData?.hospitalcode : staffDetails?.hospitalcode} disabled />
                                     </div>
 
                                     <div className='profilefstatecon'>
-                                        <h2>State</h2>
-                                        <input className='profilefstateAdmin' value={state} onChange={(e) => setstate(e.target.value)} />
+                                        <h2>{login.admin ? "State" : 'Age'}</h2>
+                                        <input className='profilefstateAdmin' value={login.admin ? state : age} onChange={login.admin ? (e) => setstate(e.target.value) : (e) => setage(e.target.value)} />
                                     </div>
+                                    {login.admin ? <div style={{ height: '25%', width: '100%', display: 'flex', justifyContent: 'space-around', alignItems: 'center', flexDirection: 'column', paddingBottom: '30px', gap: '20px' }}>
+                                        <div className='profilefcitycon' >
+                                            <h2>City</h2>
+                                            <input className='profilefcityAdmin' value={city} onChange={(e) => setcity(e.target.value)} style={{ height: "35px", width: '210px' }} />
+                                        </div>
 
-                                    <div className='profilefcitycon'>
-                                        <h2>City</h2>
-                                        <input className='profilefcityAdmin' value={city} onChange={(e) => setcity(e.target.value)} />
-                                    </div>
+                                        <div className='profileflgacon'>
+                                            <h2>L.G.A</h2>
+                                            <input className='profileflgaAdmin' value={LGA} onChange={(e) => setLGA(e.target.value)} style={{ height: "35px", width: '210px' }} />
+                                        </div>
+                                    </div> : null
+                                    }
 
-                                    <div className='profileflgacon'>
-                                        <h2>L.G.A</h2>
-                                        <input className='profileflgaAdmin' value={LGA} onChange={(e) => setLGA(e.target.value)} />
-                                    </div>
 
 
 
@@ -230,6 +302,7 @@ function Dashboard() {
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
                 </div>) : null

@@ -20,28 +20,34 @@ function ABOUTUS() {
       <>
          <Header />
          <div className='Aboutusbody'>
-            <div className='aboutustextdiv'>About Us</div>
+            <div className='aboutustextdiv'>
+               <p>About Us</p>
+               <p className='atmedvault'>At MedVault, we are your trusted partner for secure,seamless and smart patient care.</p>
+               </div>
             <div className='aboutusimgdiv'>
                <div className='aboutus1'>
                   <div className='aboutus1imgholder'>
                      <img src={abtusimg1} alt="" />
+                     <p className='clients'>Patient Centered Care</p>
                   </div>
                </div>
                <div className='aboutus2'>
                   <div className='aboutus2imgholder'>
                      <img src={abtusimg3} alt="" />
+                     <p className='clients'>Secured Patient Database</p>
                   </div>
                </div>
                <div className='aboutus3'>
                   <div className='aboutus3imgholder'>
                      <img src={abtusimg2} alt="" />
+                     <p className='clients'>Dedicated Team</p>
                   </div>
                </div>
-               <div className='aboutus4'>
+               {/* <div className='aboutus4'>
                   <div className='aboutus4imgholder'>
                      <img src={abtusimg4} alt="" />
                   </div>
-               </div>
+               </div> */}
             </div>
             <div className='aboutusdescdiv'>
                <div className='aboutusdescwrapper'>

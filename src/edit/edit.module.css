@@ -11,7 +11,7 @@ input {
 }
 
 .body {
-    height: 100vh;
+    height: 150vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -21,8 +21,7 @@ input {
 
 .mainBody {
     height: 90%;
-    width: 45%;
-    background-color: white;
+    width: 55%;
     display: flex;
     align-items: center;
     padding-top: 20px;

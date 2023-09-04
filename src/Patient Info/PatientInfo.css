@@ -1,0 +1,56 @@
+
+/* Style the main content */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.overall {
+    background-color: #1EBFC1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.patient-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.patient-image img {
+    max-width: 200px; /* Adjust the width as needed */
+    height: auto;
+}
+
+.patient-info {
+    width: 100%;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    flex: 1;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    flex: 2;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Increase font size for Diagnosis */
+#diagnosis {
+    font-size: 16px;
+}

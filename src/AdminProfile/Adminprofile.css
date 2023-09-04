@@ -1,6 +1,6 @@
 .Adminbody {
-    height: 100vh;
-    width: 100%;
+    height: 90vh;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,6 +15,7 @@
     height: 5%;
     padding-right: 20px;
     width: 100%;
+
 }
 
 .menu1 span:hover {
@@ -33,12 +34,12 @@
 }
 
 .Admincontain {
-    background-color: #46a8aa;
+    background-color: white;
     height: 95%;
     padding: 3px;
     width: 40%;
     border-radius: 5px;
-    background-color: red;
+    /* background-color: red; */
 }
 
 .Adminhead {
@@ -79,7 +80,6 @@
 }
 
 .Admincontainer {
-    background-color: #FFF;
     height: 90%;
     width: 100%;
     border-radius: 0px 0px 5px 5px;

@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from 'react'
 import './registrationMobile.css'
 import EmailPopUp from '../popUp/EmailPopUp'
 import toast, { Toaster } from 'react-hot-toast'
+import {HiOutlineArrowLeft} from 'react-icons/hi'
 
 
 function Registration() {
@@ -69,6 +70,9 @@ function Registration() {
 
     return (
         <div>
+                  <div className='stafflogowrapper'>
+                       <img onClick={() => nav('/')} src="./src/assets/logo.png" alt="logo" />
+                  </div>
             <div className="registration">
                 <div className="registrationList">
                     {/* <div className='arrow' onClick={() => nav('/')}><HiOutlineArrowLeft /></div> */}
@@ -84,7 +88,10 @@ function Registration() {
                             <input type="password" placeholder="Confirm password" className="inputType" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
                             {/* <input type="Password" placeholder="Confirm password" className="inputType" value={password} onChange={(e) => setPassword(e.target.value)} /> */}
                             <input type="text" placeholder="State" className="inputType" value={state} onChange={(e) => setState(e.target.value)} required />
-                            <input type='file' accept='/image*/' placeholder='Facility logo' className="inputType" onChange={File} />
+                            <div className="inputType">
+                            <input type='file' accept='image/*' placeholder='Facility logo' className="fileInput" onChange={File} />
+
+                            </div>
                             <input type="text" placeholder="City" className="inputType" value={city} onChange={(e) => setCity(e.target.value)} required />
                             <input type="text" placeholder="LGA" className="inputType" value={LGA} onChange={(e) => setLga(e.target.value)} required />
                             <button className="regBtn" type='submit'>{loadState ? 'Loading...' : "Register"}</button>

@@ -101,16 +101,17 @@ function Edit() {
     // }, [])
 
     return (
+        <>
         <div className={styles.body}>
             <div className={styles.mainBody}>
-                <p className={styles.mainBodyP}>Patient <span> Datails</span></p>
+                <p className={styles.mainBodyP}>Patient <span> Details</span></p>
                 <div className={styles.top}>
                     <div className={styles.image}>
                         <img src={patient.patientImage.url} alt="image" />
                     </div>
                     <div className={styles.text}>
                         <input type="text" value={patientName} onChange={(e) => setpatientName(e.target.value)} />
-                        <input type="text" value={dateOfBirth} onChange={(e) => setdateOfBirth(e.target.value)} />
+                        <input type="text" value={patientID} onChange={(e) => setpatientID(e.target.value)} />
                     </div>
                 </div>
                 <div className={styles.secondSec}>
@@ -161,6 +162,7 @@ function Edit() {
                 </div>
             </div>
         </div >
+        </>
     )
 }
 

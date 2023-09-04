@@ -8,31 +8,36 @@ function Password() {
   const { token } = useParams();
   // const [isVerified, setIsVerified] = useState(1)
   const [verified, setVerified] = useState(false)
+  const [load, setLoad] = useState(false)
   const [existingPassword, setExistingPassword] = useState('')
   const [password, setPassword] = useState('')
+
+
   const forgetInfo = { password, existingPassword }
-  console.log(token)
+
   const nav = useNavigate()
-  console.log(existingPassword)
-  console.log(password)
 
 
-  useEffect(() => {
-    const verifyUser = () => {
-      axios
-        .post(`https://medvault.onrender.com/api/changepassword/${token}`, forgetInfo)
-        .then((res) => {
-          console.log(res);
-          setVerified(true)
-          // setIsVerified(2)
-        })
-        .catch((err) => {
-          console.log("Error response:", err);
-          // setIsVerified(3)
-        });
-    };
-    verifyUser()
-  }, []);
+
+  // useEffect(() => {
+  const verifyUser = () => {
+    setLoad(true)
+    axios
+      .post(`https://medvault.onrender.com/api/changepassword/${token}`, forgetInfo)
+      .then((res) => {
+        console.log(res);
+        setVerified(true)
+        setLoad(false)
+        // setIsVerified(2)
+      })
+      .catch((err) => {
+        console.log("Error response:", err);
+        setLoad(false)
+        // setIsVerified(3)
+      });
+  };
+  // verifyUser()
+  // }, []);
 
   return (
     <>
@@ -44,9 +49,9 @@ function Password() {
               <h2>Set a new password</h2>
             </div>
           </div>
-          <input type="text" placeholder='New Password' className='in11' value={existingPassword} onChange={(e) => setExistingPassword(e.target.value)} />
-          <input type="text" placeholder='Confirm password' className='in22' value={password} onChange={(e) => setPassword(e.target.value)} />
-          <button className='btn' onClick={verifyUser}>Confirm Password</button>
+          <input type="password" placeholder='New Password' className='in11' style={{ backgroundColor: 'white' }} value={existingPassword} onChange={(e) => setExistingPassword(e.target.value)} />
+          <input type="password" placeholder='Confirm password' className='in22' style={{ backgroundColor: 'white' }} value={password} onChange={(e) => setPassword(e.target.value)} />
+          <button className='btn' onClick={verifyUser}>{load ? "Loading..." : 'change Password'}</button>
         </div>
         {
           verified ? <Alert /> : null

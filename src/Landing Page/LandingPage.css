@@ -45,13 +45,13 @@
 }
 
 .health {
-    font-size: 80px;
+    font-size: 68px;
     font-weight: 700;
     color: #0B120B;
 }
 
 .with {
-    font-size: 80px;
+    font-size: 68px;
     color: #0B120B;
     font-weight: 700;
 }
@@ -111,14 +111,9 @@ button:hover {
 .Herorightbox {
     width: 90%;
     height: 100%;
-    background-color: #E0F7F6;
     border-radius: 10px;
 }
 
-.Herorightbox:hover {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    background-color: #0d5253;
-}
 
 .Herorightbox img {
     width: 100%;
@@ -171,6 +166,25 @@ button:hover {
     align-items: center;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 0 10px;
+    overflow: hidden;
+    animation-duration: 3s;
+    animation-name: slidein;
+    place-items: center;
+    overflow: hidden;
+}
+
+
+
+@keyframes slidein{
+    0%{
+        /* opacity: 0; */
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .Emrbox1:hover {
@@ -227,7 +241,7 @@ button:hover {
     font-size: 20px;
 }
 
-.Emrbox3 {
+.Emrbox3{
     width: 30%;
     height: 100%;
     background-color: #1EBFC1;
@@ -239,7 +253,24 @@ button:hover {
     align-items: center;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 0 10px;
+    overflow: hidden;
+    animation-duration: 3s;
+    animation-name: slidein;
+    place-items: center;
+    overflow: hidden;
 }
+@keyframes slidein{
+    0%{
+        /* opacity: 0; */
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 .Emrbox3:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -300,7 +331,7 @@ button:hover {
 
 .Uniquefeaturetextbox {
     width: 100%;
-    height: 10vh;
+    height: 12vh;
     display: flex;
     justify-content: center;
     margin-top: 60px;
@@ -309,6 +340,8 @@ button:hover {
 .Uniquefeaturestext {
     width: 93%;
     height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .Uniquep {
@@ -323,7 +356,7 @@ button:hover {
 
 .Uniquefeaturesfirstbox {
     width: 100%;
-    height: 25vh;
+    height: 30vh;
     display: flex;
     justify-content: space-between;
 }
@@ -367,7 +400,7 @@ button:hover {
 
 .Uniquefeaturessecondbox {
     width: 100%;
-    height: 25vh;
+    height: 30vh;
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
@@ -400,6 +433,9 @@ button:hover {
 .secondtextholder {
     width: 85%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .secondtext {
@@ -409,7 +445,7 @@ button:hover {
 
 .Uniquefeaturethirdbox {
     width: 100%;
-    height: 25vh;
+    height: 30vh;
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
@@ -452,7 +488,7 @@ button:hover {
 
 .Uniquefeaturesfourthbox {
     width: 100%;
-    height: 25vh;
+    height: 30vh;
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
@@ -485,6 +521,9 @@ button:hover {
 .fourthtextholder {
     width: 85%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .fourthtext {
@@ -537,6 +576,10 @@ button:hover {
     border-radius: 10px;
     border: 3px solid #1EBFC1;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* opacity: 0;
+    transform: translateX(100%);
+    animation: slideIn 8s forwards; */
+
 }
 
 .pricingbox1:hover {
@@ -660,6 +703,9 @@ button:hover {
     border-radius: 10px;
     border: 3px solid #FFC147;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* opacity: 0;
+    transform: translateX(100%);
+    animation: slideIn 8s forwards;   */
 }
 
 .pricingbox3:hover {
@@ -807,14 +853,14 @@ button:hover {
 .testimonialscircle {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
-    object-fit: contain;
+    border-radius: 100%;
+    /* object-fit: contain; */
 }
 
 .testimonialscircle img {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 100%;
 }
 
 .testimonialsname {
@@ -924,6 +970,7 @@ button:hover {
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     cursor: pointer;
+    margin: 0;
 }
 
 .signupbtn button:hover {

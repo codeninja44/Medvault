@@ -18,7 +18,7 @@
 .App2 {
   width: 50%;
   height: 100%;
-  background-color: #E0F7F6;
+  background-color: white;
   /* background-image: url("../public/Doc.jpg"); */
   background-repeat: no-repeat;
   background-size: contain;
@@ -74,7 +74,7 @@
   /* background-color: purple; */
   display: flex;
   align-items: center;
-  gap: 77px;
+  /* gap: 77px; */
   margin-left: 10px;
 }
 
@@ -84,10 +84,13 @@
   outline: none;
   border: 1px solid rgba(0, 170, 255, 0.95);
   border-radius: 3px;
+  padding: 10px;
 }
 
 .NameA p {
   font-weight: 520;
+  width: 22%;
+
 }
 
 .NameB {
@@ -96,7 +99,7 @@
   /* background-color: purple; */
   display: flex;
   align-items: center;
-  gap: 10px;
+  /* gap: 10px; */
   margin-left: 10px;
 
 }
@@ -107,10 +110,13 @@
   outline: none;
   border: 1px solid rgba(0, 170, 255, 0.95);
   border-radius: 3px;
+  padding: 10px;
 }
 
 .NameB p {
   font-weight: 520;
+  width: 22%;
+
 }
 
 .NameC {
@@ -119,7 +125,7 @@
   /* background-color: purple; */
   display: flex;
   align-items: center;
-  gap: 12px;
+  /* gap: 12px; */
   margin-left: 10px;
 }
 
@@ -129,10 +135,12 @@
   outline: none;
   border: 1px solid rgba(0, 170, 255, 0.95);
   border-radius: 3px;
+  padding: 10px;
 }
 
 .NameC p {
   font-weight: 520;
+  width: 22%;
 }
 
 .NameD {
@@ -141,7 +149,7 @@
   /* background-color: purple; */
   display: flex;
   align-items: center;
-  gap: 15px;
+  /* gap: 15px; */
   margin-left: 10px;
 }
 
@@ -151,10 +159,12 @@
   outline: none;
   border: 1px solid rgba(0, 170, 255, 0.95);
   border-radius: 3px;
+  padding: 10px;
 }
 
 .NameD p {
   font-weight: 520;
+  width: 22%;
 }
 
 .NameE {
@@ -163,7 +173,7 @@
   /* background-color: purple; */
   display: flex;
   align-items: center;
-  gap: 93px;
+  /* gap: 93px; */
   margin-left: 10px;
 }
 
@@ -173,10 +183,13 @@
   outline: none;
   border: 1px solid rgba(0, 170, 255, 0.95);
   border-radius: 3px;
+  padding: 10px;
 }
 
 .NameE p {
   font-weight: 520;
+  width: 22%;
+
 }
 
 .NameF {
@@ -186,7 +199,7 @@
   display: flex;
   align-items: center;
   margin-left: 10px;
-  gap: 85px;
+  /* gap: 85px; */
 }
 
 .NameF input {
@@ -195,10 +208,13 @@
   outline: none;
   border: 1px solid rgba(0, 170, 255, 0.95);
   border-radius: 3px;
+  padding: 10px;
 }
 
 .NameF p {
   font-weight: 520;
+  width: 22%;
+
 }
 
 .NameH {
@@ -208,7 +224,7 @@
   display: flex;
   align-items: center;
   margin-left: 10px;
-  gap: 25px;
+  /* gap: 25px; */
 }
 
 .NameH input {
@@ -217,10 +233,13 @@
   outline: none;
   border: 1px solid rgba(0, 170, 255, 0.95);
   border-radius: 3px;
+  padding: 10px;
 }
 
 .NameH p {
   font-weight: 520;
+  width: 22%;
+
 }
 
 .NameI {
@@ -230,7 +249,7 @@
   display: flex;
   align-items: center;
   margin-left: 10px;
-  gap: 25px;
+  /* gap: 25px; */
 }
 
 .NameI input {
@@ -239,10 +258,13 @@
   outline: none;
   border: 1px solid rgba(0, 170, 255, 0.95);
   border-radius: 3px;
+  padding: 10px;
 }
 
 .NameI p {
   font-weight: 520;
+  width: 40%;
+
 }
 
 .NameJ {
@@ -252,7 +274,7 @@
   display: flex;
   align-items: center;
   margin-left: 10px;
-  gap: 10px;
+  /* gap: 10px;  */
 }
 
 .NameJ input {
@@ -261,10 +283,13 @@
   outline: none;
   border: 1px solid rgba(0, 170, 255, 0.95);
   border-radius: 3px;
+  padding: 10px;
 }
 
 .NameJ p {
   font-weight: 520;
+  width: 40%;
+
 }
 
 .NameK {
@@ -274,7 +299,7 @@
   display: flex;
   align-items: center;
   margin-left: 10px;
-  gap: 130px;
+  /* gap: 130px; */
 }
 
 .NameK input {
@@ -283,11 +308,12 @@
   outline: none;
   border: 1px solid rgba(0, 170, 255, 0.95);
   border-radius: 3px;
+  padding: 10px;
 }
 
 .NameK p {
   font-weight: 520;
-  width: 30%;
+  width: 40%;
 }
 
 .NameG {
@@ -302,6 +328,9 @@
 
 .NameG p {
   font-weight: 520;
+  /* width: 10%; */
+  gap: 5px;
+
 }
 
 .Diagnosis {
@@ -316,6 +345,8 @@
 
 .Diagnosis p {
   font-weight: 520;
+  width: 22%;
+
 }
 
 .Diagnosis input {
@@ -323,6 +354,7 @@
   height: 60%;
   border: 1px solid rgba(0, 170, 255, 0.95);
   border-radius: 4px;
+  padding: 10px;
 }
 
 .createPatient {

@@ -26,6 +26,8 @@ import RegisterPatient from './registerPatient/ResgisterPatient'
 import PatientInfo from './patientInfo/PatientInfo'
 import Edit from './edit/Edit'
 import Recover from './recoverPatient/Recover'
+import CreatedSuccessfully from './Created PopUp/CreatedSuccessfully'
+import StaffDetails from './staffDetail/StaffDetails'
 // import PatientsRegistration from './createPatients/CreatePatients'
 // import ABOUTUS from './ABOUTFOLD/ABOUTUS'
 
@@ -40,9 +42,11 @@ const App = () => {
           <Route path='/login' element={<Login />} />
           <Route path='/verification/:token' element={<VerifiedEmail />} />
           <Route path='/emailVerificaion' element={<EmailPopUp />} />
+          <Route path='/CreatedPopUp' element={<CreatedSuccessfully />} />
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/staffDashboard' element={<StaffSpace />} />
           <Route path='/staffInfo' element={<StaffsInfo />} />
+          <Route path='/api/getonestaff/:staffID' element={<StaffDetails />} />
           <Route path='/api/hospitals/patient/:hospitalcode' element={<Patient />} />
           <Route path='/api/getonepatient/:patientID' element={<PatientInfo />} />
           <Route path='/api/updatePatient/:patientID' element={<Edit />} />
