@@ -61,14 +61,15 @@ const Header = () => {
                 </div>
             </div>
             {
-                dropDown ? (<div className="dropDown">
+                dropDown ? (<div className="dropDown" style={{ marginLeft: '30%' }}>
                     <div className="menu1">
-                        <span onClick={() => setDropDown(false)}>X</span>
+                        <span onClick={() => setDropDown(false)} style={{ margin: '20px' }}>X</span>
                     </div>
                     <div className="menu" onClick={() => nav('/')} style={{ color: 'white' }}> <p>Home</p></div>
                     <div className="menu" style={{ color: 'white' }} onClick={() => nav('/aboutPage')}> <p>About us</p></div>
                     <div className="menu" onClick={() => nav('/contactPage')} style={{ color: 'white' }}> <p>Contact us</p></div>
                     <div className="menu" style={{ color: 'white' }} onClick={() => nav('/registration')}> <p>Registration</p></div>
+                    <div className="menu" style={{ color: 'white' }} onClick={() => nav('/Login')}> <p>Login</p></div>
                 </div>) : null
             }
 

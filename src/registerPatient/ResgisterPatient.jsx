@@ -231,14 +231,21 @@ const RegisterPatient = () => {
             </div>
 
 
-            <div className='Diagnosis'>
+            {/* <div className='Diagnosis'>
               <p>Diagnosis: </p>
               <input placeholder='' type='text' style={{ outline: 'none' }} />
-            </div>
+            </div> */}
 
             <div className="form-group">
               <label for="diagnosis">Diagnosis:</label>
-              <textarea id="diagnosis" value={diagnosis} name="diagnosis" onChange={(e) => setDiagnosis(e.target.value)}>{ }</textarea>
+              <textarea id="diagnosis" value={diagnosis} style={{
+                flex: "2",
+                padding: "10px",
+                border: "1px solid #ccc",
+                backgroundColor: "white",
+                borderRadius: "5px",
+                width: "100%"
+              }} name="diagnosis" onChange={(e) => setDiagnosis(e.target.value)}>{ }</textarea>
             </div>
 
             <button className='createPatient' type='submit'>{load ? 'Creating...' : 'Create patient'}</button>
