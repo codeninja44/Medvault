@@ -38,7 +38,7 @@ function Login() {
     return (
         <>
             <div className='stafflogowrapper'>
-                <img src={logo} alt="logo" />
+                <img src={logo} alt="logo" onClick={() => nav('/')} />
             </div>
             <div className="registration">
                 {/* <div className='arrow' onClick={() => nav('/')}><HiOutlineArrowLeft /></div> */}

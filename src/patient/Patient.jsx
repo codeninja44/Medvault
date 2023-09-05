@@ -3,6 +3,7 @@ import style from './patient.module.css'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Swal from "sweetalert2"
+import logo from '../assets/logo.png'
 
 // import { useParams } from 'react-router-dom'
 
@@ -66,7 +67,7 @@ function Patient() {
     return (
         <>
             <div className='stafflogowrapper'>
-                <img onClick={() => nav('/dashboard')} src="./src/assets/logo.png" alt="logo" />
+                <img src={logo} alt="logo" onClick={() => nav('/dashboard')} />
             </div>
             <div className={style.staffsInfo}>
                 <div className={style.innerBody}>

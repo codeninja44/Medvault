@@ -19,7 +19,7 @@ import testithirdcircle from '../assets/testithirdcircle.jpg'
 // import { FaQuoteRight, } from "react-icons/fa"
 import { useNavigate } from "react-router-dom"
 import video from '../assets/aboutVideo.mp4'
-import {Typewriter} from 'react-simple-typewriter'
+import { Typewriter } from 'react-simple-typewriter'
 
 
 const LandingPage = () => {
@@ -35,26 +35,26 @@ const LandingPage = () => {
                 <div className="MainHero">
                     <div className="Heroleft">
                         <div className="Herolefttext">
-                        <p className="health">Health in <span className="safety">
-                            <Typewriter
-            words={['Safety', 'Progress', 'Care']}
-            loop={true}
-            cursor
-            cursorStyle=''
-            typeSpeed={100}
-            deleteSpeed={100}
-            delaySpeed={1000}
-          
-          /></span></p>
+                            <p className="health">Health in <span className="safety">
+                                <Typewriter
+                                    words={['Safety', 'Progress', 'Care']}
+                                    loop={true}
+                                    cursor
+                                    cursorStyle=''
+                                    typeSpeed={100}
+                                    deleteSpeed={100}
+                                    delaySpeed={1000}
+
+                                /></span></p>
                             <span className="with">with Medvault.</span>
                             <p className="trusted">Your trusted partner for secure,seamless and smart patient care.</p>
-                            <button onClick={() => nav('/registration')}>Create Account</button>
+                            <button className="createAccountBtn" onClick={() => nav('/registration')}>Create Account</button>
                         </div>
 
                     </div>
                     <div className="Heroright">
                         <div className="Herorightbox">
-                        <img src={heronurse} alt="nurselogo" />
+                            <img src={heronurse} alt="nurselogo" />
                         </div>
                     </div>
                 </div>

@@ -4,6 +4,10 @@ import './StaffRegistrationmobile.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-hot-toast'
+import logo from '../assets/logo.png'
+import logo from '../assets/logo.png'
+
+
 
 const StaffRegistration = () => {
    const [name, setName] = useState('')
@@ -71,7 +75,7 @@ const StaffRegistration = () => {
             <form className="inputSec" onSubmit={register}>
                <div className='staffreghead'>
                   <div className='stafflogowrapper'>
-                     <img src="./src/assets/logo.png" alt="logo" />
+                     <img src={logo} alt="logo" onClick={() => nav('/staffInfo')} />
                   </div>
                </div>
                <div className='staffregcarddiv'>

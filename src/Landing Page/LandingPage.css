@@ -176,12 +176,13 @@ button:hover {
 
 
 
-@keyframes slidein{
-    0%{
+@keyframes slidein {
+    0% {
         /* opacity: 0; */
         transform: translateX(-100%);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
@@ -241,7 +242,7 @@ button:hover {
     font-size: 20px;
 }
 
-.Emrbox3{
+.Emrbox3 {
     width: 30%;
     height: 100%;
     background-color: #1EBFC1;
@@ -260,12 +261,14 @@ button:hover {
     place-items: center;
     overflow: hidden;
 }
-@keyframes slidein{
-    0%{
+
+@keyframes slidein {
+    0% {
         /* opacity: 0; */
         transform: translateX(-100%);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateX(0);
     }

@@ -2,6 +2,8 @@ import './staffDetails.css'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
+import logo from '../assets/logo.png'
+
 
 function StaffDetails() {
     const [photo, setPhoto] = useState()
@@ -47,7 +49,7 @@ function StaffDetails() {
     return (
         <>
             <div className='stafflogowrapper'>
-                <img onClick={() => nav('/staffInfo')} src="./src/assets/logo.png" alt="logo" />
+                <img src={logo} alt="logo" onClick={() => nav('/api/hospitals/patient/:hospitalcode')} />
             </div>
             <main>
                 <div className="overall">
