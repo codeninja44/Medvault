@@ -5,7 +5,6 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-hot-toast'
 import logo from '../assets/logo.png'
-import logo from '../assets/logo.png'
 
 
 
