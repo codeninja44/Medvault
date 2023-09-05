@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Swal from "sweetalert2"
 import logo from '../assets/logo.png'
+import useDashboard from '../hooks/useDashboard'
+
 
 // import { useParams } from 'react-router-dom'
 
@@ -16,6 +18,8 @@ function Patient() {
     const storedHospitalDetails = JSON.parse(localStorage.getItem("hospitaldetails"));
     console.log(storedHospitalDetails);
     const nav = useNavigate()
+    const login = useDashboard()
+
     // const [patientInfo, setPaientInfo] = useState([])
     // console.log((hospitalcode))
     const token = JSON.parse(localStorage.getItem("token"))
@@ -76,6 +80,7 @@ function Patient() {
 
                     </div>
                     <div className={style.info}>
+
                         {
                             userData.map((e) => (
                                 <div className={style.infoDisplay} >
@@ -88,36 +93,37 @@ function Patient() {
                                         </div>
                                         <p>{e.patientName}</p>
                                     </div>
-                                    <button className={style.delete} onClick={(event) => {
-                                        Swal.fire({
-                                            title: "Delete",
-                                            icon: "warning",
-                                            text: "Atre you sure you want to delete this patient?",
-                                            showCancelButton: true
-                                        }).then((result) => {
-                                            if (result.isConfirmed) {
-                                                event.stopPropagation()
-                                                axios.delete(`https://medvault.onrender.com/api/delete/${e.patientID}`, config)
-                                                    .then(res => {
-                                                        console.log(res);
-                                                        Swal.fire({
-                                                            title: "Success",
-                                                            icon: "success",
-                                                            text: "Patient will be deleted permanently in 10 days",
-                                                            showCancelButton: false,
-                                                            showConfirmButton: false,
-                                                            timer: 5000,
+                                    {login.admin ?
+                                        <button className={style.delete} onClick={(event) => {
+                                            Swal.fire({
+                                                title: "Delete",
+                                                icon: "warning",
+                                                text: "Atre you sure you want to delete this patient?",
+                                                showCancelButton: true
+                                            }).then((result) => {
+                                                if (result.isConfirmed) {
+                                                    event.stopPropagation()
+                                                    axios.delete(`https://medvault.onrender.com/api/delete/${e.patientID}`, config)
+                                                        .then(res => {
+                                                            console.log(res);
+                                                            Swal.fire({
+                                                                title: "Success",
+                                                                icon: "success",
+                                                                text: "Patient will be deleted permanently in 10 days",
+                                                                showCancelButton: false,
+                                                                showConfirmButton: false,
+                                                                timer: 5000,
+                                                            })
+                                                            nav("/dashboard")
+                                                            getData()
                                                         })
-                                                        nav("/dashboard")
-                                                        getData()
-                                                    })
-                                                    .catch(err => {
-                                                        console.log(err);
-                                                    })
-                                            }
-                                        })
+                                                        .catch(err => {
+                                                            console.log(err);
+                                                        })
+                                                }
+                                            })
 
-                                    }} >Delete</button>
+                                        }} >Delete</button> : null}
 
                                 </div>
                             ))
