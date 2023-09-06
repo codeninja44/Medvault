@@ -54,18 +54,14 @@ const CreateStaff = () => {
                     <div className="createstafftextdiv">
                         <p className="createstafftext" style={{ fontSize: '40px', fontWeight: '600' }}>Create staff</p>
                     </div>
-                    <div className="createstaffimagediv">
-                        <div className="createstaffimageholder">
-                            {/* <img src={testifourthcircle} alt="staffimg" /> */}
-                        </div>
-                    </div>
+
                     <div className="createstaffinputdiv">
                         <input className="createinput1" type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
                         <input className="createinput2" type="text" placeholder="Hospital code" value={storedHospitalDetails} readOnly />
                     </div>
                     <div className="createstaffbtndiv">
                         <div className="createstaffbtnholder">
-                            <button className="createstaffbtn" type='submit' onClick={()=>{
+                            <button className="createstaffbtn" type='submit' onClick={() => {
                                 staff()
                                 setHospitalCode(storedHospitalDetails)
                                 console.log("Button")

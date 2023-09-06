@@ -17,6 +17,9 @@ const token = JSON.parse(localStorage.getItem("token"))
 const getId = JSON.parse(localStorage.getItem('id'))
 const hospitalcode = JSON.parse(localStorage.getItem("hospitalcode"))
 const staffId = JSON.parse(localStorage.getItem('staffID'))
+// const patient = JSON.parse(localStorage.getItem('patient'))
+// const staffs = JSON.parse(localStorage.getItem('staff'))
+// 
 
 function Dashboard() {
     const [userData, setUserData] = useState()
@@ -107,6 +110,9 @@ function Dashboard() {
                 setcity(res.data.data.city)
                 setLGA(res.data.data.LGA)
                 localStorage.setItem("hospitaldetails", JSON.stringify(userData.hospitalcode))
+                localStorage.setItem("patient", JSON.stringify(userData.patient))
+                localStorage.setItem("staff", JSON.stringify(userData.staff))
+
                 console.log(res)
                 setallStaff(res.data.data.staff)
                 setPatient(res.data.data.patients)
