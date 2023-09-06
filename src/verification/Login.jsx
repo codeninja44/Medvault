@@ -22,11 +22,14 @@ function Login() {
         axios.post(url, loginInfo)
             .then(res => {
                 setLoad(false)
+                // localStorage.setItem("StaffId", JSON.stringify(res.data.data.StaffId))
                 localStorage.setItem("token", JSON.stringify(res.data.data.token))
                 localStorage.setItem("id", JSON.stringify(res.data.data.id))
                 localStorage.setItem("hospitalcode", JSON.stringify(res.data.data.hospitalcode))
+
                 nav('/dashboard')
                 console.log(res)
+                console.log(res.data.data)
             })
             .catch((err) => {
                 console.log(err),
