@@ -28,36 +28,66 @@
 }
 
 .medlogo img{
-    width: 40%;
-    height: 50%;
+    width: 50%;
+    height: 60%;
 }
 
 .footeraddress{
     width: 100%;
     height: 10%;
-    font-size: 8px;
     color: #636763;
+    display: flex;
+    gap: 5px;
+}
+
+.footeraddressicon{
+    font-size: 8px;
+}
+
+.footeraddress p{
+    font-size: 8px; 
 }
 
 .footerphoneno{
     width: 100%;
     height: 10%;
-    font-size: 8px;
     color: #636763;
+    display: flex;
+    gap: 5px;
+}
+
+.footerphoneno p{
+    font-size: 8px;
+}
+
+.footerphonenoicon{
+    font-size: 8px;
 }
 
 .footeremail{
     width: 100%;
     height: 10%;
-    font-size: 8px; 
     color: #636763;
+    display: flex;
+    gap: 5px;
+}
+
+.footeremailicon{
+    font-size: 8px;
+}
+
+.footeremail p{
+    font-size: 8px; 
 }
 
 .footercopyrights{
     width: 100%;
-    height: 40%;
-    font-size: 8px;  
+    height: 40%; 
     color: #636763;
+}
+
+.footercopyrights p{
+    font-size: 8px;
 }
 
 .footer2{
@@ -78,22 +108,37 @@
 .quicklinkshome{
     width: 100%;
     height: 10%;
-    font-size: 8px; 
     color: #636763;
+    display: flex;
+    align-items: center;
+}
+
+.quicklinkshome p{
+    font-size: 8px; 
 }
 
 .quicklinksabout{
     width: 100%;
     height: 10%;
-    font-size: 8px; 
     color: #636763;
+    display: flex;
+    align-items: center;
 }
 
+
+.quicklinksabout p{
+    font-size: 8px;  
+}
 .quicklinksservices{
     width: 100%;
     height: 10%;
-    font-size: 8px; 
     color: #636763;
+    display: flex;
+    align-items: center;
+}
+
+.quicklinksservices p{
+    font-size: 8px;  
 }
 
 .quicklinkempty{
@@ -118,13 +163,37 @@
     height: 10%;
     font-size: 8px; 
     color: #636763;
+    display: flex;
+    align-items: center;
+}
+
+.legallinksterms p{
+    font-size: 8px;
 }
 
 .legallinkscondition{
+    width: 100%;
+    height: 10%;
+    font-size: 8px; 
+    color: #636763;
+    display: flex;
+    align-items: center;
+}
+
+.legallinkscondition p{
     font-size: 8px;
 }
 
 .legallinksprivacy{
+    width: 100%;
+    height: 10%;
+    font-size: 8px; 
+    color: #636763;
+    display: flex;
+    align-items: center;
+}
+
+.legallinksprivacy p{
     font-size: 8px;
 }
 
@@ -141,17 +210,48 @@
 .socialmediafb{
     width: 100%;
     height: 10%;
-    font-size: 8px; 
-    color: #636763; 
+    color: #636763;
     display: flex;
+    gap: 5px;
+}
+.socialmediafbicon{
+    font-size: 8px;
+}
+
+.socialmediafb p{
+    font-size: 8px;
 }
 
 .socialmediatwi{
+    width: 100%;
+    height: 10%;
+    color: #636763;
+    display: flex;
+    gap: 5px;
+}
+
+.socialmediatwiicon{
+    font-size: 8px; 
+}
+
+.socialmediatwi p{
     font-size: 8px; 
 }
 
 .socialmedialnkd{
-    font-size: 8px;
+    width: 100%;
+    height: 10%;
+    color: #636763;
+    display: flex;
+    gap: 5px;
+}
+
+.socialmedialnkdicon{
+    font-size: 8px; 
+}
+
+.socialmedialnkd p{
+    font-size: 8px; 
 }
 
 }

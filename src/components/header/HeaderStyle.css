@@ -54,6 +54,21 @@
     font-size: 18px;
 }
 
+
+.landinghometext{
+    font-weight: bold;
+}
+
+.landingabouttext{
+    font-weight: bold;
+}
+
+.landingcontactustext{
+    font-weight: bold;
+}
+
+
+
 .firstList li {
     cursor: pointer;
 }

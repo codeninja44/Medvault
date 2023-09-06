@@ -1,4 +1,5 @@
 import './staffDetails.css'
+import "../../src/patientInfo/PatientInfo.css"
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
@@ -49,14 +50,16 @@ function StaffDetails() {
     return (
         <>
             <div className='stafflogowrapper'>
-                <img src={logo} alt="logo" onClick={() => nav('/api/hospitals/patient/:hospitalcode')} />
+                <img src={logo} alt="logo" onClick={() => nav('/staffInfo')} />
             </div>
             <main>
                 <div className="overall">
                     <h1 style={{ textAlign: 'center', marginBottom: '10px' }}>Staff Information</h1>
                     <section className="patient-image">
                         <p>Staff image:</p>
-                        <img src={photo} alt="Patient's Photo" />
+                        <div className='patientimgphoto'>
+                            <img src={photo} alt="Patient's Photo" />
+                        </div>
                     </section>
 
                     <section className="patient-info">

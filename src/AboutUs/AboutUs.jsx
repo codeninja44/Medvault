@@ -21,13 +21,13 @@ function ABOUTUS() {
          <Header />
          <div className='Aboutusbody'>
             <div className='aboutustextdiv'>
-               <p>About Us</p>
+               <p className='abtusmaintext'>About Us</p>
                <p className='atmedvault'>At MedVault, we are your trusted partner for secure,seamless and smart patient care.</p>
                </div>
             <div className='aboutusimgdiv'>
                <div className='aboutus1'>
                   <div className='aboutus1imgholder'>
-                     <img src={abtusimg1} alt="" />
+                     <img className='abtusimg1' src={abtusimg1} alt="" />
                      <p className='clients'>Patient Centered Care</p>
                   </div>
                </div>

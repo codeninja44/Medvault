@@ -25,7 +25,7 @@ const CreateStaff = () => {
     function staff(e) {
         // const nav = useNavigate()
 
-        e.preventDefault()
+        // e.preventDefault()
         setButtonText(true)
         axios.post(url, staffInfo, { headers: { "Authorization": `Bearer ${token}` } })
             .then(res => {
@@ -56,7 +56,7 @@ const CreateStaff = () => {
                     </div>
                     <div className="createstaffimagediv">
                         <div className="createstaffimageholder">
-                            <img src={testifourthcircle} alt="staffimg" />
+                            {/* <img src={testifourthcircle} alt="staffimg" /> */}
                         </div>
                     </div>
                     <div className="createstaffinputdiv">
@@ -65,7 +65,11 @@ const CreateStaff = () => {
                     </div>
                     <div className="createstaffbtndiv">
                         <div className="createstaffbtnholder">
-                            <button className="createstaffbtn" onClick={staff}>{buttonText ? "creating..." : 'send'}</button>
+                            <button className="createstaffbtn" type='submit' onClick={()=>{
+                                staff()
+                                setHospitalCode(storedHospitalDetails)
+                                console.log("Button")
+                            }}>{buttonText ? "creating..." : 'send'}</button>
                         </div>
                     </div>
                 </div>

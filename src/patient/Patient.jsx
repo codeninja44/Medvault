@@ -13,12 +13,14 @@ import useDashboard from '../hooks/useDashboard'
 // const patientID = JSON.parse(localStorage.getItem("patientID"))
 // const hospitalcode = JSON.parse(localStorage.getItem("hospitalcode")) 
 
+const hospitalcode = JSON.parse(localStorage.getItem("hospitalcode"))
 
 function Patient() {
     const storedHospitalDetails = JSON.parse(localStorage.getItem("hospitaldetails"));
     console.log(storedHospitalDetails);
     const nav = useNavigate()
     const login = useDashboard()
+    const { patientID } = useParams()
 
     // const [patientInfo, setPaientInfo] = useState([])
     // console.log((hospitalcode))
@@ -35,7 +37,7 @@ function Patient() {
             Authorization: `Bearer ${token}`
         }
     }
-    const url1 = `https://medvault.onrender.com/api/hospitals/patient/${storedHospitalDetails}`
+    const url1 = `https://medvault.onrender.com/api/hospitals/patient/${hospitalcode}`
 
 
 
@@ -79,6 +81,7 @@ function Patient() {
                         <input className={style.searchIcon} placeholder="Search Patient Name" onChange={(e) => searchFunctionality(e.target.value)} />
 
                     </div>
+                    <h2>View Hospital Patients</h2>
                     <div className={style.info}>
 
                         {
@@ -91,14 +94,17 @@ function Patient() {
                                         <div className={style.image}>
                                             <img src={e.patientImage.url} alt="profile" />
                                         </div>
-                                        <p>{e.patientName}</p>
+                                        <div>
+                                          <p style={{ fontSize: '14px',fontWeight: '550' }}>{e.patientName}</p>
+                                          <p style={{ fontSize: '11px',fontWeight: '400' }}>Patient ID: <span style={{ fontSize: '11px',color: '#1EBFC1'}}>{e.patientID}</span></p>
+                                        </div>
                                     </div>
                                     {login.admin ?
                                         <button className={style.delete} onClick={(event) => {
                                             Swal.fire({
                                                 title: "Delete",
                                                 icon: "warning",
-                                                text: "Atre you sure you want to delete this patient?",
+                                                text: "Are you sure you want to delete this patient?",
                                                 showCancelButton: true
                                             }).then((result) => {
                                                 if (result.isConfirmed) {

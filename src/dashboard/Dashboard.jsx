@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Adminprofile from '../AdminProfile/Adminprofile'
 import useDashboard from '../hooks/useDashboard'
+import Swal from 'sweetalert2'
 
 
 
@@ -33,6 +34,8 @@ function Dashboard() {
     const [age, setage] = useState('')
     const [phoneNumber, setphoneNumber] = useState('')
     const [role, setrole] = useState('')
+    const [allStaff, setallStaff] = useState([])
+    const [patient, setPatient] = useState([])
 
     const allData = { facilityname, facilityaddress, email, facilityphone, state, city, LGA }
     const updateStaff = { name, age, phoneNumber, role }
@@ -45,14 +48,29 @@ function Dashboard() {
     const nav = useNavigate()
 
     const url = `https://medvault.onrender.com/api/logouthospital/${getId}`
+ function ShowAlert(){
+    Swal.fire({
+        title: "Logout",
+        icon: "warning",
+        text: "Are you sure you want to log out?",
+        showCancelButton: true,       
+    }).then((result) => {
+        if (result.isConfirmed){
+            logout()
+        }
+    })
+ }
 
-
-    function logout(e) {
-        e.preventDefault()
+    function logout() {
+        // e.preventDefault()
         axios.post(url)
             .then((res) => {
                 nav('/')
                 localStorage.removeItem('token')
+                localStorage.removeItem('hospitalcode')
+                localStorage.removeItem('patientID')
+                localStorage.removeItem('hospitaldetails')
+                localStorage.removeItem('id')
             })
             .catch((err) => {
                 console.log(err)
@@ -67,6 +85,7 @@ function Dashboard() {
             { headers: { "Authorization": `Bearer ${token}` } })
         return res
     }
+
 
     async function getStaffData() {
         const res = await axios.get(`https://medvault.onrender.com/api/getonestaff/${staffId}`,
@@ -88,6 +107,9 @@ function Dashboard() {
                 setcity(res.data.data.city)
                 setLGA(res.data.data.LGA)
                 localStorage.setItem("hospitaldetails", JSON.stringify(userData.hospitalcode))
+                console.log(res)
+                setallStaff(res.data.data.staff)
+                setPatient(res.data.data.patients)
             })
         }
         else {
@@ -219,6 +241,12 @@ function Dashboard() {
         });
     }
 
+    const totalStaff = allStaff.length
+    const totalPatient = patient.length
+    console.log(totalStaff)
+    console.log(totalPatient)
+
+
 
 
 
@@ -258,7 +286,7 @@ function Dashboard() {
                             </div>
                         </div>
                     </div>
-                    <div className={style.logout} onClick={logout} style={{ cursor: 'pointer' }}>Logout</div>
+                    <div className={style.logout} onClick= {ShowAlert}style={{ cursor: 'pointer' }}>Logout</div>
                 </div>
                 <div className={style.leftSection}>
                     <div className={style.profile}>
@@ -270,19 +298,19 @@ function Dashboard() {
                             <p><span>Welcome</span>,{login.admin ? userData?.facilityname : staffDetails?.name}</p>
                             <div style={{ display: 'flex', gap: '20px', marginTop: "10px" }}>
                                 <p className={style.id}>{login.admin ? 'Admin' : 'Staff'}</p>
-                                <p style={{ fontSize: '15px', fontWeight: '600' }}>{login.admin ? userData?.hospitalcode : staffDetails?.hospitalcode}</p>
+                                <p style={{ fontSize: '15px', fontWeight: '600' }}>{login.admin ? userData?.hospitalcode : staffDetails?.staffID}</p>
                             </div>
 
                         </div>
                     </div>
                     <div className={style.hospitaldetails}>
                         {login.admin ? <div className={style.totals}>
-                            <span>30+</span>
+                            <span>{totalStaff}</span>
                             <p>Staffs</p>
                         </div> : null}
 
                         <div className={style.totals}>
-                            <span>2000+</span>
+                            <span>{totalPatient}</span>
                             <p>Patients</p>
                         </div>
                     </div>

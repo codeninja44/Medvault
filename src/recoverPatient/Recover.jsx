@@ -3,6 +3,7 @@ import style from './recover.module.css'
 import axios from 'axios'
 import Swal from "sweetalert2"
 import { useNavigate } from 'react-router-dom'
+import logo from '../assets/logo.png'
 
 function Recover() {
     const [patientID, setPatientID] = useState('')
@@ -50,6 +51,10 @@ console.log(storedHospitalDetails, "this is the hospital detail")
 
 
     return (
+        <>
+        <div className='stafflogowrapper'>
+                <img src={logo} alt="logo" onClick={() => nav('/dashboard')} />
+            </div>
         <div className={style.resendEmail}>
             <div className={style.contentSec}>
                 <div className={style.header}>
@@ -64,6 +69,7 @@ console.log(storedHospitalDetails, "this is the hospital detail")
                 sent ? <ResendPopup /> : null
             } */}
         </div >
+        </>
     )
 }
 

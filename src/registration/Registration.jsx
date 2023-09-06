@@ -5,6 +5,7 @@ import './registrationMobile.css'
 import EmailPopUp from '../popUp/EmailPopUp'
 import toast, { Toaster } from 'react-hot-toast'
 import {HiOutlineArrowLeft} from 'react-icons/hi'
+import logo from '../assets/logo.png'
 
 
 function Registration() {
@@ -71,7 +72,7 @@ function Registration() {
     return (
         <div>
                   <div className='stafflogowrapper'>
-                       <img onClick={() => nav('/')} src="./src/assets/logo.png" alt="logo" />
+                  <img src={logo} alt="logo" onClick={() => nav('/')} />
                   </div>
             <div className="registration">
                 <div className="registrationList">

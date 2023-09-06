@@ -37,7 +37,7 @@ const LandingPage = () => {
                         <div className="Herolefttext">
                             <p className="health">Health in <span className="safety">
                                 <Typewriter
-                                    words={['Safety', 'Progress', 'Care']}
+                                    words={['Safety', 'Confidentiality', 'Technology']}
                                     loop={true}
                                     cursor
                                     cursorStyle=''
@@ -48,7 +48,9 @@ const LandingPage = () => {
                                 /></span></p>
                             <span className="with">with Medvault.</span>
                             <p className="trusted">Your trusted partner for secure,seamless and smart patient care.</p>
-                            <button className="createAccountBtn" onClick={() => nav('/registration')}>Create Account</button>
+                            <div className="landbtncontainer">
+                            <button onClick={() => nav('/registration')}>Create Account</button>
+                            </div>
                         </div>
 
                     </div>

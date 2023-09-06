@@ -24,6 +24,7 @@ function Login() {
                 setLoad(false)
                 localStorage.setItem("token", JSON.stringify(res.data.data.token))
                 localStorage.setItem("id", JSON.stringify(res.data.data.id))
+                localStorage.setItem("hospitalcode", JSON.stringify(res.data.data.hospitalcode))
                 nav('/dashboard')
                 console.log(res)
             })

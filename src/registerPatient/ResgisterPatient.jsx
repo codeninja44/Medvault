@@ -137,10 +137,11 @@ const RegisterPatient = () => {
 
 
   return (
-    <div className='App'>
-      <div className='stafflogowrapper' style={{ height: '100px', width: '150px' }}>
+    <>
+    <div className='stafflogowrapper' style={{ height: '100px', width: '150px' }}>
         <img src={logo} alt="logo" onClick={() => nav('/dashboard')} />
       </div>
+    <div className='App'>
       <div className='App2'>
         <form className="inputSec" onSubmit={register}>
           <div className='detailsHeader'>
@@ -201,7 +202,7 @@ const RegisterPatient = () => {
 
             <div className='NameH'>
               <p>Hospital code: </p>
-              <input placeholder='' type='text' value={storedHospitalDetails} onChange={(e) => setHospitalcode(e.target.value)} style={{ backgroundColor: 'white' }} readOnly />
+              <input placeholder='' type='text' value={storedHospitalDetails} style={{ backgroundColor: 'white' }} readOnly />
             </div>
 
 
@@ -257,7 +258,10 @@ const RegisterPatient = () => {
               }} name="diagnosis" onChange={(e) => setDiagnosis(e.target.value)}>{ }</textarea>
             </div>
 
-            <button className='createPatient' type='submit'>{load ? 'Creating...' : 'Create patient'}</button>
+            <button className='createPatient' type='submit'
+            onClick={()=>{
+              setHospitalcode(storedHospitalDetails)
+            }}>{load ? 'Creating...' : 'Create patient'}</button>
 
           </div>
         </form>
@@ -267,6 +271,7 @@ const RegisterPatient = () => {
         // verify ? <CreatedSuccessfully/> : null
       }
     </div>
+    </>
 
   )
 }

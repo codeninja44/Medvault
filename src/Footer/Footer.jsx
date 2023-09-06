@@ -21,16 +21,16 @@ const Footer = () => {
                             <img src={logo} alt="logo" />
                         </div>
                         <div className="footeraddress">
-                            <MdLocationOn />
+                            <MdLocationOn className="footeraddressicon" />
                             <p>161 Muyibi Street,
                             </p>
                         </div>
                         <div className="footerphoneno">
-                            <BsFillTelephoneFill />
+                            <BsFillTelephoneFill className="footerphonenoicon" />
                             <p>08131245060</p>
                         </div>
                         <div className="footeremail">
-                            <MdEmail />
+                            <MdEmail  className="footeremailicon"/>
                             <p>thecurvemedvault@gmail.com</p>
                         </div>
                         <div className="footercopyrights">
@@ -72,16 +72,16 @@ const Footer = () => {
                             <p>Social Media</p>
                         </div>
                         <div className="socialmediafb">
-                            <FaFacebookF />
+                            <FaFacebookF  className="socialmediafbicon"/>
                             <p>Facebook</p>
                         </div>
                         <div className="socialmediatwi">
-                            <FaTwitter />
+                            <FaTwitter className="socialmediatwiicon"/>
                             <p>Twitter</p>
                         </div>
 
                         <div className="socialmedialnkd">
-                            <FaLinkedin />
+                            <FaLinkedin className="socialmedialnkdicon"/>
                             <p>Linkedin</p>
                         </div>
                         <div className="socialmediaempty"></div>

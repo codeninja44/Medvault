@@ -19,13 +19,15 @@
 
     .Heroleft {
         width: 100%;
-        height: 60%;
+        height: 50%;
+        display: flex;
+        justify-content: space-between;
     }
 
 
     .Herolefttext {
         width: 100%;
-        height: 100%;
+        height: 65%;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -46,18 +48,26 @@
     }
 
 
+ 
+   .landbtncontainer{
+    width: 100%;
+    height: 35%;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
 
-    button {
-        width: 150px;
-        height: 30px;
-        font-size: 12px;
-        margin-left: 70px;
+   .landbtncontainer button{
+    width: 60%;
+    height: 100%;
+   
+   }
 
-    }
 
     .Heroright {
         width: 100%;
-        height: 60%;
+        height: 50%;
     }
 
     .Herorightbox {
@@ -346,10 +356,14 @@
     .Pricingtextholder {
         width: 100%;
         height: 10vh;
-        font-size: 30px;
+        /* font-size: 30px; */
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .Pricingtextholder p{
+        font-size: 30px;
     }
 
     .Pricingboxholder {
@@ -468,6 +482,10 @@
         align-items: center;
     }
 
+    .testimonialstextholder p{
+        font-size: 30px;
+    }
+
     .testimonialsboxholder {
         width: 100%;
         height: 100%;
@@ -557,6 +575,15 @@
     .custom-video-container {
         width: 80%;
         height: 100%;
+    }
+
+    
+    .custom-video-container video::-webkit-media-controls-timeline {
+        display: none;
+    }
+    
+    .custom-video-container video::-webkit-media-controls {
+        display: none;
     }
 
 }

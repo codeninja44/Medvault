@@ -14,13 +14,15 @@ import logo from '../assets/logo.png'
 
 
 function Patient() {
+const hospitalcode = JSON.parse(localStorage.getItem("hospitalcode"))
+
     const storedHospitalDetails = JSON.parse(localStorage.getItem("hospitaldetails"));
     console.log(storedHospitalDetails);
     const nav = useNavigate()
     // const [patientInfo, setPaientInfo] = useState([])
     // console.log((hospitalcode))
     const token = JSON.parse(localStorage.getItem("token"))
-    const { hospitalcode } = useParams()
+    // const { hospitalcode } = useParams()
     console.log(hospitalcode)
 
 
@@ -32,7 +34,7 @@ function Patient() {
             Authorization: `Bearer ${token}`
         }
     }
-    const url1 = `https://medvault.onrender.com/api/hospitals/staff/${storedHospitalDetails}`
+    const url1 = `https://medvault.onrender.com/api/hospitals/staff/${hospitalcode}`
 
 
 
@@ -77,6 +79,7 @@ function Patient() {
                         <input className={style.searchIcon} placeholder="Search staff Name" onChange={(e) => searchFunctionality(e.target.value)} />
 
                     </div>
+                    <h2>View Hospital Staffs</h2>
                     <div className={style.info}>
                         {
                             userData.map((e) => (
@@ -89,15 +92,15 @@ function Patient() {
                                             <img src={e.photo.url} alt="profile" />
                                         </div>
                                         <div style={{ display: 'flex', flexDirection: 'column' }}>
-                                            <p style={{ fontWeight: '600', fontSize: '17px' }}>{e.name}</p>
-                                            <p style={{ fontSize: '14px' }}>ID: <span style={{ fontSize: '13px' }}>{e.staffID}</span></p>
+                                            <p style={{ fontWeight: '550', fontSize: '14px' }}>{e.name}</p>
+                                            <p style={{ fontSize: '11px' }}>Staff ID: <span style={{ fontSize: '11px',color: '#1EBFC1' }}>{e.staffID}</span></p>
                                         </div>
                                     </div>
                                     <button className={style.delete} onClick={(event) => {
                                         Swal.fire({
                                             title: "Delete",
                                             icon: "warning",
-                                            text: "Are you sure you want to delete this patient?",
+                                            text: "Are you sure you want to delete this staff?",
                                             showCancelButton: true
                                         }).then((result) => {
                                             if (result.isConfirmed) {
@@ -108,7 +111,7 @@ function Patient() {
                                                         Swal.fire({
                                                             title: "Success",
                                                             icon: "success",
-                                                            text: "Patient will be deleted permanently in 10 days",
+                                                            text: "Staff will be deleted permanently in 10 days",
                                                             showCancelButton: false,
                                                             showConfirmButton: false,
                                                             timer: 5000,

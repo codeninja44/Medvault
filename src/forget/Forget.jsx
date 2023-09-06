@@ -35,7 +35,7 @@ function ForgetPassword() {
                 </div>
                 <input type="email" placeholder='Email' value={email} className={style.input} onChange={(e) => setemail(e.target.value)} />
                 <p className={style.error}>{errorMessage}</p>
-                <button className={style.sendMail} onClick={forgetPassword}>{loadState ? 'a moment...' : 'send email'}</button>
+                <button className={style.sendMail} onClick={forgetPassword}>{loadState ? 'a moment...' : 'Send email'}</button>
             </div>
             {
                 verify ? <ForgetPopup /> : null

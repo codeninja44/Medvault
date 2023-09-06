@@ -215,7 +215,7 @@
     
     .createinput2{
         width: 50%;
-        height: 30%;
+        height: 20%;
         border: none;
         padding: 10px;
         font-size: 12px;
@@ -235,7 +235,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: gray;
     }
     
     .createstaffbtn{

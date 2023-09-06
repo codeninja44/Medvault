@@ -47,9 +47,9 @@ const Header = () => {
                 </div>
                 <div className='firstList'>
                     <ul>
-                        <li onClick={() => nav('/')}>Home</li>
-                        <li onClick={() => nav('/aboutPage')}>About us</li>
-                        <li onClick={() => nav('/contactPage')} > Contact</li>
+                        <li className='landinghometext' onClick={() => nav('/')}>Home</li>
+                        <li className='landingabouttext' onClick={() => nav('/aboutPage')}>About us</li>
+                        <li className='landingcontactustext' onClick={() => nav('/contactPage')} > Contact Us</li>
                     </ul>
                 </div>
                 <div className='buttons'>

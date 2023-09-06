@@ -16,17 +16,39 @@ main {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     gap: 25px;
     font-weight: 600;
+    width: 100%;
+    height: 20vh;
 
 }
 
-.patient-image img {
-    width: 200px;
+.patient-image p {
+    width: 68%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.patientimgphoto {
+    width: 30%;
     /* Adjust the width as needed */
-    height: auto;
+    height: 100%;
+    border-radius: 5px;
+
 }
+
+.patientimgphoto img {
+    width: 100% !important;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 .patient-info {
     width: 100%;
@@ -65,7 +87,42 @@ textarea {
 .updateBtn {
     height: 45px;
     width: 80px;
-    background-color: white;
     margin: 0px;
     color: #1EBFC1;
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 580px) {
+
+    .patient-image {
+        text-align: center;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0px !important ;
+        font-weight: 600;
+        width: 100%;
+        height: 20vh;
+    }
+
+    .patient-image p {
+        width: 50%;
+        height: 100%;
+    }
+
+    .patientimgphoto {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .patientimgphoto img {
+        width: 100% !important ;
+        height: 100% !important;
+        border-radius: 5px;
+
+    }
 }

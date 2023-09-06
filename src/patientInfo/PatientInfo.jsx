@@ -2,6 +2,7 @@ import './patientInfo.css'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
+import logo from '../assets/logo.png'
 
 function PatientInfo() {
 
@@ -32,7 +33,7 @@ function PatientInfo() {
         relationshipStatus,
         spouseName,
         spousePhonenumber,
-        otherContacts
+        otherContacts,
     }
 
     const token = JSON.parse(localStorage.getItem("token"))
@@ -127,14 +128,16 @@ function PatientInfo() {
     return (
         <>
             <div className='stafflogowrapper'>
-                <img onClick={() => nav('/api/hospitals/patient/:hospitalcode')} src="./src/assets/logo.png" alt="logo" />
+                <img onClick={() => nav('/api/hospitals/patient/:hospitalcode')} src={logo} alt="logo" />
             </div>
             <main>
                 <div className="overall">
                     <h1 style={{ textAlign: 'center', marginBottom: '10px' }}>Patient Information</h1>
                     <section className="patient-image">
-                        <p>Patient image:</p>
-                        <img src={photo} alt="Patient's Photo" />
+                        <p>Patient Image:</p>
+                        <div className='patientimgphoto'>
+                          <img src={photo} alt="Patient's Photo" />
+                        </div>
                     </section>
 
                     <section className="patient-info">
@@ -164,6 +167,10 @@ function PatientInfo() {
                                 <input type="tel" id="phoneNumber" name="phoneNumber" value={phoneNumber} onChange={(e) => setphoneNumber(e.target.value)} />
                             </div>
                             <div className="form-group">
+                                <label for="phoneNumber">Patient Id:</label>
+                                <input type="tel" id="phoneNumber" name="phoneNumber" value={patientID} onChange={(e) => setphoneNumber(e.target.value)} />
+                            </div>
+                            <div className="form-group">
                                 <label for="bloodGroup">Blood Group:</label>
                                 <input type="text" className='textType' id="bloodGroup" name='blood Group' value={bloodGroup} onChange={(e) => setbloodGroup(e.target.value)} />
                             </div>
@@ -188,8 +195,8 @@ function PatientInfo() {
                                 <textarea id="diagnosis" name="diagnosis" value={diagnosisText} onChange={(e) => setDiagnosis(e.target.value)}></textarea>
                                 <button style={{
                                     height: '50px',
-                                    width: '110px',
-                                    fontSize: '15px',
+                                    width: '50px',
+                                    fontSize: '10px',
                                     backgroundColor: 'white',
                                     color: '#1EBFC1',
                                     marginBottom: '20px',
