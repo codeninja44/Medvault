@@ -93,7 +93,7 @@ const RegisterPatient = () => {
   data.append("spouseName", spouseName)
   data.append("spousePhonenumber", spousePhonenumber)
   data.append("diagnosis", diagnosis)
-  data.append('storedHospitalDetails', storedHospitalDetails)
+  data.append('hospitalcode', hospitalcode)
 
   const nav = useNavigate()
   const url = "https://medvault.onrender.com/api/createpatient"
@@ -202,7 +202,7 @@ const RegisterPatient = () => {
 
               <div className='NameH'>
                 <p>Hospital code: </p>
-                <input placeholder='' type='text' value={storedHospitalDetails} style={{ backgroundColor: 'white' }} readOnly />
+                <input placeholder='' type='text' value={hospitalcode} style={{ backgroundColor: 'white' }} onChange={(e) => setHospitalcode(e.target.value)} />
               </div>
 
 

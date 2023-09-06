@@ -19,8 +19,8 @@ const CreateStaff = () => {
     const token = JSON.parse(localStorage.getItem("token"))
 
 
-    const storedHospitalDetails = JSON.parse(localStorage.getItem("hospitalcode"));
-    console.log(storedHospitalDetails);
+    // const storedHospitalDetails = JSON.parse(localStorage.getItem("hospitalcode"));
+    // console.log(storedHospitalDetails);
 
     function staff(e) {
         // const nav = useNavigate()
@@ -57,13 +57,13 @@ const CreateStaff = () => {
 
                     <div className="createstaffinputdiv">
                         <input className="createinput1" type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <input className="createinput2" type="text" placeholder="Hospital code" value={storedHospitalDetails} readOnly />
+                        <input className="createinput2" type="text" placeholder="Hospital code" value={hospitalcode} onChange={(e) => setHospitalCode(e.target.value)} />
                     </div>
                     <div className="createstaffbtndiv">
                         <div className="createstaffbtnholder">
                             <button className="createstaffbtn" type='submit' onClick={() => {
                                 staff()
-                                setHospitalCode(storedHospitalDetails)
+                                // setHospitalCode(storedHospitalDetails)
                                 console.log("Button")
                             }}>{buttonText ? "creating..." : 'send'}</button>
                         </div>
