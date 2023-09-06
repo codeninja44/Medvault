@@ -48,18 +48,18 @@ function Dashboard() {
     const nav = useNavigate()
 
     const url = `https://medvault.onrender.com/api/logouthospital/${getId}`
- function ShowAlert(){
-    Swal.fire({
-        title: "Logout",
-        icon: "warning",
-        text: "Are you sure you want to log out?",
-        showCancelButton: true,       
-    }).then((result) => {
-        if (result.isConfirmed){
-            logout()
-        }
-    })
- }
+    function ShowAlert() {
+        Swal.fire({
+            title: "Logout",
+            icon: "warning",
+            text: "Are you sure you want to log out?",
+            showCancelButton: true,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                logout()
+            }
+        })
+    }
 
     function logout() {
         // e.preventDefault()
@@ -121,6 +121,7 @@ function Dashboard() {
                 setphoneNumber(res.data.data.phoneNumber)
                 setrole(res.data.data.role)
                 setemail(res.data.data.email)
+                setPatient(res.data.data.patients)
                 localStorage.setItem("hospitaldetails", JSON.stringify(userData.hospitalcode))
             })
 
@@ -241,10 +242,13 @@ function Dashboard() {
         });
     }
 
-    const totalStaff = allStaff.length
-    const totalPatient = patient.length
+    const allPatients = userData.patients
+    const allStaffs = userData.staff
+    const totalStaff = allPatients.length
+    const totalPatient = allStaffs.length
     console.log(totalStaff)
-    console.log(totalPatient)
+    // console.log(patient)
+
 
 
 
@@ -286,7 +290,7 @@ function Dashboard() {
                             </div>
                         </div>
                     </div>
-                    <div className={style.logout} onClick= {ShowAlert}style={{ cursor: 'pointer' }}>Logout</div>
+                    <div className={style.logout} onClick={ShowAlert} style={{ cursor: 'pointer' }}>Logout</div>
                 </div>
                 <div className={style.leftSection}>
                     <div className={style.profile}>
