@@ -19,7 +19,7 @@ const CreateStaff = () => {
     const token = JSON.parse(localStorage.getItem("token"))
 
 
-    const storedHospitalDetails = JSON.parse(localStorage.getItem("hospitaldetails"));
+    const storedHospitalDetails = JSON.parse(localStorage.getItem("hospitalcode"));
     console.log(storedHospitalDetails);
 
     function staff(e) {

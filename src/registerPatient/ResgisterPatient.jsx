@@ -34,7 +34,7 @@ const RegisterPatient = () => {
   const [spousePhonenumber, setSpouseNumber] = useState('')
   const [diagnosis, setDiagnosis] = useState('')
 
-  const storedHospitalDetails = JSON.parse(localStorage.getItem("hospitaldetails"));
+  const storedHospitalDetails = JSON.parse(localStorage.getItem("hospitalcode"));
   console.log(storedHospitalDetails);
 
   const handleMaleChange = () => {
@@ -93,7 +93,7 @@ const RegisterPatient = () => {
   data.append("spouseName", spouseName)
   data.append("spousePhonenumber", spousePhonenumber)
   data.append("diagnosis", diagnosis)
-  data.append('hospitalcode', hospitalcode)
+  data.append('storedHospitalDetails', storedHospitalDetails)
 
   const nav = useNavigate()
   const url = "https://medvault.onrender.com/api/createpatient"
@@ -138,139 +138,139 @@ const RegisterPatient = () => {
 
   return (
     <>
-    <div className='stafflogowrapper' style={{ height: '100px', width: '150px' }}>
+      <div className='stafflogowrapper' style={{ height: '100px', width: '150px' }}>
         <img src={logo} alt="logo" onClick={() => nav('/dashboard')} />
       </div>
-    <div className='App'>
-      <div className='App2'>
-        <form className="inputSec" onSubmit={register}>
-          <div className='detailsHeader'>
-            <p>Patient Details</p>
-            <input placeholder='photo' type='file' accept='image/*' style={{
-              height: '145px',
-              width: '150px',
-              border: 'none',
-              outline: 'none',
-              borderRadius: "5px",
-              paddingTop: '30px',
-              paddingLeft: '20px',
-              background: 'white',
-              border: "1px solid rgba(0, 170, 255, 0.95)"
-            }} onChange={File} />
-
-          </div>
-          <div className='PatientsInfo'>
-            <div className='NameA'>
-              <p>Name: </p>
-              <input placeholder='' type='text' value={patientName} onChange={(e) => setName(e.target.value)} style={{ backgroundColor: 'white' }} />
-            </div>
-
-            <div className='NameB'>
-              <p>Phone Number: </p>
-              <input placeholder='' type='number' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} style={{ backgroundColor: 'white' }} />
-            </div>
-
-            <div className='NameC'>
-              <p>E-Mail Address: </p>
-              <input placeholder='' type='email' value={email} onChange={(e) => setEmailAddress(e.target.value)} style={{ backgroundColor: 'white' }} />
-            </div>
-
-            <div className='NameC'>
-              <p>Blood group: </p>
-              <input placeholder='' type='text' value={bloodGroup} onChange={(e) => setBloodGroup(e.target.value)} style={{ backgroundColor: 'white' }} />
-            </div>
-
-            <div className='NameD'>
-              <p>Home Address: </p>
-              <input placeholder='' type='text' value={homeAddress} onChange={(e) => setHomeAddress(e.target.value)} style={{ backgroundColor: 'white' }} />
-            </div>
-
-            <div className='NameE'>
-              <p>City: </p>
-              <input placeholder='' type='' value={city} onChange={(e) => setCity(e.target.value)} style={{ backgroundColor: 'white' }} />
-            </div>
-
-            <div className='NameF'>
-              <p>State: </p>
-              <input placeholder='' type='text' value={state} onChange={(e) => setState(e.target.value)} style={{ backgroundColor: 'white' }} />
-            </div>
-
-            <div className='NameH'>
-              <p>Date Of Birth: </p>
-              <input placeholder='' type='text' value={dateOfBirth} onChange={(e) => setDateOfBirth(e.target.value)} style={{ backgroundColor: 'white' }} />
-            </div>
-
-            <div className='NameH'>
-              <p>Hospital code: </p>
-              <input placeholder='' type='text' value={storedHospitalDetails} style={{ backgroundColor: 'white' }} readOnly />
-            </div>
-
-
-            <div className='NameG'>
-              <p>Gender:</p>
-              <p >M</p>
-              <input checked={male} onChange={handleMaleChange} type='checkbox' />
-              <p >F</p>
-              <input checked={female} onChange={handleFemaleChange} type='checkbox' />
-            </div>
-
-            <div className='NameG'>
-              <p>Marital Status: </p>
-              <p>Single</p>
-              <input checked={single} onChange={isSingle} type='checkbox' />
-              <p>Married</p>
-              <input checked={married} onChange={isMarried} type='checkbox' />
-              <p>Divorced</p>
-              <input checked={divorced} onChange={isDivorced} type='checkbox' />
+      <div className='App'>
+        <div className='App2'>
+          <form className="inputSec" onSubmit={register}>
+            <div className='detailsHeader'>
+              <p>Patient Details</p>
+              <input placeholder='photo' type='file' accept='image/*' style={{
+                height: '145px',
+                width: '150px',
+                border: 'none',
+                outline: 'none',
+                borderRadius: "5px",
+                paddingTop: '30px',
+                paddingLeft: '20px',
+                background: 'white',
+                border: "1px solid rgba(0, 170, 255, 0.95)"
+              }} onChange={File} />
 
             </div>
+            <div className='PatientsInfo'>
+              <div className='NameA'>
+                <p>Name: </p>
+                <input placeholder='' type='text' value={patientName} onChange={(e) => setName(e.target.value)} style={{ backgroundColor: 'white' }} />
+              </div>
 
-            <div className='NameI'>
-              <p>Spouse Name(if Married or Divorced): </p>
-              <input placeholder='' type='text' value={spouseName} onChange={(e) => setSpouseName(e.target.value)} style={{ backgroundColor: 'white' }} />
-            </div>
+              <div className='NameB'>
+                <p>Phone Number: </p>
+                <input placeholder='' type='number' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} style={{ backgroundColor: 'white' }} />
+              </div>
 
-            <div className='NameJ'>
-              <p>Spouse Number(if Married or Divorced): </p>
-              <input placeholder='' type='text' value={spousePhonenumber} onChange={(e) => setSpouseNumber(e.target.value)} style={{ backgroundColor: 'white' }} />
-            </div>
+              <div className='NameC'>
+                <p>E-Mail Address: </p>
+                <input placeholder='' type='email' value={email} onChange={(e) => setEmailAddress(e.target.value)} style={{ backgroundColor: 'white' }} />
+              </div>
 
-            <div className='NameK'>
-              <p>Other contact: </p>
-              <input placeholder='' type='text' value={otherContacts} onChange={(e) => setOtherContacts(e.target.value)} style={{ backgroundColor: 'white' }} />
-            </div>
+              <div className='NameC'>
+                <p>Blood group: </p>
+                <input placeholder='' type='text' value={bloodGroup} onChange={(e) => setBloodGroup(e.target.value)} style={{ backgroundColor: 'white' }} />
+              </div>
+
+              <div className='NameD'>
+                <p>Home Address: </p>
+                <input placeholder='' type='text' value={homeAddress} onChange={(e) => setHomeAddress(e.target.value)} style={{ backgroundColor: 'white' }} />
+              </div>
+
+              <div className='NameE'>
+                <p>City: </p>
+                <input placeholder='' type='' value={city} onChange={(e) => setCity(e.target.value)} style={{ backgroundColor: 'white' }} />
+              </div>
+
+              <div className='NameF'>
+                <p>State: </p>
+                <input placeholder='' type='text' value={state} onChange={(e) => setState(e.target.value)} style={{ backgroundColor: 'white' }} />
+              </div>
+
+              <div className='NameH'>
+                <p>Date Of Birth: </p>
+                <input placeholder='' type='text' value={dateOfBirth} onChange={(e) => setDateOfBirth(e.target.value)} style={{ backgroundColor: 'white' }} />
+              </div>
+
+              <div className='NameH'>
+                <p>Hospital code: </p>
+                <input placeholder='' type='text' value={storedHospitalDetails} style={{ backgroundColor: 'white' }} readOnly />
+              </div>
 
 
-            {/* <div className='Diagnosis'>
+              <div className='NameG'>
+                <p>Gender:</p>
+                <p >M</p>
+                <input checked={male} onChange={handleMaleChange} type='checkbox' />
+                <p >F</p>
+                <input checked={female} onChange={handleFemaleChange} type='checkbox' />
+              </div>
+
+              <div className='NameG'>
+                <p>Marital Status: </p>
+                <p>Single</p>
+                <input checked={single} onChange={isSingle} type='checkbox' />
+                <p>Married</p>
+                <input checked={married} onChange={isMarried} type='checkbox' />
+                <p>Divorced</p>
+                <input checked={divorced} onChange={isDivorced} type='checkbox' />
+
+              </div>
+
+              <div className='NameI'>
+                <p>Spouse Name(if Married or Divorced): </p>
+                <input placeholder='' type='text' value={spouseName} onChange={(e) => setSpouseName(e.target.value)} style={{ backgroundColor: 'white' }} />
+              </div>
+
+              <div className='NameJ'>
+                <p>Spouse Number(if Married or Divorced): </p>
+                <input placeholder='' type='text' value={spousePhonenumber} onChange={(e) => setSpouseNumber(e.target.value)} style={{ backgroundColor: 'white' }} />
+              </div>
+
+              <div className='NameK'>
+                <p>Other contact: </p>
+                <input placeholder='' type='text' value={otherContacts} onChange={(e) => setOtherContacts(e.target.value)} style={{ backgroundColor: 'white' }} />
+              </div>
+
+
+              {/* <div className='Diagnosis'>
               <p>Diagnosis: </p>
               <input placeholder='' type='text' style={{ outline: 'none' }} />
             </div> */}
 
-            <div className="form-group">
-              <label for="diagnosis">Diagnosis:</label>
-              <textarea id="diagnosis" value={diagnosis} style={{
-                flex: "2",
-                padding: "10px",
-                border: "1px solid rgba(0, 170, 255, 0.95)",
-                backgroundColor: "white",
-                borderRadius: "5px",
-                width: "100%"
-              }} name="diagnosis" onChange={(e) => setDiagnosis(e.target.value)}>{ }</textarea>
+              <div className="form-group">
+                <label for="diagnosis">Diagnosis:</label>
+                <textarea id="diagnosis" value={diagnosis} style={{
+                  flex: "2",
+                  padding: "10px",
+                  border: "1px solid rgba(0, 170, 255, 0.95)",
+                  backgroundColor: "white",
+                  borderRadius: "5px",
+                  width: "100%"
+                }} name="diagnosis" onChange={(e) => setDiagnosis(e.target.value)}>{ }</textarea>
+              </div>
+
+              <button className='createPatient' type='submit'
+                onClick={() => {
+                  setHospitalcode(storedHospitalDetails)
+                }}>{load ? 'Creating...' : 'Create patient'}</button>
+
             </div>
-
-            <button className='createPatient' type='submit'
-            onClick={()=>{
-              setHospitalcode(storedHospitalDetails)
-            }}>{load ? 'Creating...' : 'Create patient'}</button>
-
-          </div>
-        </form>
+          </form>
+        </div>
+        {
+          // verify ? <EmailPopUp /> : null
+          // verify ? <CreatedSuccessfully/> : null
+        }
       </div>
-      {
-        // verify ? <EmailPopUp /> : null
-        // verify ? <CreatedSuccessfully/> : null
-      }
-    </div>
     </>
 
   )
