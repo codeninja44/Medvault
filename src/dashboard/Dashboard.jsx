@@ -320,12 +320,12 @@ function Dashboard() {
                     </div>
                     <div className={style.hospitaldetails}>
                         {login.admin ? <div className={style.totals}>
-                            {/* <span>{totalStaff}</span> */}
+                            <span>200+</span>
                             <p>Staffs</p>
                         </div> : null}
 
                         <div className={style.totals}>
-                            {/* <span>{totalPatient}</span> */}
+                            <span>42+</span>
                             <p>Patients</p>
                         </div>
                     </div>
