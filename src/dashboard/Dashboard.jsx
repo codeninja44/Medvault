@@ -242,11 +242,11 @@ function Dashboard() {
         });
     }
 
-    const allPatients = userData.patients
-    const allStaffs = userData.staff
-    const totalStaff = allPatients.length
-    const totalPatient = allStaffs.length
-    console.log(totalStaff)
+    // const allPatients = userData.patients
+    // const allStaffs = userData.staff
+    // const totalStaff = allPatients.length
+    // const totalPatient = allStaffs.length
+    // console.log(totalStaff)
     // console.log(patient)
 
 
@@ -309,12 +309,12 @@ function Dashboard() {
                     </div>
                     <div className={style.hospitaldetails}>
                         {login.admin ? <div className={style.totals}>
-                            <span>{totalStaff}</span>
+                            {/* <span>{totalStaff}</span> */}
                             <p>Staffs</p>
                         </div> : null}
 
                         <div className={style.totals}>
-                            <span>{totalPatient}</span>
+                            {/* <span>{totalPatient}</span> */}
                             <p>Patients</p>
                         </div>
                     </div>
